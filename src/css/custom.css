@@ -56,6 +56,12 @@ code {
   stroke: var(--ifm-navbar-link-color);
 }
 
+.navbar__title {
+  font-family: 'Poppins';
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
 .container {
   max-width: calc(1100px);
 }
