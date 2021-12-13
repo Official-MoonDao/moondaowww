@@ -8,6 +8,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "Official-MoonDao", // Usually your GitHub org/user name.
   projectName: "moondaowww", // Usually your repo name.
+  trailingSlash: false,
   // scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'moondao.com'}],
   // Add Plausible if we want privacy focused analytics. $6/month.
   themeConfig: {
