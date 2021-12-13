@@ -1,161 +1,31 @@
-module.exports = {
-  mainSidebar: {
-    Moloch: ['devs/contracts', 'devs/subgraphs'],
-    Client: [
-      {
-        'Code Legos': [
-          'devs/legos/overview',
-          'devs/legos/tx-tut',
-          'devs/legos/tx-api',
-          'devs/legos/field-lego-api',
-          'devs/legos/form-lego-api',
-        ],
-      },
-      'devs/dev-proposals',
-      'devs/activities',
-      'devs/bank',
-      'devs/contexts',
-      'devs/services',
-      'devs/tx-polling',
-      'devs/summoning',
-      'devs/utilities',
-    ],
-    Boosts: ['devs/default-boosts', 'devs/new-boosts'],
-    'JS Code Review': [
-      'devs/goals-and-ideals',
-      'devs/review-process',
-      'devs/javascript',
-      'devs/async-await',
-      'devs/caching',
-      'devs/react-structure',
-      'devs/react-components',
-      'devs/react-use-effect',
-      'devs/react-jsx',
-      'devs/react-layout',
-    ],
-  },
-  howSidebar: {
-    Intro: [
-      'users/intro',
-      'users/intro-dao',
-      'users/intro-moloch',
-      'users/glossary',
-      'users/haus-token',
-    ],
-    Features: [
-      'users/hub',
-      'users/bank',
-      'users/membership',
-      'users/proposals-intro',
-      'users/profile',
-      'users/minion',
-    ],
-    Tutorials: [
-      'users/navigation',
-      'users/summon',      
-      'users/add-member',
-      'users/deploy-minion',
-      'users/request-funding',
-      'users/withdraw-internal',
-      'users/weth',
-      'users/networks',
-      'users/manage-proposal-playlists',
-      'users/rage-quit',
-    ],
-    Boosts: [
-      'users/boosts/boosts',
-      'users/boosts/installing-boosts',
-      {
-        type: 'category',
-        label: 'Boosts Catalog',
-        items: [
-          'users/boosts/disperse-boost',
-          'users/boosts/rarible-boost',
-          'users/boosts/dao-books-boost',
-          'users/boosts/superfluid-boost',
-          'users/boosts/wrap-n-zap-boost',
-          'users/boosts/discourse-forum-boost',
-          'users/boosts/discord-notifications-boost',
-          'users/boosts/mintgate-boost',
-          'users/boosts/nifty-ink-boost',
-          'users/boosts/bank-buyout-boost',
-          'users/boosts/nft-tribute-boost',
-          'users/boosts/boost-catalog-format',
-          'users/boosts/minion-dev-suite-v3-boost',
-          'users/boosts/minion-dev-suite-v2-boost',
-          'users/boosts/minion-dev-suite-v1-boost',
-        ],
-      },
-      'users/boosts/building-boosts',
-    ],
-    FAQ: [
-      'users/proposals-faq',
-      'users/bank-faq',
-      'users/members-faq',
-      'users/summoner-faq',
-      'users/settings-faq',
-      'users/boosts-faq',
-      'users/allies-faq',
-      'users/profile-faq',
-      'users/minion-faq',
-      'users/other-networks-faq',
-    ],
-  },
-  whoSidebar: {
-    Community: [
-      'handbook/who-we-are',
-      'handbook/meeting-schedule',
-      'handbook/resources',
-    ],
-    Discord: [
-      'handbook/getting-started',
-      //"handbook/level-up",
-      'handbook/scholar',
-      'handbook/supporter',
-      'handbook/contributor',
-      'handbook/summoner',
-      'handbook/discord-faq',
-      //"handbook/bots"
-    ],
-    Summoners: [
-      'handbook/summoners/why-daos-summoners',
-      {
-        type: 'category',
-        label: 'Features',
-        items: [
-          'handbook/summoners/summoners-daohaus-features',
-          'handbook/summoners/uberhaus-governance',
-          'handbook/summoners/cco',
-        ],
-      },
-      {
-        type: 'category',
-        label: 'Tutorials',
-        items: [
-          'handbook/summoners/summoners-get-started',
-          'handbook/summoners/summon-dao-gnosis',
-          'handbook/summoners/uber-actions',
-        ],
-      },
-      'handbook/summoners/summoners-best-practices',
-      'handbook/summoners/summoners-faq',
-    ],
-    Contributors: [
-      'handbook/contributors/contributors-get-started',
-      'handbook/contributors/contributors-docs',
-      'handbook/contributors/contributors-docs-style-guide',
-      'handbook/contributors/contributors-get-paid',
-      'handbook/contributors/contributors-earn-power',
-      'handbook/contributors/contributors-faq',
-    ],
-    Circles: [
-      'handbook/overview',
-      'handbook/alchemists',
-      'handbook/magesmiths',
-      'handbook/paladins',
-      'handbook/rangers',
-      'handbook/uberpaladins',
-    ],
-  },
+/**
+ * Creating a sidebar enables you to:
+ - create an ordered group of docs
+ - render a sidebar for each doc of that group
+ - provide next/previous navigation
+
+ The sidebars can be generated from the filesystem, or explicitly defined here.
+
+ Create as many sidebars as you want.
+ */
+
+// @ts-check
+
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
+  // By default, Docusaurus generates a sidebar from the docs folder structure
+  docsSidebar: [{type: 'autogenerated', dirName: '.'}],
+
+  // But you can create a sidebar manually
+  /*
+  tutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Tutorial',
+      items: ['hello'],
+    },
+  ],
+   */
 };
-``;
+
+module.exports = sidebars;

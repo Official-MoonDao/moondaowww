@@ -21,7 +21,7 @@ h1 {
   font-family: $heading-font;
   font-weight: 900;
   font-size: 2.5em;
-  font-weight: 700;
+  letter-spacing: -2px;
 }
 
 h2 {
@@ -33,18 +33,18 @@ h2 {
 
 h3 {
   font-family: $heading-font;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.75em;
 }
 
 h4 {
   font-family: $heading-font;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 1.35em;
 }
 
 h5 {
-  font-family: $body-font;
+  font-family: $heading-font;
   font-weight: 700;
   font-size: 1em;
 }
@@ -62,6 +62,12 @@ p {
   &.BigP {
     font-size: 1.25em;
   }
+  &.small {
+    font-size: .8em;
+  }
+  &.center {
+    text-align: center;
+  }
 }
 
 body {
@@ -71,6 +77,7 @@ body {
   width: 100%;
   text-align: left;
   word-wrap: pre-line;
+  color: $secondary;
 }
 
 a {
@@ -80,7 +87,7 @@ a {
   transition: all 0.15s linear;
   font-weight: 500;
   &:not(.Button):hover {
-    color: $primary-hover;
+    color: $secondary;
   }
   &:hover {
     text-decoration: none;
@@ -89,15 +96,38 @@ a {
 
 .navbar__item.dropdown:hover a {
   cursor: pointer;
-  color: $primary-hover;
+  color: $primary;
 }
 
 .navbar__item.dropdown a:last-child {
   background-color: #050a1b !important;
   color: #0e99c4;
   &:hover {
-    color: $primary-hover;
+    color: $primary;
   }
+}
+
+.navbar {
+  a:hover {
+    color: $primary;
+  }
+}
+
+.footer {
+  .footer__link-item {
+    color: $secondary;
+  }
+  .footer__copyright {
+    font-size: 0.8em;
+  }
+}
+
+blockquote {
+  font-family: 'Poppins';
+  margin-top:40px;
+  font-size: 1.25em;
+  font-weight: bold;
+  border-left-width: 1px;
 }
 
 img {
@@ -112,21 +142,21 @@ img {
 }
 
 // UI Elements
-button:not(.hamburger):not([role="switch"]),
 .Button {
   &:hover {
-    background-color: $primary-hover;
+    background-color: $secondary;
+    color: white;
   }
   font-family: $body-font;
-  font-weight: 500;
+  font-weight: bold;
   display: inline-block;
   outline: none;
-  background-color: $orange;
+  background-color: $primary;
   color: white;
   border: 2px solid transparent;
   border-radius: 10px;
   height: auto;
-  padding: 15px 25px;
+  padding: 10px 15px;
   font-size: 1em;
   cursor: pointer;
   transition: all 0.15s linear;
@@ -151,13 +181,13 @@ button:not(.hamburger):not([role="switch"]),
     }
   }
   &.Outlined {
-    border: 2px solid $orange;
+    border: 2px solid $primary;
     background-color: transparent;
-    color: $orange;
+    color: $primary;
     &:hover {
-      border: 2px solid $primary-hover;
+      border: 2px solid $tertiary;
       background-color: transparent;
-      color: $primary-hover;
+      color: $tertiary;
     }
   }
   &.Secondary {
@@ -189,27 +219,6 @@ button:not(.hamburger):not([role="switch"]),
       color: $primary-hover;
     }
   }
-}
-
-// Dao/Profile Elements
-
-.Daolist__Header {
-  display: flex;
-  align-items: center;
-  .Daolist__Avatar {
-    margin: 0;
-    margin-right: 15px;
-  }
-}
-
-.NoteCount {
-  background-color: $red;
-  border-radius: 25px;
-  padding: 3px 5px;
-  color: white;
-  font-size: 0.75em;
-  min-width: 11px;
-  text-align: center;
 }
 
 // Layout
@@ -275,12 +284,14 @@ button:not(.hamburger):not([role="switch"]),
   align-items: center;
   justify-content: flex-start;
   min-height: 50vh;
-  padding: 125px 0px;
+  padding: 80px 0px;
+  font-size: 1.25em;
+  background: $background;
   &__Contents {
     margin: 0 auto;
     width: 100%;
     max-width: calc(1100px);
-    padding: 50px;
+    padding: 50px 0px;
     > h1,
     h2 {
       font-weight: 700;
@@ -311,10 +322,13 @@ button:not(.hamburger):not([role="switch"]),
       color: white;
     }
     a {
-      color: $orange;
+      color: $tertiary;
       &:hover {
-        color: $secondary;
+        color: $primary;
       }
+    }
+    h5 {
+      color: $primary;
     }
   }
   &.PrimaryDark {
@@ -459,12 +473,9 @@ p.Large {
 .Success {
   color: $success;
 }
-.tradColor {
-  color: $red;
-}
 
 .daoColor {
-  color: $secondary;
+  color: $primary;
 }
 
 .JustifyCenter {
@@ -509,70 +520,6 @@ p.Large {
     top: 0;
     cursor: pointer;
     font-weight: 900;
-  }
-}
-
-// Ant-D Components
-
-// Carousel
-
-.ant-carousel {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-variant: tabular-nums;
-  list-style: none;
-  -webkit-font-feature-settings: "tnum";
-  font-feature-settings: "tnum", "tnum";
-  // Modify
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  .slick-slider {
-    position: relative;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .slick-list {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    // extra
-    transform: translate3d(0, 0, 0);
-
-    .slick-track {
-      position: relative;
-      top: 0;
-      left: 0;
-      display: block;
-      height: 100%;
-      &:before {
-        display: table;
-        content: "";
-      }
-      .slick-slide {
-        position: relative;
-        float: left;
-        height: 100%;
-        min-height: 1px;
-        width: 100%;
-      }
-    }
   }
 }
 

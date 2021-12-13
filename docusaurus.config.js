@@ -1,84 +1,52 @@
 module.exports = {
-  title: "DAOhaus",
-  tagline: "A place for all your DAOs",
-  url: "https://daohaus.club",
-  baseUrl: "/",
+  title: "MoonDAO",
+  tagline: "Decentralize space.",
+  url: "https://official-moondao.github.io", // TODO: update URL
+  baseUrl: "/moondaowww/", // TODO update to "/" after CNAME entry is made
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "hausdao", // Usually your GitHub org/user name.
-  projectName: "daohaus-docs", // Usually your repo name.
-    scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
+  organizationName: "Official-MoonDao", // Usually your GitHub org/user name.
+  projectName: "moondaowww", // Usually your repo name.
+  // scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'moondao.com'}],
+  // Add Plausible if we want privacy focused analytics. $6/month.
   themeConfig: {
-    image: "https://daohaus.club/images/daohaus-main.jpg",
-    metadatas: [
+    image: "img/moondao-one-small-step.png", // TODO update image
+    metadata: [
       { name: "og:type", content: "website" },
       {
         name: "og:description",
-        content: "DAOhaus is a no code platform for Moloch DAOs.",
+        content: "MoonDAO's mission is to decentralize access to space.",
       },
-      { name: "og:site_name", content: "DAOhaus" },
+      { name: "og:site_name", content: "MoonDAO" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@nowdaoit" },
-      { name: "twitter:title", content: "DAOhaus" },
+      { name: "twitter:site", content: "@OfficialMoonDAO" },
+      { name: "twitter:title", content: "MoonDAO" },
       {
         name: "twitter:description",
-        content: "DAOhaus is a no code platform for Moloch DAOs.",
-      },
-      {
-        name: "twitter:image",
-        content: "https://daohaus.club/images/daohaus-main.jpg",
+        content: "MoonDAO's mission is to decentralize access to space.",
       },
     ],
     colorMode: {
       disableSwitch: true,
     },
     navbar: {
+      title: "MoonDAO",
       logo: {
-        alt: "DAOhaus Logo",
-        src: "img/logo.png",
-        srcDark: "img/logoDark.png",
+        alt: "MoonDAO Logo",
+        src: "img/logo-50px.png",
       },
+      hideOnScroll: true,
       items: [
         {
-          to: "/community",
-          activeBasePath: "community",
-          label: "Community",
-          position: "right",
-        },
-        {
-          to: "/token",
-          activeBasePath: "token",
-          label: "Token",
-          position: "right",
-        },
-        {
-          to: "/market",
-          activeBasePath: "market",
-          label: "Marketplace",
-          position: "right",
-        },
-        {
+          to: "/docs/introduction",
+          activeBasePath: "docs",
           label: "Docs",
           position: "right",
-          items: [
-            {
-              label: "Users",
-              to: "/docs",
-            },
-            {
-              label: "Developers",
-              to: "/docs/devs",
-            },
-            {
-              label: "Handbook",
-              to: "/docs/handbook",
-            }
-          ],
         },
         {
-          href: "https://app.daohaus.club",
-          label: "Open App",
+          to: "/#community",
+          label: "Contribute",
           position: "right",
         },
       ],
@@ -88,71 +56,37 @@ module.exports = {
         {
           items: [
             {
-              label: "Launch the App",
-              href: "https://app.daohaus.club",
+              to: "/docs/introduction",
+              label: "Documentation",
             },
-            {
-              label: "Explore DAOs",
-              href: "https://app.daohaus.club/explore",
-            },
-            {
-              label: "Summon a DAO",
-              href: "https://app.daohaus.club/summon",
-            },
-            {
-              to: "/docs",
-              label: "User Docs",
-            },
-            {
-              to: "/docs/devs",
-              label: "Developer Docs",
-            },
-            {
-              to: "/docs/handbook",
-              label: "Handbook",
-            }
-          ],
-        },
-        {
-          items: [
             {
               label: "Twitter",
-              href: "https://twitter.com/nowdaoit",
+              href: "https://twitter.com/OfficialMoonDAO",
             },
             {
               label: "Discord",
-              href: "https://discord.gg/daohaus",
-            },
-            {
-              label: "Substack",
-              href: "https://daohaus.substack.com/",
+              href: "https://discord.gg/5nAu7K9aES",
             },
             {
               label: "Github",
-              href: "https://github.com/HausDAO/pokemol-web",
+              href: "https://github.com/Official-MoonDao",
             },
           ],
         },
       ],
       logo: {
-        alt: "HAUS logo",
-        src: "img/logo.png",
+        alt: "MoonDAO logo",
+        src: "img/logo-50px.png",
       },
-      copyright: `Built by the community via HausDAO.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MoonDAO.`,
     },
   },
   presets: [
     [
-      "@docusaurus/preset-classic",
+      'classic',
       {
         docs: {
-          routeBasePath: "/docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging",
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

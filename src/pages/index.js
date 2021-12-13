@@ -1,40 +1,14 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { Carousel } from "antd";
-
-import CommunityBlock from "../components/CommunityBlock";
 
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
-import { RiDiscordFill } from "react-icons/ri";
-import SubstackSvg from "@site/static/img/Substack.svg";
 import DiscordSvg from "@site/static/img/Discord_alt.svg";
-
-import InfographicTrad from "@site/static/img/infographic__trad.png";
-import InfographicDAO from "@site/static/img/infographic__dao.png";
-import GraphicCommunities from "@site/static/img/bauhaus_communities.png";
-import DaohausBauhaus from "@site/static/img/bauhaus__composable.png";
-import DaohausHugeType from "@site/static/img/daohaus__hugeType.png";
-
-import HowTreasury from "@site/static/img/how__treasury.png";
-import HowProposals from "@site/static/img/how__proposals.png";
-import HowMembers from "@site/static/img/how__members.png";
-
-import IconA from "@site/static/img/ico-grants.png";
-import IconB from "@site/static/img/ico-protocols.png";
-import IconC from "@site/static/img/ico-guilds.png";
-import IconD from "@site/static/img/ico-clubs.png";
-import IconFA from "@site/static/img/ico__future--a.png";
-import IconFB from "@site/static/img/ico__future--b.png";
-import IconFC from "@site/static/img/ico__future--c.png";
-import IconHA from "@site/static/img/ico__how--a.png";
-import IconHB from "@site/static/img/ico__how--b.png";
-import IconHC from "@site/static/img/ico__how--c.png";
+import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg"
 
 import "../css/global.scss";
 import "../css/home.scss";
-import { heroSlides } from "../components/homeContent";
 
 export default function Home() {
   const context = useDocusaurusContext();
@@ -42,136 +16,32 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Daohaus Docs: Learnin' and burnin'"
+      description={siteConfig.tagline}
     >
       <div className='Home'>
         <div className='HomeHero'>
-          <div className='SummonHero'>
-            <h1>
-              Unlock the next tier <br />
-              in community cooperation
-            </h1>
-            <p className='BigP daoColor' style={{ maxWidth: "500px" }}>
-              DAOs give direct <strong>power to the people</strong>. Join us in
-              pioneering a future where magic internet communities unlock the
-              power of human-centric coordination.
-            </p>
-            <p>
-              Secured by the{" "}
-              <a
-                href='https://ethereum.org'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Ethereum
-              </a>{" "}
-              blockchain ❤️
-            </p>
-            <div className='Social'>
-              <a
-                href='https://discord.gg/daohaus'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <DiscordSvg />
-              </a>
-              <a
-                href='https://daohaus.substack.com'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <SubstackSvg />
-              </a>
-              <a
-                href='https://github.com/HausDAO/pokemol-web'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <DiGithubAlt />
-              </a>
-              <a
-                href='https://twitter.com/nowdaoit'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <ImTwitter />
-              </a>
-            </div>
-            <div className='HeroButtonGroup'>
-              <a
-                href='https://daohaus.club/docs'
-                className='Button Big Secondary Outlined'
-              >
-                DAO Basics
-              </a>
-              <a
-                href='https://app.daohaus.club/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='Button Big'
-              >
-                Open the App
-              </a>
-            </div>
-          </div>
-          <div className='Carousel'>
-            <Carousel
-              autoplay={true}
-              dots={false}
-              effect='fade'
-              autoplaySpeed={5000}
-            >
-              {heroSlides.map((slide) => {
-                return (
-                  <div key={slide.id} className='Carousel__Slide'>
-                    <div className='Content'>
-                      <p>{slide.content}</p>
-                      <h4>{slide.heading}</h4>
-                    </div>
-                    <div
-                      className='SlideBg'
-                      style={{
-                        backgroundImage: "url(" + slide.image + ")",
-                      }}
-                    />
-                    <div className='Overlay'>
-                      <img
-                        src={DaohausHugeType}
-                        alt='daohaus type illustration'
-                        width='50%'
-                        style={{ position: "absolute", bottom: 25, right: 25 }}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-            </Carousel>
-          </div>
-        </div>
-        <div>
-          <div className='Block Video PrimaryDark'>
+          <div className='BigHero'>
             <div className='Block__Contents'>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <h2 style={{ textAlign: "left" }}>DAOhaus - What is a DAO?</h2>
-                <iframe
-                  className='VideoSize'
-                  src='https://www.youtube.com/embed/7MaucjMwEUA'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen
-                ></iframe>
-                <p style={{ marginTop: "15px" }}>
-                  A DAO explainer built by a DAO for DAOs funded by a DAO.
-                  That's what DAOhaus is all about. The DAO 2 DAO economy and an
-                  actual social network for the Metaverse.
-                </p>
+              <h1 className='daoColor'>
+                One small step for a DAO.<br />
+                One giant leap for DAO-kind.
+              </h1>
+              <p className='BigP'>
+                MoonDAO's mission is to decentralize access to space.
+              </p>
+              <div className='HeroButtonGroup'>
+                <a
+                  href='./docs/introduction'
+                  className='Button Big Primary Outlined'
+                >
+                  Learn more
+                </a>
+                <a
+                  href='#community'
+                  className='Button Big Primary Outlined'
+                >
+                  Contribute
+                </a>
               </div>
             </div>
           </div>
@@ -180,259 +50,228 @@ export default function Home() {
         <div className='Block PrimaryBg'>
           <div className='Block__Contents'>
             <div className='Row'>
-              <div className='Column--50'>
-                <img
-                  src={InfographicTrad}
-                  alt='infographic trad'
-                  width='240px'
-                  style={{ marginBottom: 25 }}
-                />
-                <h5 className='tradColor'>Traditional Organization</h5>
-                <h2 style={{ textDecoration: "strikethrough" }}>
-                  Power held by few at the top
+              <div className='Column--100'>
+                <h5 className='daoColor'>Mission</h5>
+                <h2>
+                  MoonDAO is going to the moon.
                 </h2>
                 <p>
-                  <span className='tradColor'>
-                    Rigid, Competition, Inequality, Opaque
-                  </span>
+                  Many coins talk about going to the moon, but what if we
+                  <strong> literally </strong>sent MoonDAO members to the moon — and collectively governed our colony as a Decentralized Autonomous Organization?
                 </p>
-              </div>
-              <div className='Column--50'>
-                <img
-                  src={InfographicDAO}
-                  alt='infographic dao'
-                  width='240px'
-                  style={{ marginBottom: 25 }}
-                />
-                <h5 className='daoColor'>DAO</h5>
-                <h2>Power shared by all</h2>
                 <p>
-                  <span className='daoColor'>
-                    Agile, Collaboration, Diversity, Transparent
-                  </span>
+                  Rather than have the moon and other celestial bodies lie in
+                  the hands of a few private organizations (SpaceX, Blue
+                  Origin), we believe that an international, decentralized,
+                  inclusive, and transparent organization would be more
+                  equitable and fair. We do not believe in "emperors of the
+                  moon" or "CEOs of space," but instead we believe in
+                  extending the unalienable rights of citizens of planet
+                  earth to the solar system and beyond.
+                </p>
+                <blockquote>
+                  <p>
+                    "All civilizations become either spacefaring or extinct."
+                  </p>
+                  <p className='attribution'>&mdash; Carl Sagan</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='Values Block'>
+          <div className='Block__Contents'>
+            <div className='Row'>
+              <div className='Column--100'>
+                <h5>Values</h5>
+                <h3>Space should be in the hands of the
+                people.</h3>
+                <p>
+                  We uphold values of inclusion, peace, transparency, freedom of
+                  organization and speech. Space should be in the hands of the
+                  people, not any one nation or private entity.
+                </p>
+                <p>
+                  As such, MoonDAO will support funding for individuals to go
+                  to space, acquisition and governance of symbolic assets (like
+                  lunar asteroids, or the lunar manual used in the first space
+                  mission), and fund future space research and exploration as
+                  it fits into the mission of becoming a governing body for the
+                  moon and other celestial bodies.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className='Usecases Block'>
+        <div className='Roadmap Block PrimaryBg'>
           <div className='Block__Contents'>
-            <h3>How is it Used?</h3>
-            <p>
-              How communities use DAOhaus{" "}
-              <span className='daoColor'>TODAY</span>
-            </p>
-            <div className='Row'>
-              <div className='Column--50'>
-                <img src={IconA} alt='' width='80px' />
-                <h5>Grants & Investments</h5>
-                <p>
-                  The first major use of DAOs has been through community grants!
-                  Millions have been raised and distributed to early developers
-                  of this technology.
-                </p>
-              </div>
-              <div className='Column--50'>
-                <img src={IconB} alt='' width='80px' />
-                <h5>Ventures</h5>
-                <p>
-                  The DAOhaus project is a prime example of a project based DAO.
-                  Every community initiative can now become a funded reality.
-                </p>
-              </div>
-              <div className='Column--50'>
-                <img src={IconC} alt='' width='80px' />
-                <h5>Guilds & Services</h5>
-                <p>
-                  Freelancers rejoice! Guilds have re-emerged as a powerful
-                  collective force. Some even have members who quit their day
-                  jobs to work for a DAO.
-                </p>
-              </div>
-              <div className='Column--50'>
-                <img src={IconD} alt='' width='80px' />
-                <h5>Social</h5>
-                <p>
-                  Get your friends together and put your money where your mouth
-                  is! Clubs are culture machines, and DAOhaus is flexible enough
-                  to keep the party going.
-                </p>
-              </div>
-            </div>
-            <p style={{ marginTop: 75 }}>
-              How communities will use DAOs{" "}
-              <span className='yellowColor'>TOMORROW</span>
-            </p>
-            <div className='Row'>
-              <div className='Column--33'>
-                <div className='Row AlignCenter JustifyStart'>
-                  <img
-                    src={IconFA}
-                    alt=''
-                    width='40px'
-                    style={{ marginRight: "10px" }}
-                  />
-                  <p>
-                    Player-owned
-                    <br />
-                    <strong>Games</strong>
-                  </p>
-                </div>
-              </div>
-              <div className='Column--33'>
-                <div className='Row AlignCenter JustifyStart'>
-                  <img
-                    src={IconFB}
-                    alt=''
-                    width='40px'
-                    style={{ marginRight: "10px" }}
-                  />
-                  <p>
-                    Brewer-owned
-                    <br />
-                    <strong>Breweries</strong>
-                  </p>
-                </div>
-              </div>
-              <div className='Column--33'>
-                <div className='Row AlignCenter JustifyStart'>
-                  <img
-                    src={IconFC}
-                    alt=''
-                    width='40px'
-                    style={{ marginRight: "10px" }}
-                  />
-                  <p>
-                    User-owned
-                    <br />
-                    <strong>Platforms</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='Block Communities'>
-          <div className='Block__Contents'>
-            <div className='Row'>
-              <div className='Column--50'>
-                <h3>
-                  We{" "}
-                  <span role='img' aria-label='Love'>
-                    ❤️
-                  </span>{" "}
-                  Communities
-                </h3>
-                <p className='BigP'>
-                  DAOhaus communities have raised over $50M collectively and
-                  distributed almost $20M throughout the ecosystem to support
-                  their various goals.{" "}
-                </p>
-                <a
-                  href='https://app.daohaus.club/explore'
-                  className='Button Outlined'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Explore DAOs
-                </a>
-              </div>
-              <div className='Column--50'>
-                <img src={GraphicCommunities} alt='dao communities' />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='How Block'>
-          <div className='Block__Contents'>
-            <h3>How a DAO works</h3>
-            <p>Just the basics.</p>
-            <p className='TinyP'>
-              Learn more in our{" "}
-              <a
-                href='https://daohaus.substack.com'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                help documentation
-              </a>
-              .
-            </p>
+            <h5>Moon Phases</h5>
+            <h3>Our roadmap to the stars.</h3>
             <div className='Row AlignCenter'>
-              <div className='Column--50'>
-                <img src={IconHA} alt='' width='40px' />
-                <h5>Shared Treasury</h5>
+              <div className='Column--66'>
+                <h4>Moon phase 1</h4>
                 <p>
-                  Community funds are held by the DAO itself and distributed
-                  through Proposals.
+                  <strong>Raise funds to send people to space and progress space research
+                  and exploration</strong>
+                </p>
+                <p className='small'>
+                  We'll raise funds with a juicebox.money crowdfund that will
+                  go into a multi-sig controlled by a trusted group of people,
+                  in exchange you'll receive governance tokens for MoonDAO. The
+                  money contributed is a donation, and there is no expectation
+                  of profit, and you are not receiving fractionalized ownership
+                  of our assets, but governance rights for the assets we hold
+                  and governance of the DAO treasury.
                 </p>
               </div>
-              <div className='Column--50'>
-                <img src={HowTreasury} alt='app screenshot of treasury' />
+              <div className='Column--33'>
+                <p className='center roadmap-moon-icon'>
+                  🌒
+                </p>
+              </div>
+
+            </div>
+            <div className='Row AlignCenter'>
+              <div className='Column--66'>
+                <h4>Moon phase 2</h4>
+                <p>
+                  <strong>Send a MoonDAO member to space.</strong>
+                </p>
+                <p className='small'>
+                  We're in the midst of a privatized space race. Whether it's
+                  SpaceX, Blue Origin or Virgin Galactic- we want front row
+                  seats (literally!). Virgin Galactic has sold tickets for
+                  $250K and it's been reported that Blue Origin will sell
+                  tickets in the range of $300K-$400K. MoonDAO wants to help
+                  create a world where anyone can fly to space &mdash; regardless of background. We hope that this can be a meaningful and inspirational first step in decentralizing space exploration.
+                </p>
+              </div>
+              <div className='Column--33'>
+              <p className='center roadmap-moon-icon'>
+                🌗
+              </p>
               </div>
             </div>
             <div className='Row AlignCenter'>
-              <div className='Column--50'>
-                <img src={IconHB} alt='' width='40px' />
-                <h5>Voting & Proposals</h5>
+              <div className='Column--66'>
+                <h4>Moon phase 3</h4>
                 <p>
-                  Proposals can be used for all types of decisions like
-                  distributing funds, allocating shares, and even interacting
-                  with other applications and communities.
+                  <strong>Provide funding to space research and exploration.</strong>
+                </p>
+                <p className='small'>
+                  The exploration of space should unify the world &mdash; not pit us against each other like the last space race. After all,
+                  aren't we all just curious earthlings that want to explore
+                  the unknown? Now, Web 3.0 represents a technology that can
+                  unify earthlings and decentralize space exploration. Moon
+                  Phase 4 begins MoonDAOs ambitious goal of being the DAO
+                  that does just that.
                 </p>
               </div>
-              <div className='Column--50'>
-                <img src={HowProposals} alt='app screenshot of proposals' />
+              <div className='Column--33'>
+              <p className='center roadmap-moon-icon'>
+                🌔
+              </p>
               </div>
             </div>
             <div className='Row AlignCenter'>
-              <div className='Column--50'>
-                <img src={IconHC} alt='' width='40px' />
-                <h5>Fluid Membership</h5>
+              <div className='Column--66'>
+                <h4>Moon phase 4</h4>
                 <p>
-                  Members are added and removed through proposals and may leave
-                  at any time. Shares allow for truly distributed ownership.
+                  <strong>Put a MoonDAO colony on the moon.</strong>
+                </p>
+                <p className='small'>
+                  That's one small step for man, one giant leap for mankind.
+                </p>
+                <p className='small'>
+                  The 1967 Space Treaty forms the basis for all law concerning
+                  space. In this treaty it states that no
+                  <strong> national </strong>
+                  appropriation of the moon can take place. However, a DAO is
+                  not a nation — it is an international collective.
                 </p>
               </div>
-              <div className='Column--50'>
-                <img src={HowMembers} alt='app screenshot of members' />
+              <div className='Column--33'>
+              <p className='center roadmap-moon-icon'>
+                🌕
+              </p>
+              </div>
+            </div>
+            <div className='Row AlignCenter'>
+              <div className='Column--66'>
+                <h4>Moon phase 5</h4>
+                <p>
+                  <strong>Have sweet moon parties (everyone's invited).</strong>
+                </p>
+                <p className='small'>
+                  They're gonna be sweet. BYOB but we'll provide transportation.
+                </p>
+              </div>
+              <div className='Column--33'>
+              <p className='center roadmap-moon-icon'>
+                🌝
+              </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className='Block Communities'>
+        <div className='Block' id='community'>
           <div className='Block__Contents'>
             <div className='Row'>
               <div className='Column--50'>
                 <h3>
-                  Interact with the entire Ethereum ecosystem of decentralized
-                  apps.
+                  Join our mission.
                 </h3>
-                <p className='BigP' style={{ margin: "25px 0px" }}>
-                  Swap tokens on Uniswap... spin up a Gnosis Safe... govern your
-                  own protocol... all as a community.
-                </p>
                 <p>
-                  <strong>Collaborative composability ftw.</strong> If you’re
-                  building something useful for DAOs, hit us up in our{" "}
-                  <a
-                    href='https://discord.gg/daohaus'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='SocialIcon'
-                  >
-                    Discord ->
-                  </a>
+                  Contribute to our efforts by buying our governance token to
+                  fund our treasury, or lend us your brain power and help us build the world's first decentralized public
+                  space program.
                 </p>
+                <div id='community_actions' className='Row AlignCenter'>
+                  <div>
+                    <a
+                      href='https://juicebox.money/#/'
+                      className='Button Primary Outlined'
+                    >
+                      Buy token
+                    </a>
+                  </div>
+                  <div className='Social'>
+                    <a
+                      href='https://discord.gg/5nAu7K9aES'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <DiscordSvg />
+                    </a>
+                    <a
+                      href='https://github.com/Official-MoonDao'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <DiGithubAlt />
+                    </a>
+                    <a
+                      href='https://twitter.com/OfficialMoonDAO'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <ImTwitter />
+                    </a>
+                  </div>
+                </div>
+
+
+
               </div>
               <div className='Column--50'>
-                <img src={DaohausBauhaus} alt='ethereum ecosystem of dapps' />
+                <p className='center'>
+                  <img width='75%' src='img/undraw_launch_day_4e04.svg' />
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <CommunityBlock />
       </div>
     </Layout>
   );
