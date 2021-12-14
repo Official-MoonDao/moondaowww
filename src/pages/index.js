@@ -46,7 +46,29 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        <div className='Goal Block'>
+          <div className='Block__Contents'>
+            <div className='Row'>
+              <div className='Column--100'>
+                <h5>2022 goal</h5>
+                <h3>Our goal in 2022 is to send a MoonDAO member to space.</h3>
+                <p>
+                  So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO fixes this.
+                </p>
+                <p>
+                  How will we do this?
+                </p>
+                <p><ol>
+                  <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
+                  <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
+                  <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
+                  <li>Send MoonDAO member(s) to space in 2022.</li>
+                </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='Block PrimaryBg'>
           <div className='Block__Contents'>
             <div className='Row'>
