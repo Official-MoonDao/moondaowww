@@ -126,7 +126,7 @@ export default function Home() {
               </div>
               <div className='Column--33'>
                 <p className='center roadmap-moon-icon'>
-                  🌒
+                  🌒 <br />
                 </p>
               </div>
 
@@ -147,9 +147,9 @@ export default function Home() {
                 </p>
               </div>
               <div className='Column--33'>
-              <p className='center roadmap-moon-icon'>
-                🌗
-              </p>
+               <p className='center roadmap-moon-icon'>
+                 🌓 <br />
+               </p>
               </div>
             </div>
             <div className='Row AlignCenter'>
@@ -169,7 +169,7 @@ export default function Home() {
               </div>
               <div className='Column--33'>
               <p className='center roadmap-moon-icon'>
-                🌔
+                🌔 <br />
               </p>
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
               <div className='Column--33'>
               <p className='center roadmap-moon-icon'>
-                🌕
+                🌕 <br />
               </p>
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
               </div>
               <div className='Column--33'>
               <p className='center roadmap-moon-icon'>
-                🌝
+                🌝 <br />
               </p>
               </div>
             </div>
