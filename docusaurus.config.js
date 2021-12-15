@@ -1,8 +1,8 @@
 module.exports = {
   title: "MoonDAO",
   tagline: "Decentralize space.",
-  url: "https://official-moondao.github.io", // TODO: update URL
-  baseUrl: "/moondaowww/", // TODO update to "/" after CNAME entry is made
+  url: "https://moondao.com",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
