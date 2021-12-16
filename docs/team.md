@@ -2,7 +2,7 @@
 id: team
 title: Our (growing) team
 sidebar_label: Team
-sidebar_position: 4
+sidebar_position: 5
 ---
 **Disclaimer:** We're providing this info because we think it helps build trust to have our names and reputation behind this effort (we're not a rug pull). However we don't claim to be the "leaders" of this DAO, we're just helping guide it during its early life and then like proud parents will let it run free once it reaches maturity.
 

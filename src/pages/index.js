@@ -252,7 +252,7 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='https://juicebox.money/#/'
+                      href='/docs/token'
                       className='Button Primary Outlined'
                     >
                       Buy token

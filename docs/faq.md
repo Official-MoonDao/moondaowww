@@ -1,7 +1,7 @@
 ---
 id: faq
 title: FAQ
-sidebar_position: 2
+sidebar_position: 3
 ---
 ### Where are the funds going to be stored?
 We will use the same strategy as ConstitutionDAO for the initial fundraise for MoonDAO. We'll store the funds in a Gnosis multi-sig with some of the core contributors, and then use Juicebox's protocol to raise funds. Once we have a coin we will use a snapshot to make decisions as a DAO.

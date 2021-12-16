@@ -1,7 +1,7 @@
 ---
 id: launch-path
 title: Launch path
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 1. Create a safe using a Gnosis multi-sig protected via core team signers with Snapshot for voting.
