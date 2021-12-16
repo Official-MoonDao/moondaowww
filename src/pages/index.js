@@ -31,7 +31,8 @@ export default function Home() {
               </p>
               <div className='HeroButtonGroup'>
                 <a
-                  href='./docs/introduction'
+                  href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'
+                  target="_blank"
                   className='Button Big Primary Outlined'
                 >
                   Learn more
