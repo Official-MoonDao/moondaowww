@@ -65,3 +65,51 @@ code {
 .container {
   max-width: calc(1100px);
 }
+
+#homeTitle {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#moneyAmounts {
+  margin-left: 30px;
+}
+
+.progress {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1000px;
+  height: 40px;
+  background: #e1e4e8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
+  background-size: 300% 100%;
+  animation: progress-animation 2s linear infinite;
+  width: 0%;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+ .progressTitle {
+  font-weight: 900;
+  font-size: 2.5em;
+  letter-spacing: -2px;
+ }
+
+ #heroButton {
+   background-color: #5ce0d8;
+   color: black;
+ }
