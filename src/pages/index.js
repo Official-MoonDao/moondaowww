@@ -36,7 +36,7 @@ export default function Home() {
       const exchangeRate = value['USD'];
       console.log(exchangeRate);
 
-      const targetUSD = 1_000_000;
+      const targetUSD = 350_000;
       const usdRaised = (ethVal*exchangeRate).toFixed(0);
 
       const percentRaised = (usdRaised / targetUSD) * 100;
