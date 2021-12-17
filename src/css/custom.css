@@ -77,7 +77,6 @@ code {
 
 .progress {
   margin-top: 20px;
-  margin-left: 70px;
   margin-bottom: 40px;
   width: 100%;
   max-width: 1000px;
@@ -85,7 +84,6 @@ code {
   background: #e1e4e8;
   border-radius: 20px;
   overflow: hidden;
-  border-style: ridge;
 }
 
 .progress-bar {
@@ -94,7 +92,7 @@ code {
   background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
   background-size: 300% 100%;
   animation: progress-animation 2s linear infinite;
-  width: 66%;
+  width: 0%;
 }
 
 @keyframes progress-animation {
@@ -109,4 +107,9 @@ code {
   font-weight: 900;
   font-size: 2.5em;
   letter-spacing: -2px;
+ }
+
+ #heroButton {
+   background-color: #5ce0d8;
+   color: black;
  }
