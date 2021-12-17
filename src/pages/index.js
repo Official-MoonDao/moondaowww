@@ -36,7 +36,7 @@ export default function Home() {
       const exchangeRate = value['USD'];
       console.log(exchangeRate);
 
-      const targetUSD = 20_000_000;
+      const targetUSD = 1_000_000;
       const usdRaised = (ethVal*exchangeRate).toFixed(0);
 
       const percentRaised = (usdRaised / targetUSD) * 100;
@@ -69,7 +69,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'>...</span>
+                <span id='moneyAmounts'></span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
@@ -79,12 +79,14 @@ export default function Home() {
                   href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'
                   target="_blank"
                   className='Button Big Primary Outlined'
+                  id='heroButton'
                 >
                   Learn more
                 </a>
                 <a
                   href='/docs/token'
                   className='Button Big Primary Outlined'
+                  id='heroButton'
                 >
                   Buy token
                 </a>
