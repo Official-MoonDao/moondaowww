@@ -10,9 +10,47 @@ import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg"
 import "../css/global.scss";
 import "../css/home.scss";
 
+async function getMooney() {
+  const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=balance&address=0x2c1165Dd19723896e00De2603D0Dbc6834105fD9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
+  const content = await etherscanRawResponse.json();
+  return content;
+}
+
+async function getUSDExchangeRate() {
+  const rawResponse = await fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+  const content = await rawResponse.json();
+  return content;
+}
+
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+  getMooney().then((value) => {
+    var ethStr = String(value['result']);
+    ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
+    console.log(ethStr);
+
+    const ethVal = parseFloat(ethStr);
+
+    getUSDExchangeRate().then((value) => {
+      const exchangeRate = value['USD'];
+      console.log(exchangeRate);
+
+      const targetUSD = 20_000_000;
+      const usdRaised = (ethVal*exchangeRate).toFixed(0);
+
+      const percentRaised = (usdRaised / targetUSD) * 100;
+
+      const ethReadable = (ethVal).toFixed(2);
+      const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('progress-bar').style.width = `${percentRaised}%`;
+
+      document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+    });
+  });
+
   return (
     <Layout
       title={siteConfig.title}
@@ -21,14 +59,21 @@ export default function Home() {
       <div className='Home'>
         <div className='HomeHero'>
           <div className='BigHero'>
-            <div className='Block__Contents'>
-              <h1 className='daoColor'>
+            <div className='Block__Contents' id='homeTitle'>
+              <h1 className='daoColor' id='homeTitle'>
                 Buy $MOONEY to send a <br />
                 MoonDAO member to space in 2022.
               </h1>
               <p className='BigP'>
                 Our governance token launches on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
               </p>
+              <h2 className='daoColor' id='fundsRaised'>
+                Funds Raised:
+                <span id='moneyAmounts'>...</span>
+              </h2>
+              <div className='progress'>
+                <span className='progress-bar' id='progress-bar'></span>
+              </div>
               <div className='HeroButtonGroup'>
                 <a
                   href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'
