@@ -84,7 +84,7 @@ export default function Home() {
                   Learn more
                 </a>
                 <a
-                  href='/docs/token'
+                  href='https://juicebox.money/#/p/moondao'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
@@ -300,7 +300,7 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='/docs/token'
+                      href='https://juicebox.money/#/p/moondao'
                       className='Button Primary Outlined'
                     >
                       Buy token
