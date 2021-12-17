@@ -23,11 +23,11 @@ export default function Home() {
           <div className='BigHero'>
             <div className='Block__Contents'>
               <h1 className='daoColor'>
-                One small step for a DAO.<br />
-                One giant leap for DAO-kind.
+                Buy $MOONEY to send a <br />
+                MoonDAO member to space in 2022.
               </h1>
               <p className='BigP'>
-                MoonDAO's mission is to decentralize access to space.
+                Our governance token launches on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
               </p>
               <div className='HeroButtonGroup'>
                 <a
@@ -38,10 +38,10 @@ export default function Home() {
                   Learn more
                 </a>
                 <a
-                  href='#community'
+                  href='/docs/token'
                   className='Button Big Primary Outlined'
                 >
-                  Contribute
+                  Buy token
                 </a>
               </div>
             </div>
