@@ -11,7 +11,7 @@ import "../css/global.scss";
 import "../css/home.scss";
 
 async function getMooney() {
-  const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=balance&address=0x2c1165Dd19723896e00De2603D0Dbc6834105fD9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
+  const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
   const content = await etherscanRawResponse.json();
   return content;
 }
