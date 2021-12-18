@@ -1,8 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import axios from "axios";
-import Buffer from "buffer";
 
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
@@ -15,6 +13,7 @@ import "../css/home.scss";
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+  const axios = require('axios');
 
   axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
   .then(etherscanRawResponse => {
