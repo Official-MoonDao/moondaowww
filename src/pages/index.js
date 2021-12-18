@@ -63,15 +63,13 @@ export default function Home() {
               <p className='BigP'>
                 Our governance token launched on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
               </p>
-              {/*
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'></span>
+                <span id='moneyAmounts'> $111,584/$350,000 (28.28 ETH) </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
               </div>
-              */}
               <div className='HeroButtonGroup'>
                 <a
                   href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'
