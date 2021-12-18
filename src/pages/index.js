@@ -104,13 +104,12 @@ export default function Home() {
                 <p>
                   How will we do this?
                 </p>
-                <p><ol>
+                <ol>
                   <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
                   <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
                   <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
-                </p>
               </div>
             </div>
           </div>
