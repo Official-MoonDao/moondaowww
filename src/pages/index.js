@@ -25,7 +25,7 @@ const BrowserOnlyAxios = () => {
             console.log(ethStr);
 
             // const ethVal = parseFloat(ethStr);
-            const ethVal = 29.38;
+            const ethVal = 29.50;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
@@ -76,7 +76,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'> $115,702/$450,000 (29.17 ETH) </span>
+                <span id='moneyAmounts'> </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
