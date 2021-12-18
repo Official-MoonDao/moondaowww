@@ -65,7 +65,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'> $111,584/$350,000 (28.29 ETH) </span>
+                <span id='moneyAmounts'> $115,702/$350,000 (29.17 ETH) </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
