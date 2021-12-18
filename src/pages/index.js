@@ -73,11 +73,11 @@ export default function Home() {
                 MoonDAO member to space in 2022.
               </h1>
               <p className='BigP'>
-                Our governance token launches on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
+                Our governance token launched on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'></span>
+                <span id='moneyAmounts'> $115,702/$350,000 (29.17 ETH) </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
@@ -92,7 +92,7 @@ export default function Home() {
                   Learn more
                 </a>
                 <a
-                  href='/docs/token'
+                  href='https://juicebox.money/#/p/moondao'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
@@ -307,7 +307,7 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='/docs/token'
+                      href='https://juicebox.money/#/p/moondao'
                       className='Button Primary Outlined'
                     >
                       Buy token
