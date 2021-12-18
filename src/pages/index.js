@@ -1,42 +1,62 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import axios from 'axios';
 
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
 import DiscordSvg from "@site/static/img/Discord_alt.svg";
-import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg"
+import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg";
 
 import "../css/global.scss";
 import "../css/home.scss";
 
-async function getMooney() {
-  const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
-  const content = await etherscanRawResponse.json();
-  return content;
-}
+// async function getMooney() {
+//   axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
+//   .then(etherscanRawResponse => {
+//     console.log(etherscanRawResponse.data);
+//     const content = etherscanRawResponse.data;
+//     return content;
+//   });
+//   // const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xd569D3CCE55b71a8a3f3C418c329A66e5f714431&address=0xd569D3CCE55b71a8a3f3C418c329A66e5f714431&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
+//   // const content = await etherscanRawResponse.json();
+//   // return content;
+// } 
 
-async function getUSDExchangeRate() {
-  const rawResponse = await fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
-  const content = await rawResponse.json();
-  return content;
-}
+// async function getUSDExchangeRate() {
+//   axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+//   .then(rawResponse => {
+//     console.log(rawResponse.data);
+//     const content = rawResponse.data;
+//     return content;
+//   });
+//   // const rawResponse = await fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+//   // const content = await rawResponse.json();
+//   // return content;
+// }
 
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  getMooney().then((value) => {
-    var ethStr = String(value['result']);
+  
+  axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
+  .then(etherscanRawResponse => {
+    console.log(etherscanRawResponse.data);
+    var ethStr = etherscanRawResponse.data.result;
+    
     ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
     console.log(ethStr);
 
     const ethVal = parseFloat(ethStr);
 
-    getUSDExchangeRate().then((value) => {
-      const exchangeRate = value['USD'];
+    axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+    .then(rawResponse => {
+      console.log(rawResponse.data);
+      const exchangeRate = rawResponse.data.USD;
+      
       console.log(exchangeRate);
 
-      const targetUSD = 350_000;
+      const targetUSD = 450_000;
       const usdRaised = (ethVal*exchangeRate).toFixed(0);
 
       const percentRaised = (usdRaised / targetUSD) * 100;
@@ -50,6 +70,33 @@ export default function Home() {
       document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
     });
   });
+
+  // getMooney().then((value) => {
+  //   console.log(value);
+  //   var ethStr = String(value['result']);
+  //   ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
+  //   console.log(ethStr);
+
+  //   const ethVal = parseFloat(ethStr);
+
+  //   getUSDExchangeRate().then((value) => {
+  //     const exchangeRate = value['USD'];
+  //     console.log(exchangeRate);
+
+  //     const targetUSD = 450_000;
+  //     const usdRaised = (ethVal*exchangeRate).toFixed(0);
+
+  //     const percentRaised = (usdRaised / targetUSD) * 100;
+
+  //     const ethReadable = (ethVal).toFixed(2);
+  //     const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  //     const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  //     document.getElementById('progress-bar').style.width = `${percentRaised}%`;
+
+  //     document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+  //   });
+  // });
 
   return (
     <Layout
@@ -84,7 +131,7 @@ export default function Home() {
                   Learn more
                 </a>
                 <a
-                  href='https://juicebox.money/#/p/moondao'
+                  href='/docs/token'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
@@ -300,7 +347,7 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='https://juicebox.money/#/p/moondao'
+                      href='/docs/token'
                       className='Button Primary Outlined'
                     >
                       Buy token
