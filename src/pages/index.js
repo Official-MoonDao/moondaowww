@@ -7,14 +7,13 @@ import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
 import DiscordSvg from "@site/static/img/Discord_alt.svg";
 import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg";
-import axios from 'axios'
 
 import "../css/global.scss";
 import "../css/home.scss";
 
 const BrowserOnlyAxios = () => {
   return (
-    <BrowserOnly fallback={<div> Loading Nate.... </div>}>
+    <BrowserOnly fallback={<div> Loading... </div>}>
       {() => {
         const axios = require('axios')
         axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
