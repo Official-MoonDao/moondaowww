@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
@@ -10,48 +11,58 @@ import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg";
 import "../css/global.scss";
 import "../css/home.scss";
 
+const BrowserOnlyAxios = () => {
+  return (
+    <BrowserOnly fallback={<div> Loading... </div>}>
+      {() => {
+        const axios = require('axios')
+        axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
+          .then(etherscanRawResponse => {
+            console.log(etherscanRawResponse.data);
+            var ethStr = etherscanRawResponse.data.result;
+
+            ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
+            console.log(ethStr);
+
+            const ethVal = parseFloat(ethStr);
+
+            axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+              .then(rawResponse => {
+                console.log(rawResponse.data);
+                const exchangeRate = rawResponse.data.USD;
+
+                console.log(exchangeRate);
+
+                const targetUSD = 450_000;
+                const usdRaised = (ethVal * exchangeRate).toFixed(0);
+
+                const percentRaised = (usdRaised / targetUSD) * 100;
+
+                const ethReadable = (ethVal).toFixed(2);
+                const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+                // document.getElementById('progress-bar').style.width = `${percentRaised}%`;
+
+                // document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+              });
+          });
+      }}
+    </BrowserOnly>
+  )
+}
+
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  // const axios = require('axios');
-  //
-  // axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
-  // .then(etherscanRawResponse => {
-  //   console.log(etherscanRawResponse.data);
-  //   var ethStr = etherscanRawResponse.data.result;
-  //
-  //   ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
-  //   console.log(ethStr);
-  //   
-  //   const ethVal = parseFloat(ethStr);
-  //
-  //   axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
-  //   .then(rawResponse => {
-  //     console.log(rawResponse.data);
-  //     const exchangeRate = rawResponse.data.USD;
-  //
-  //     console.log(exchangeRate);
-  //
-  //     const targetUSD = 450_000;
-  //     const usdRaised = (ethVal*exchangeRate).toFixed(0);
-  //
-  //     const percentRaised = (usdRaised / targetUSD) * 100;
-  //
-  //     const ethReadable = (ethVal).toFixed(2);
-  //     const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  //     const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  //
-  //     document.getElementById('progress-bar').style.width = `${percentRaised}%`;
-  //
-  //     document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
-  //   });
-  // });
 
   return (
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
+      <BrowserOnlyAxios>
+      </BrowserOnlyAxios>
       <div className='Home'>
         <div className='HomeHero'>
           <div className='BigHero'>
@@ -64,7 +75,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'> $115,702/$350,000 (29.17 ETH) </span>
+                <span id='moneyAmounts'> $115,702/$450,000 (29.17 ETH) </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
