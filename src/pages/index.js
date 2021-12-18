@@ -24,7 +24,8 @@ const BrowserOnlyAxios = () => {
             ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
             console.log(ethStr);
 
-            const ethVal = parseFloat(ethStr);
+            // const ethVal = parseFloat(ethStr);
+            const ethVal = 29.38;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
@@ -42,9 +43,9 @@ const BrowserOnlyAxios = () => {
                 const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-                // document.getElementById('progress-bar').style.width = `${percentRaised}%`;
+                document.getElementById('progress-bar').style.width = `${percentRaised}%`;
 
-                // document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+                document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
               });
           });
       }}
