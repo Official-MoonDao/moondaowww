@@ -10,42 +10,60 @@ import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg";
 import "../css/global.scss";
 import "../css/home.scss";
 
+// async function getMooney() {
+//   axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
+//   .then(etherscanRawResponse => {
+//     console.log(etherscanRawResponse.data);
+//     const content = etherscanRawResponse.data;
+//     return content;
+//   });
+//   // const etherscanRawResponse = await fetch("https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xd569D3CCE55b71a8a3f3C418c329A66e5f714431&address=0xd569D3CCE55b71a8a3f3C418c329A66e5f714431&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS");
+//   // const content = await etherscanRawResponse.json();
+//   // return content;
+// } 
+
+// async function getUSDExchangeRate() {
+//   axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+//   .then(rawResponse => {
+//     console.log(rawResponse.data);
+//     const content = rawResponse.data;
+//     return content;
+//   });
+//   // const rawResponse = await fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+//   // const content = await rawResponse.json();
+//   // return content;
+// }
+
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  const axios = require('axios');
 
-  axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
-  .then(etherscanRawResponse => {
-    console.log(etherscanRawResponse.data);
-    var ethStr = etherscanRawResponse.data.result;
+  // getMooney().then((value) => {
+  //   console.log(value);
+  //   var ethStr = String(value['result']);
+  //   ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
+  //   console.log(ethStr);
 
-    ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
-    console.log(ethStr);
+  //   const ethVal = parseFloat(ethStr);
 
-    const ethVal = parseFloat(ethStr);
+  //   getUSDExchangeRate().then((value) => {
+  //     const exchangeRate = value['USD'];
+  //     console.log(exchangeRate);
 
-    axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
-    .then(rawResponse => {
-      console.log(rawResponse.data);
-      const exchangeRate = rawResponse.data.USD;
+  //     const targetUSD = 450_000;
+  //     const usdRaised = (ethVal*exchangeRate).toFixed(0);
 
-      console.log(exchangeRate);
+  //     const percentRaised = (usdRaised / targetUSD) * 100;
 
-      const targetUSD = 450_000;
-      const usdRaised = (ethVal*exchangeRate).toFixed(0);
+  //     const ethReadable = (ethVal).toFixed(2);
+  //     const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  //     const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-      const percentRaised = (usdRaised / targetUSD) * 100;
+  //     document.getElementById('progress-bar').style.width = `${percentRaised}%`;
 
-      const ethReadable = (ethVal).toFixed(2);
-      const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-      document.getElementById('progress-bar').style.width = `${percentRaised}%`;
-
-      document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
-    });
-  });
+  //     document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+  //   });
+  // });
 
   return (
     <Layout
@@ -65,7 +83,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'></span>
+                <span id='moneyAmounts'>$111,032/$350,000 (28.17 ETH)</span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
@@ -80,7 +98,7 @@ export default function Home() {
                   Learn more
                 </a>
                 <a
-                  href='/docs/token'
+                  href='https://juicebox.money/#/p/moondao'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
@@ -102,12 +120,13 @@ export default function Home() {
                 <p>
                   How will we do this?
                 </p>
-                <ol>
+                <p><ol>
                   <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
                   <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
                   <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
+                </p>
               </div>
             </div>
           </div>
