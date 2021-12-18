@@ -57,12 +57,12 @@ export default function Home() {
           <div className='BigHero'>
             <div className='Block__Contents' id='homeTitle'>
               <h1 className='daoColor' id='homeTitle'>
-                Buy $MOONEY to send a <br />
-                MoonDAO member to space in 2022.
+                The future of space colonization should be in the hands of the people
               </h1>
               <p className='BigP'>
-                Our governance token launched on <strong>Friday, December 17, 2021</strong>. Join MoonDAO and get involved for a chance to be sent into low earth orbit in 2022!
+                Buy $MOONEY to send a MoonDAO member to space in 2022, create decentralized funding for space research and exploration, and ultimately go to the moon!
               </p>
+              <br/><br/>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
                 <span id='moneyAmounts'> $115,702/$350,000 (29.17 ETH) </span>
