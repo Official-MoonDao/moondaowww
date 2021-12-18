@@ -22,7 +22,7 @@ export default function Home() {
   //
   //   ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
   //   console.log(ethStr);
-  //
+  //   
   //   const ethVal = parseFloat(ethStr);
   //
   //   axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
@@ -65,7 +65,7 @@ export default function Home() {
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
-                <span id='moneyAmounts'> $111,584/$350,000 (28.28 ETH) </span>
+                <span id='moneyAmounts'> $111,584/$350,000 (28.29 ETH) </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
