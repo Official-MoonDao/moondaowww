@@ -60,7 +60,7 @@ export default function Home() {
                 The future of space colonization should be in the hands of the people.
               </h1>
               <p className='BigP'>
-                Buy $MOONEY to send a MoonDao member to space in 2022, create decentralized funding for space research and exploration, and ultimately go to the moon!
+                Buy $MOONEY to send a MoonDAO member to space in 2022, create decentralized funding for space research and exploration, and ultimately go to the moon!
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
