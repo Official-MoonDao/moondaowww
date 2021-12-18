@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import axios from 'axios';
+import axios from "axios";
+import Buffer from "buffer";
 
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
@@ -14,12 +15,12 @@ import "../css/home.scss";
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  
+
   axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
   .then(etherscanRawResponse => {
     console.log(etherscanRawResponse.data);
     var ethStr = etherscanRawResponse.data.result;
-    
+
     ethStr = ethStr.substring(0, ethStr.length - 18) + "." + ethStr.substring(ethStr.length - 18, ethStr.length);
     console.log(ethStr);
 
@@ -29,7 +30,7 @@ export default function Home() {
     .then(rawResponse => {
       console.log(rawResponse.data);
       const exchangeRate = rawResponse.data.USD;
-      
+
       console.log(exchangeRate);
 
       const targetUSD = 450_000;
@@ -102,13 +103,12 @@ export default function Home() {
                 <p>
                   How will we do this?
                 </p>
-                <p><ol>
+                <ol>
                   <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
                   <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
                   <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
-                </p>
               </div>
             </div>
           </div>
