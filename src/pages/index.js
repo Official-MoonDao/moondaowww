@@ -17,7 +17,7 @@ const BrowserOnlyAxios = () => {
       {() => {
         const axios = require('axios');
         // const Web3 = require('web3');
-        // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+        // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");    
 
         // var JBContract = web3.eth.contract(abi);
         // var JBContractInstance = JBContract.at('0xd569D3CCE55b71a8a3f3C418c329A66e5f714431');
@@ -33,7 +33,7 @@ const BrowserOnlyAxios = () => {
             console.log(ethStr);
 
             // const ethVal = parseFloat(ethStr);
-            const ethVal = 32.76;
+            const ethVal = 33.06;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
