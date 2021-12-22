@@ -77,10 +77,10 @@ export default function Home() {
           <div className='BigHero'>
             <div className='Block__Contents' id='homeTitle'>
               <h1 className='daoColor' id='homeTitle'>
-                The future of space exploration should be in the hands of the people.
+                Send a MoonDAO member to space
               </h1>
               <p className='BigP'>
-                Buy $MOONEY to send a MoonDAO member to space in 2022, create decentralized funding for space research and exploration, and ultimately go to the moon!
+                Buy $MOONEY to join MoonDAO and send a fren to space in 2022!
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
@@ -113,18 +113,11 @@ export default function Home() {
           <div className='Block__Contents'>
             <div className='Row'>
               <div className='Column--100'>
-                <h5>2022 goal</h5>
-                <h3>Our goal in 2022 is to send a MoonDAO member to space.</h3>
-                <p>
-                  So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO fixes this.
-                </p>
-                <p>
-                  How will we do this?
-                </p>
+                <h3>Our plan to send a MoonDAO member to space in 2022:</h3>
                 <ol>
-                  <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
-                  <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
-                  <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
+                  <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens</strong></li>
+                  <li>Release <strong>Ticket to Space</strong> NFT collection. These NFTs will put you into a lottery to fly to space in 2022.</li>
+                  <li>Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
               </div>
@@ -140,18 +133,15 @@ export default function Home() {
                   MoonDAO is going to the moon.
                 </h2>
                 <p>
-                  Many coins talk about going to the moon, but what if we
-                  <strong> literally </strong>sent MoonDAO members to the moon — and collectively governed our colony as a Decentralized Autonomous Organization?
-                </p>
-                <p>
-                  Rather than have the moon and other celestial bodies lie in
-                  the hands of a few private organizations (SpaceX, Blue
-                  Origin), we believe that an international, decentralized,
-                  inclusive, and transparent organization would be more
-                  equitable and fair. We do not believe in "emperors of the
-                  moon" or "CEOs of space," but instead we believe in
-                  extending the unalienable rights of citizens of planet
-                  earth to the solar system and beyond.
+                  MoonDAO is an international collective of people united by
+                  the mission of decentralizing access to space research and 
+                  exploration. We are currently living at the inflection point
+                  of a privatized space race, and the implications of this
+                  exponential will define our future. Making life multi-planetary
+                  is one of the most inspiring and important missions in our lifetime,
+                  the big question is: how? We believe that an international,
+                  decentralized, inclusive, and transparent organization would
+                  be much better aligned with the needs of the everyday person.
                 </p>
                 <blockquote>
                   <p>
