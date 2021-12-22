@@ -80,9 +80,9 @@ code {
   margin-bottom: 0px;
   width: 100%;
   max-width: 1000px;
-  height: 70px;
+  height: 50px;
   background: #e1e4e8;
-  border-radius: 40px;
+  border-radius: 25px;
   overflow: hidden;
 }
 
@@ -118,3 +118,11 @@ code {
    background-color: #5ce0d8;
    color: black;
  }
+
+ #MoonPhase {
+   margin-top: 20px;
+ }
+
+ #MoonPhase5 {
+  margin-top: 5px;
+}
