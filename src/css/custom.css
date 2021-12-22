@@ -118,3 +118,11 @@ code {
    background-color: #5ce0d8;
    color: black;
  }
+
+ #MoonPhase {
+   margin-top: 20px;
+ }
+
+ #MoonPhase5 {
+  margin-top: 5px;
+}
