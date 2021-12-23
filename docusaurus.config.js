@@ -34,7 +34,7 @@ module.exports = {
     navbar: {
       title: "MoonDAO",
       logo: {
-        alt: "MoonDAO Logo",
+        alt: "MoonDAO Logo moon dao",
         src: "img/logo-50px.png",
       },
       hideOnScroll: true,
@@ -76,7 +76,7 @@ module.exports = {
         },
       ],
       logo: {
-        alt: "MoonDAO logo",
+        alt: "MoonDAO logo moondao moon dao",
         src: "img/logo-50px.png",
       },
       copyright: `Copyright © ${new Date().getFullYear()} MoonDAO.`,
