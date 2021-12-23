@@ -33,7 +33,7 @@ const BrowserOnlyAxios = () => {
             console.log(ethStr);
 
             // const ethVal = parseFloat(ethStr);
-            const ethVal = 35.45;
+            const ethVal = 37.18;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
@@ -115,8 +115,8 @@ export default function Home() {
               <div className='Column--100'>
                 <h3>Our plan to send a MoonDAO member to space in 2022:</h3>
                 <ol>
-                  <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens</strong></li>
-                  <li>Release <strong>Ticket to Space</strong> NFT collection. These NFTs will put you into a lottery to fly to space in 2022.</li>
+                  <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens.</strong></li>
+                  <li>Release the<strong>Ticket to Space</strong> NFT collection. These NFTs will give you a chance to fly to space in 2022.</li>
                   <li>Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
