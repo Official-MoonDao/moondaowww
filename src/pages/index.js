@@ -361,7 +361,7 @@ export default function Home() {
               </div>
               <div className='Column--50'>
                 <p className='center'>
-                  <img width='75%' src='img/undraw_launch_day_4e04.svg' />
+                  <img width='75%' src='img/undraw_launch_day_4e04.svg' alt='moodao logo'/>
                 </p>
               </div>
             </div>
