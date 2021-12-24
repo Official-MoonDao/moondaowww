@@ -33,7 +33,7 @@ const BrowserOnlyAxios = () => {
             console.log(ethStr);
 
             // const ethVal = parseFloat(ethStr);
-            const ethVal = 33.06;
+            const ethVal = 37.18;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
@@ -77,10 +77,10 @@ export default function Home() {
           <div className='BigHero'>
             <div className='Block__Contents' id='homeTitle'>
               <h1 className='daoColor' id='homeTitle'>
-                The future of space exploration should be in the hands of the people.
+                Send a MoonDAO member to space
               </h1>
               <p className='BigP'>
-                Buy $MOONEY to send a MoonDAO member to space in 2022, create decentralized funding for space research and exploration, and ultimately go to the moon!
+                Buy $MOONEY to join MoonDAO and send a fren to space in 2022!
               </p>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
@@ -113,18 +113,11 @@ export default function Home() {
           <div className='Block__Contents'>
             <div className='Row'>
               <div className='Column--100'>
-                <h5>2022 goal</h5>
-                <h3>Our goal in 2022 is to send a MoonDAO member to space.</h3>
-                <p>
-                  So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO fixes this.
-                </p>
-                <p>
-                  How will we do this?
-                </p>
+                <h3>Our plan to send a MoonDAO member to space in 2022:</h3>
                 <ol>
-                  <li>Offer governance tokens to begin decentralized community governance and fund our first mission of sending MoonDAO members to space. <strong>This will be our one and only token supply</strong> creation, and we will not create more tokens, yes our token will have fixed supply.</li>
-                  <li>Release <em>Ticket to Space</em> NFT collection. These NFTs will put you into a lottery to be a candidate to fly to space in 2022.</li>
-                  <li>The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
+                  <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens.</strong></li>
+                  <li>Release the<strong>Ticket to Space</strong> NFT collection. These NFTs will give you a chance to fly to space in 2022.</li>
+                  <li>Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
               </div>
@@ -140,18 +133,15 @@ export default function Home() {
                   MoonDAO is going to the moon.
                 </h2>
                 <p>
-                  Many coins talk about going to the moon, but what if we
-                  <strong> literally </strong>sent MoonDAO members to the moon — and collectively governed our colony as a Decentralized Autonomous Organization?
-                </p>
-                <p>
-                  Rather than have the moon and other celestial bodies lie in
-                  the hands of a few private organizations (SpaceX, Blue
-                  Origin), we believe that an international, decentralized,
-                  inclusive, and transparent organization would be more
-                  equitable and fair. We do not believe in "emperors of the
-                  moon" or "CEOs of space," but instead we believe in
-                  extending the unalienable rights of citizens of planet
-                  earth to the solar system and beyond.
+                  MoonDAO is an international collective of people united by
+                  the mission of decentralizing access to space research and 
+                  exploration. We are currently living at the inflection point
+                  of a privatized space race, and the implications of this
+                  exponential will define our future. Making life multi-planetary
+                  is one of the most inspiring and important missions in our lifetime,
+                  the big question is: how? We believe that an international,
+                  decentralized, inclusive, and transparent organization would
+                  be much better aligned with the needs of the everyday person.
                 </p>
                 <blockquote>
                   <p>
@@ -177,17 +167,21 @@ export default function Home() {
                 </p>
                 <p>
                   As such, MoonDAO will support funding for individuals to go
-                  to space, acquisition and governance of symbolic assets (like
-                  lunar asteroids, or the lunar manual used in the first space
-                  mission), and fund future space research and exploration as
+                  to space and fund future space research and exploration as
                   it fits into the mission of becoming a governing body for the
                   moon and other celestial bodies.
+                </p>
+                <p>
+                  It is very important to note that the core team has not pre-mined
+                  any tokens for ourselves. We have not given “special terms” to any 
+                  Venture Capitalists, Influencers, Angel Investors, Rich Friends or 
+                  Family, or any other person. We are all being treated equally.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className='Roadmap Block PrimaryBg'>
+        <div className='Roadmap Block PrimaryBg' id='MoonPhase'>
           <div className='Block__Contents'>
             <h5>Moon Phases</h5>
             <h3>Our roadmap to the stars.</h3>
@@ -195,17 +189,19 @@ export default function Home() {
               <div className='Column--66'>
                 <h4>Moon phase 1</h4>
                 <p>
-                  <strong>Raise funds to send people to space and progress space research
-                  and exploration</strong>
+                  <strong>Deploy a token for decentralized governance of MoonDAO.</strong>
                 </p>
                 <p className='small'>
-                  We'll raise funds with a juicebox.money crowdfund that will
-                  go into a multi-sig controlled by a trusted group of people,
-                  in exchange you'll receive governance tokens for MoonDAO. The
-                  money contributed is a donation, and there is no expectation
-                  of profit, and you are not receiving fractionalized ownership
-                  of our assets, but governance rights for the assets we hold
-                  and governance of the DAO treasury.
+                  In order to be a DAO, we need a governance token for decision making. 
+                  This is our first step. There is no expectation of profit with this token, 
+                  this token’s purpose is to coordinate our governance.
+                </p>
+                <p className='small'>
+                  Every investor, builder, or fren, big or small, has gotten the same terms. 
+                  No special treatment for anyone. This is unusual for an Ethereum project, 
+                  but we thought it would be more fair for everyone involved that we did not 
+                  airdrop or pre-mine any number of tokens for people ahead of time. We are 
+                  not VC funded, we are community organized and led, this is very important to us!
                 </p>
               </div>
               <div className='Column--33'>
@@ -215,19 +211,24 @@ export default function Home() {
               </div>
 
             </div>
-            <div className='Row AlignCenter'>
+            <div className='Row AlignCenter' id='MoonPhase'>
               <div className='Column--66'>
                 <h4>Moon phase 2</h4>
                 <p>
                   <strong>Send a MoonDAO member to space.</strong>
                 </p>
                 <p className='small'>
-                  We're in the midst of a privatized space race. Whether it's
-                  SpaceX, Blue Origin or Virgin Galactic- we want front row
-                  seats (literally!). Virgin Galactic has sold tickets for
-                  $250K and it's been reported that Blue Origin will sell
-                  tickets in the range of $300K-$400K. MoonDAO wants to help
-                  create a world where anyone can fly to space &mdash; regardless of background. We hope that this can be a meaningful and inspirational first step in decentralizing space exploration.
+                  Virgin Galactic advertises its tickets will be sold for “as low as” $450K 
+                  and it has been reported that Blue Origin’s tickets are have gone up for 
+                  auction for over $28M. The range is large. MoonDAO wants to help create a 
+                  world where anyone can fly to space regardless of their financial situation. 
+                  We hope that this can be a meaningful and inspirational first step in 
+                  decentralizing space exploration.
+                </p>
+                <p className='small'>
+                  So far in history, space exploration has been gated to the rest of the world 
+                  — accessible to only the privileged. MoonDAO changes this for the first time 
+                  in history.
                 </p>
               </div>
               <div className='Column--33'>
@@ -236,19 +237,25 @@ export default function Home() {
                </p>
               </div>
             </div>
-            <div className='Row AlignCenter'>
+            <div className='Row AlignCenter' id='MoonPhase'>
               <div className='Column--66'>
                 <h4>Moon phase 3</h4>
                 <p>
                   <strong>Provide funding to space research and exploration.</strong>
                 </p>
                 <p className='small'>
-                  The exploration of space should unify the world &mdash; not pit us against each other like the last space race. After all,
-                  aren't we all just curious earthlings that want to explore
-                  the unknown? Now, Web 3.0 represents a technology that can
-                  unify earthlings and decentralize space exploration. Moon
-                  Phase 4 begins MoonDAOs ambitious goal of being the DAO
-                  that does just that.
+                  We don’t want to just take a ride on someone else’s rockets, 
+                  we’d like to fund and coordinate our own plans. We think an 
+                  international collective could move much faster than any red-taped 
+                  organization, and we can contract out certain aspects of rocket 
+                  development to private companies -- just like NASA.
+                </p>
+                <p className='small'>
+                  The exploration of space should unify the world, not pit us against 
+                  each other like the last space race. After all, aren't we all just 
+                  curious earthlings that want to explore the unknown? Now, Web 3.0 
+                  represents a technology that can unify earthlings and decentralize 
+                  space exploration.
                 </p>
               </div>
               <div className='Column--33'>
@@ -257,7 +264,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className='Row AlignCenter'>
+            <div className='Row AlignCenter' id='MoonPhase'>
               <div className='Column--66'>
                 <h4>Moon phase 4</h4>
                 <p>
@@ -267,11 +274,15 @@ export default function Home() {
                   That's one small step for man, one giant leap for mankind.
                 </p>
                 <p className='small'>
-                  The 1967 Space Treaty forms the basis for all law concerning
-                  space. In this treaty it states that no
-                  <strong> national </strong>
-                  appropriation of the moon can take place. However, a DAO is
-                  not a nation — it is an international collective.
+                  The 1967 Space Treaty forms the basis for all law concerning 
+                  space. In this treaty it states that no national appropriation 
+                  of the Moon can take place. However, a DAO is not a nation — it 
+                  is an international collective of frens.
+                </p>
+                <p className='small'>
+                  We have the opportunity to use these new governance and coordination 
+                  tools in order to form a more perfect union as we extend the rights 
+                  and liberties of every human on earth into the solar system.
                 </p>
               </div>
               <div className='Column--33'>
@@ -280,7 +291,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className='Row AlignCenter'>
+            <div className='Row AlignCenter' id='MoonPhase5'>
               <div className='Column--66'>
                 <h4>Moon phase 5</h4>
                 <p>
@@ -350,7 +361,7 @@ export default function Home() {
               </div>
               <div className='Column--50'>
                 <p className='center'>
-                  <img width='75%' src='img/undraw_launch_day_4e04.svg' />
+                  <img width='75%' src='img/undraw_launch_day_4e04.svg' alt='moodao logo'/>
                 </p>
               </div>
             </div>
