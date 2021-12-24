@@ -1,6 +1,8 @@
 ---
 id: contribute
-title: How to contribute
+title: How to contribute to MoonDAO
+description: Learn how to contribute to MoonDAO, understand Progressive Governance, and Titles and their Subject Roles.
+keywords: [Contribute, Progressive Governance, Titles, Astronauts, Cosmonauts, Rocketeers, Moon Settlers, Earthlings, Subject Roles, Decentralization]
 sidebar_label: Contribute
 sidebar_position: 6
 ---

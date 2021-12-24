@@ -1,6 +1,8 @@
 ---
 id: introduction
 title: Introduction
+description: Get introduced to MoonDAO and our Mission
+keywords: [Introduction, MoonDAO, Documentation, Team, Information, Goals, Mission]
 sidebar_position: 1
 ---
 
