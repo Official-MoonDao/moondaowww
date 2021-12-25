@@ -33,7 +33,7 @@ const BrowserOnlyAxios = () => {
             console.log(ethStr);
 
             // const ethVal = parseFloat(ethStr);
-            const ethVal = 37.18;
+            const ethVal = 38.19;
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
