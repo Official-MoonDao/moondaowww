@@ -22,5 +22,8 @@ No. You are receiving a governance token, not fractionalized ownership. Governan
 ### Will the core team receive any of the raised funds for themselves or get compensated in any way from this?
 The core team has not received or pre-minted any tokens. We just want this to exist, we're not doing this for the money. If you want to tip anyone in the community with NFT-memes or give individuals something for their hard work, that's up to you. We don't see much of a distinction between the core-contributors and the rest of the people. Eventually we hope there is no distinction in the long term and the community and core contributors have the same powers.
 
+### Why is there a 50% reserve on the token?
+The 50% reserve will be goverened by the $MOONEY holders, and can be used to pay contributors for their work on MoonDAO going forward, or could be even be burned if that is the wish of the community. We're not going to dump that reserve on secondary markets and dilute anyone without the consent of the $MOONEY holders. We belieive that the holders of the $MOONEY will likely only do things that doesn't hurt their interest, and that this is more fair letting the DAO deflate the holders by minting more $MOONEY with no supply cap. Rather, we wanted to set a supply limit and leave the DAO with some portion to distribute for work done for the DAO -- so $MOONEY holders can only ever get diluted up to a specific limit, and this affords them more proteciton.
+
 ### How will governance work?
 We are looking into using a similar method of governance as the Green Bay Packers. Votes will be proportional to the amount of tokens you have, but capped at 4% of the total vote. This means that the MoonDAO governance will be decentralized.
