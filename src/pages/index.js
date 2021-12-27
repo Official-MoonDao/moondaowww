@@ -17,7 +17,7 @@ const BrowserOnlyAxios = () => {
       {() => {
         const axios = require('axios');
         // const Web3 = require('web3');
-        // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");    
+        // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
 
         // var JBContract = web3.eth.contract(abi);
         // var JBContractInstance = JBContract.at('0xd569D3CCE55b71a8a3f3C418c329A66e5f714431');
@@ -134,14 +134,11 @@ export default function Home() {
                 </h2>
                 <p>
                   MoonDAO is an international collective of people united by
-                  the mission of decentralizing access to space research and 
+                  the mission of decentralizing access to space research and
                   exploration. We are currently living at the inflection point
                   of a privatized space race, and the implications of this
-                  exponential will define our future. Making life multi-planetary
-                  is one of the most inspiring and important missions in our lifetime,
-                  the big question is: how? We believe that an international,
-                  decentralized, inclusive, and transparent organization would
-                  be much better aligned with the needs of the everyday person.
+                  moment will define our future. Making life multi-planetary
+                  is one of the most inspiring and important missions in our lifetime. The big question is: how? We believe that an international, decentralized, inclusive, and transparent organization would be much better aligned with the needs of the everyday person.
                 </p>
                 <blockquote>
                   <p>
@@ -173,8 +170,8 @@ export default function Home() {
                 </p>
                 <p>
                   It is very important to note that the core team has not pre-mined
-                  any tokens for ourselves. We have not given “special terms” to any 
-                  Venture Capitalists, Influencers, Angel Investors, Rich Friends or 
+                  any tokens for ourselves. We have not given “special terms” to any
+                  Venture Capitalists, Influencers, Angel Investors, Rich Friends or
                   Family, or any other person. We are all being treated equally.
                 </p>
               </div>
@@ -192,15 +189,15 @@ export default function Home() {
                   <strong>Deploy a token for decentralized governance of MoonDAO.</strong>
                 </p>
                 <p className='small'>
-                  In order to be a DAO, we need a governance token for decision making. 
-                  This is our first step. There is no expectation of profit with this token, 
+                  In order to be a DAO, we need a governance token for decision making.
+                  This is our first step. There is no expectation of profit with this token,
                   this token’s purpose is to coordinate our governance.
                 </p>
                 <p className='small'>
-                  Every investor, builder, or fren, big or small, has gotten the same terms. 
-                  No special treatment for anyone. This is unusual for an Ethereum project, 
-                  but we thought it would be more fair for everyone involved that we did not 
-                  airdrop or pre-mine any number of tokens for people ahead of time. We are 
+                  Every investor, builder, or fren, big or small, has gotten the same terms.
+                  No special treatment for anyone. This is unusual for an Ethereum project,
+                  but we thought it would be more fair for everyone involved that we did not
+                  airdrop or pre-mine any number of tokens for people ahead of time. We are
                   not VC funded, we are community organized and led, this is very important to us!
                 </p>
               </div>
@@ -218,16 +215,16 @@ export default function Home() {
                   <strong>Send a MoonDAO member to space.</strong>
                 </p>
                 <p className='small'>
-                  Virgin Galactic advertises its tickets will be sold for “as low as” $450K 
-                  and it has been reported that Blue Origin’s tickets are have gone up for 
-                  auction for over $28M. The range is large. MoonDAO wants to help create a 
-                  world where anyone can fly to space regardless of their financial situation. 
-                  We hope that this can be a meaningful and inspirational first step in 
+                  Virgin Galactic advertises its tickets will be sold for “as low as” $450K
+                  and it has been reported that Blue Origin’s tickets are have gone up for
+                  auction for over $28M. The range is large. MoonDAO wants to help create a
+                  world where anyone can fly to space regardless of their financial situation.
+                  We hope that this can be a meaningful and inspirational first step in
                   decentralizing space exploration.
                 </p>
                 <p className='small'>
-                  So far in history, space exploration has been gated to the rest of the world 
-                  — accessible to only the privileged. MoonDAO changes this for the first time 
+                  So far in history, space exploration has been gated to the rest of the world
+                  — accessible to only the privileged. MoonDAO changes this for the first time
                   in history.
                 </p>
               </div>
@@ -244,17 +241,17 @@ export default function Home() {
                   <strong>Provide funding to space research and exploration.</strong>
                 </p>
                 <p className='small'>
-                  We don’t want to just take a ride on someone else’s rockets, 
-                  we’d like to fund and coordinate our own plans. We think an 
-                  international collective could move much faster than any red-taped 
-                  organization, and we can contract out certain aspects of rocket 
+                  We don’t want to just take a ride on someone else’s rockets,
+                  we’d like to fund and coordinate our own plans. We think an
+                  international collective could move much faster than any red-taped
+                  organization, and we can contract out certain aspects of rocket
                   development to private companies -- just like NASA.
                 </p>
                 <p className='small'>
-                  The exploration of space should unify the world, not pit us against 
-                  each other like the last space race. After all, aren't we all just 
-                  curious earthlings that want to explore the unknown? Now, Web 3.0 
-                  represents a technology that can unify earthlings and decentralize 
+                  The exploration of space should unify the world, not pit us against
+                  each other like the last space race. After all, aren't we all just
+                  curious earthlings that want to explore the unknown? Now, Web 3.0
+                  represents a technology that can unify earthlings and decentralize
                   space exploration.
                 </p>
               </div>
@@ -274,14 +271,14 @@ export default function Home() {
                   That's one small step for man, one giant leap for mankind.
                 </p>
                 <p className='small'>
-                  The 1967 Space Treaty forms the basis for all law concerning 
-                  space. In this treaty it states that no national appropriation 
-                  of the Moon can take place. However, a DAO is not a nation — it 
+                  The 1967 Space Treaty forms the basis for all law concerning
+                  space. In this treaty it states that no national appropriation
+                  of the Moon can take place. However, a DAO is not a nation — it
                   is an international collective of frens.
                 </p>
                 <p className='small'>
-                  We have the opportunity to use these new governance and coordination 
-                  tools in order to form a more perfect union as we extend the rights 
+                  We have the opportunity to use these new governance and coordination
+                  tools in order to form a more perfect union as we extend the rights
                   and liberties of every human on earth into the solar system.
                 </p>
               </div>
