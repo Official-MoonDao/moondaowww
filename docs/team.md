@@ -1,6 +1,8 @@
 ---
 id: team
 title: Our (growing) team
+description: Get to know our growing team of Contributors.
+keywords: [Contributors, Team, Core Team, Progressive Governance, Titles, Astronauts, Cosmonauts, Rocketeers, Moon Settlers, Earthlings, Subject Roles]
 sidebar_label: Team
 sidebar_position: 5
 ---

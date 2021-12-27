@@ -1,6 +1,8 @@
 ---
 id: token
 title: The $MOONEY token
+description: Learn more about the $MOONEY token, and how you can help fund the decentralization of space travel.
+keywords: [Token, Tokenomics, Distribution, Multi-Sig, Juicebox, Donations, MoonDAO, MOONEY, Space Travel]
 sidebar_label: $MOONEY token
 sidebar_position: 2
 ---

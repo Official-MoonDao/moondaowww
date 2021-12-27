@@ -1,6 +1,8 @@
 ---
 id: launch-path
 title: Launch path
+description: Learn More about MoonDAO's Launch Path, and  get to know our Mission.
+keywords: [MoonDAO, Launch Path, Goals, Mission, Phases, Roadmap, Member in Space, Cost, Funding, Research and Development, Exploration, Moon Parties]
 sidebar_position: 4
 ---
 
