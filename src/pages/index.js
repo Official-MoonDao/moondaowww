@@ -116,7 +116,7 @@ export default function Home() {
                 <h3>Our plan to send a MoonDAO member to space in 2022:</h3>
                 <ol>
                   <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens.</strong></li>
-                  <li>Release the<strong>Ticket to Space</strong> NFT collection. These NFTs will give you a chance to fly to space in 2022.</li>
+                  <li>Release the <strong>Ticket to Space</strong> NFT collection. These NFTs will give you a chance to fly to space in 2022.</li>
                   <li>Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
                 </ol>
