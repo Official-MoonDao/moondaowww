@@ -1,6 +1,8 @@
 ---
 id: contribute
-title: How to contribute
+title: How to contribute to MoonDAO
+description: Learn how to contribute to MoonDAO, understand Progressive Governance, and Titles and their Subject Roles.
+keywords: [Contribute, Progressive Governance, Titles, Astronauts, Cosmonauts, Rocketeers, Moon Settlers, Earthlings, Subject Roles, Decentralization]
 sidebar_label: Contribute
 sidebar_position: 6
 ---
@@ -10,6 +12,7 @@ If you have any more questions, or would like to hang out with the community and
 
 - [Discord](https://discord.gg/RpDEtQHcPw)
 - [Twitter](https://twitter.com/OfficialMoonDAO)
+- [Github] (https://github.com/Official-MoonDao/moondaowww)
 
 ## Progressive Governance
 
@@ -17,11 +20,11 @@ Our Progressive governance model enables anyone to contribute to the DAO.
 
 ## Titles Include: 
 
-**@Astronaut** - (Temporary) leaders and administrators of MoonDAO
-**@Cosmonauts** - Members of the MoonDAO Core Team
-**@Rocketeers** - Members of the MoonDAO Preliminary Core Team
-**@Moon Settlers** - Moderators and key contributors to MoonDAO
-**@Earthlings** - Verified members of MoonDAO
+- **@Astronaut** - (Temporary) leaders and administrators of MoonDAO
+- **@Cosmonauts** - Members of the MoonDAO Core Team
+- **@Rocketeers** - Members of the MoonDAO Preliminary Core Team
+- **@Moon Settlers** - Moderators and key contributors to MoonDAO
+- **@Earthlings** - Verified members of MoonDAO
 
 ## Subject Roles
 Here are some of the ways you can specialise in MoonDAO:
