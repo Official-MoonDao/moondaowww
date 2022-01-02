@@ -25,27 +25,39 @@ const BrowserOnlyAxios = () => {
         // console.log(JBContractInstance);
 
         axios.get("https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xd569d3cce55b71a8a3f3c418c329a66e5f714431&data=0x9cc7f70800000000000000000000000000000000000000000000000000000000000000c7&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
-          .then(etherscanRawResponse => {
-            console.log(etherscanRawResponse.data);
+          .then(juiceboxRawResponse => {
+            // console.log(juiceboxRawResponse.data);
 
             // Initial value set in case network call fails.
-            let ethVal = 81.00;
+            let ethVal = 0.0;
 
             // Convert hex to int.
-            const wei = parseInt(etherscanRawResponse.data.result, 16);
-            let eth = wei / 1000000000000000000;
+            const wei = parseInt(juiceboxRawResponse.data.result, 16);
+            let juiceboxETH = wei / 1000000000000000000;
              //  Round to 2 decimal places.
-            eth = Math.round(eth * 100) / 100;
-            if (eth) {
-              ethVal = eth;
+            juiceboxETH = Math.round(juiceboxETH * 100) / 100;
+            if (juiceboxETH) {
+              ethVal = juiceboxETH;
             }
+
+            axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
+              .then(multisigRawResponse => {
+              console.log(multisigRawResponse.data.result);
+
+              let multisigETH = multisigRawResponse.data.result / 1000000000000000000;
+              if (multisigETH) {
+                ethVal += multisigETH;
+              }
+
+              console.log(ethVal);
+            });
 
             axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
               .then(rawResponse => {
-                console.log(rawResponse.data);
+                // console.log(rawResponse.data);
                 const exchangeRate = rawResponse.data.USD;
 
-                console.log(exchangeRate);
+                // console.log(exchangeRate);
 
                 const targetUSD = 450_000;
                 const usdRaised = (ethVal * exchangeRate).toFixed(0);
