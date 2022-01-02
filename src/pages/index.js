@@ -29,7 +29,7 @@ const BrowserOnlyAxios = () => {
             console.log(etherscanRawResponse.data);
 
             // Initial value set in case network call fails.
-            let ethVal = 62.43;
+            let ethVal = 81.00;
 
             // Convert hex to int.
             const wei = parseInt(etherscanRawResponse.data.result, 16);
