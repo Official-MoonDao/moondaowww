@@ -11,69 +11,103 @@ import LaunchSvg from "@site/static/img/undraw_launch_day_4e04.svg";
 import "../css/global.scss";
 import "../css/home.scss";
 
+// Juicebox TerminalV1 address.
+const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
+
+// MoonDAO Multsig Wallet address.
+const MULTISIG_ADDRESS = '0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9';
+
+const ETHERSCAN_API_BASE = 'https://api.etherscan.io/api';
+
+const ETHERSCAN_API_KEY = 'TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS';
+
+// Target USD amount for the initial MoonDAO funds raised.
+const TARGET_USD = 450_000;
+
+// Get the ETH balance for the Juicbox contract.
+async function getJuiceboxBalance(axios) {
+  // balanceOf(199)
+  const data = '0x9cc7f70800000000000000000000000000000000000000000000000000000000000000c7';
+  const url = ETHERSCAN_API_BASE +
+    '?module=proxy' +
+    '&action=eth_call' +
+    `&to=${JUICEBOX_ADDRESS}` +
+    `&data=${data}` +
+    '&tag=latest' +
+    `&apikey=${ETHERSCAN_API_KEY}`;
+  console.log('getJuiceboxBalance - Request: ', url);
+  const response = await axios.get(url);
+  console.log('getJuiceboxBalance - Response: ', response);
+
+  if (response && response.data && response.data.result) {
+    const wei = hexToInt(response.data.result);
+    return weiToEth(wei);
+  }
+  return 0;
+}
+
+// Get the ETH balance from the Multisig wallet.
+async function getMultisigBalance(axios) {
+  const url = ETHERSCAN_API_BASE +
+    '?module=account' +
+    '&action=balance' +
+    `&address=${MULTISIG_ADDRESS}` +
+    '&tag=latest' +
+    `&apikey=${ETHERSCAN_API_KEY}`;
+  console.log('getMultisigBalance - Request: ', url);
+  const response = await axios.get(url);
+  console.log('getMultisigBalance - Response: ', response);
+
+  if (response && response.data && response.data.result) {
+    return weiToEth(response.data.result);
+  }
+  console.error('getMultisigBalance - Failed');
+  return 0;
+}
+
+// Get the conversion rate for ETH to USD.
+async function getEthToUsd(axios) {
+  const url = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD';
+  console.log('getEthToUsd - Request: ', url);
+  const response = await axios.get(url);
+  console.log('getEthToUsd - Response: ', response);
+  if (response && response.data && response.data.USD) {
+    return response.data.USD;
+  }
+  return 0;
+}
+
+// Convert hex to int.
+function hexToInt(hex) {
+  return parseInt(hex, 16);
+}
+
+// Convert Wei to ETH.
+function weiToEth(wei) {
+  return wei / 1000000000000000000;
+}
+
+async function fetchAndUpdateProgress() {
+  const axios = require('axios');
+  const juiceBoxBalance = await getJuiceboxBalance(axios);
+  const multisigBalance = await getMultisigBalance(axios);
+  const usdToEth = await getEthToUsd(axios);
+
+  const eth = juiceBoxBalance + multisigBalance;
+  console.log('ETH: ' + eth);
+  const usdRaised = (eth * usdToEth).toFixed(0);
+  const percentRaised = (usdRaised / TARGET_USD) * 100;
+  const ethReadable = (eth).toFixed(2);
+  const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const targetUSDreadble = TARGET_USD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  document.getElementById('progress-bar').style.width = `${percentRaised}%`;
+  document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+}
+
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => {
-        const axios = require('axios');
-        // const Web3 = require('web3');
-        // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-
-        // var JBContract = web3.eth.contract(abi);
-        // var JBContractInstance = JBContract.at('0xd569D3CCE55b71a8a3f3C418c329A66e5f714431');
-
-        // console.log(JBContractInstance);
-
-        axios.get("https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xd569d3cce55b71a8a3f3c418c329a66e5f714431&data=0x9cc7f70800000000000000000000000000000000000000000000000000000000000000c7&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
-          .then(juiceboxRawResponse => {
-            // console.log(juiceboxRawResponse.data);
-
-            // Initial value set in case network call fails.
-            let ethVal = 0.0;
-
-            // Convert hex to int.
-            const wei = parseInt(juiceboxRawResponse.data.result, 16);
-            let juiceboxETH = wei / 1000000000000000000;
-             //  Round to 2 decimal places.
-            juiceboxETH = Math.round(juiceboxETH * 100) / 100;
-            if (juiceboxETH) {
-              ethVal = juiceboxETH;
-            }
-
-            axios.get("https://api.etherscan.io/api?module=account&action=balance&address=0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9&tag=latest&apikey=TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS")
-              .then(multisigRawResponse => {
-              console.log(multisigRawResponse.data.result);
-
-              let multisigETH = multisigRawResponse.data.result / 1000000000000000000;
-              if (multisigETH) {
-                ethVal += multisigETH;
-              }
-
-              console.log(ethVal);
-            });
-
-            axios.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
-              .then(rawResponse => {
-                // console.log(rawResponse.data);
-                const exchangeRate = rawResponse.data.USD;
-
-                // console.log(exchangeRate);
-
-                const targetUSD = 450_000;
-                const usdRaised = (ethVal * exchangeRate).toFixed(0);
-
-                const percentRaised = (usdRaised / targetUSD) * 100;
-
-                const ethReadable = (ethVal).toFixed(2);
-                const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                const targetUSDreadble = targetUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-                document.getElementById('progress-bar').style.width = `${percentRaised}%`;
-
-                document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
-              });
-          });
-      }}
+      {() => { fetchAndUpdateProgress(); }}
     </BrowserOnly>
   )
 }
