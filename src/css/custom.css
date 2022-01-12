@@ -136,8 +136,22 @@ code {
   font-size: large;
 }
 
+@media screen and (max-width: 768px)) {
+  #timerContainer {
+    visibility: hidden;
+    display: none;
+  }
+  #countdownLabel {
+    margin-top: 30px;
+    font-size: large;
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .base-timer {
   position: relative;
+  display: flex;
   height: 150px;
   width: 150px;
   margin-left: 30px;
