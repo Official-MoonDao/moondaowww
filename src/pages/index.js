@@ -104,10 +104,66 @@ async function fetchAndUpdateProgress() {
   document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
 }
 
+function runCountdown() {
+  var currentTime = new Date();
+  const finalDateStr = "1/16/2022";
+  var finalTime = new Date(finalDateStr);
+  finalTime.setHours(finalTime.getHours()+15);
+  finalTime.setMinutes(finalTime.getMinutes()+18);
+  const fundraiseStartStr = "12/17/2021"
+  var fundraiseStartTime = new Date(fundraiseStartStr);
+  fundraiseStartTime.setHours(fundraiseStartTime.getHours()+17);
+
+  console.log(finalTime);
+
+  const fundraiseTotalTimeSeconds = Math.abs(finalTime.getTime() - fundraiseStartTime.getTime()) / 1000;
+
+  var timerInterval = setInterval(() => {
+    currentTime.setSeconds(currentTime.getSeconds()+1);
+
+    var secondsRemaining = Math.abs(finalTime.getTime() - currentTime.getTime()) / 1000;
+
+    var daysRemainingProgress = secondsRemaining / (fundraiseTotalTimeSeconds*1.0);
+    var daysRemainingDisplay = Math.floor(daysRemainingProgress*((fundraiseTotalTimeSeconds*1.0)/(24*3600)));
+
+    secondsRemaining = secondsRemaining - daysRemainingDisplay*24*3600;
+
+    var hoursRemaining = Math.floor(secondsRemaining / 3600);
+
+    secondsRemaining = secondsRemaining - hoursRemaining*3600;
+
+    var minutesRemaining = Math.floor(secondsRemaining / 60);
+
+    secondsRemaining = Math.floor(secondsRemaining - minutesRemaining*60);
+
+    document.getElementById("base-timer-label-days").innerHTML = String(daysRemainingDisplay) + " D";
+    document.getElementById("base-timer-label-hours").innerHTML = String(hoursRemaining) + " H";
+    document.getElementById("base-timer-label-minutes").innerHTML = String(minutesRemaining) + " M";
+    document.getElementById("base-timer-label-seconds").innerHTML = String(secondsRemaining) + " S";
+    
+    const circleDasharrayDays = `${(
+      daysRemainingProgress * 283
+    ).toFixed(0)} 283`;
+    document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
+    const circleDasharrayHours = `${(
+      (hoursRemaining/24) * 283
+    ).toFixed(0)} 283`;
+    document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
+    const circleDasharrayMinutes = `${(
+      (minutesRemaining/60) * 283
+    ).toFixed(0)} 283`;
+    document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
+    const circleDasharraySeconds = `${(
+      (secondsRemaining/60) * 283
+    ).toFixed(0)} 283`;
+    document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
+  }, 1000);
+}
+
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => { fetchAndUpdateProgress(); }}
+      {() => { fetchAndUpdateProgress(); runCountdown();}}
     </BrowserOnly>
   )
 }
@@ -115,6 +171,7 @@ const BrowserOnlyAxios = () => {
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+  
 
   return (
     <Layout
@@ -133,6 +190,87 @@ export default function Home() {
               <p className='BigP'>
                 Buy $MOONEY to join MoonDAO and send a fren to space in 2022!
               </p>
+              <h2 className='daoColor' id='countdownLabel'>
+                Time until end of fundraise
+              </h2>
+              <div id='timerContainer'>
+                <div id='daysTimer' class='base-timer'>
+                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+                    <g class='base-timer__circle'>
+                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
+                      <path
+                        id="base-timer-path-remaining-days"
+                        stroke-dasharray="283"
+                        class="base-timer__path-remaining-days"
+                        d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                      ></path>
+                    </g>
+                  </svg>
+                  <span id='base-timer-label-days' class='base-timer__label'></span>
+                </div>
+                <div id='hoursTimer' class='base-timer'>
+                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+                    <g class='base-timer__circle'>
+                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
+                      <path
+                        id="base-timer-path-remaining-hours"
+                        stroke-dasharray="283"
+                        class="base-timer__path-remaining-hours"
+                        d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                      ></path>
+                    </g>
+                  </svg>
+                  <span id='base-timer-label-hours' class='base-timer__label'></span>
+                </div>
+                <div id='minutesTimer' class='base-timer'>
+                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+                    <g class='base-timer__circle'>
+                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
+                      <path
+                        id="base-timer-path-remaining-minutes"
+                        stroke-dasharray="283"
+                        class="base-timer__path-remaining-minutes"
+                        d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                      ></path>
+                    </g>
+                  </svg>
+                  <span id='base-timer-label-minutes' class='base-timer__label'></span>
+                </div>
+                <div id='secondsTimer' class='base-timer'>
+                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+                    <g class='base-timer__circle'>
+                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
+                      <path
+                        id="base-timer-path-remaining-seconds"
+                        stroke-dasharray="283"
+                        class="base-timer__path-remaining-seconds"
+                        d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                      ></path>
+                    </g>
+                  </svg>
+                  <span id='base-timer-label-seconds' class='base-timer__label'></span>
+                </div>
+              </div>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
                 <span id='moneyAmounts'> </span>

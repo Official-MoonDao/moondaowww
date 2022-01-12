@@ -110,7 +110,7 @@ code {
  }
 
  #fundsRaised {
-   margin-top: 60px;
+   margin-top: 30px;
    font-size: large;
  }
 
@@ -125,4 +125,122 @@ code {
 
  #MoonPhase5 {
   margin-top: 5px;
+}
+
+#timerContainer {
+  display: flex;
+}
+
+#countdownLabel {
+  margin-top: 30px;
+  font-size: large;
+}
+
+.base-timer {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 30px;
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 4px;
+  stroke: grey;
+}
+
+.base-timer__label {
+  position: absolute;
+  
+  width: 150px;
+  height: 150px;
+  
+  top: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+.base-timer__path-remaining-days {
+  /* Just as thick as the original ring */
+  stroke-width: 4px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: #1bab8f;
+}
+
+.base-timer__path-remaining-hours {
+  /* Just as thick as the original ring */
+  stroke-width: 4px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: #2980b8;
+}
+
+.base-timer__path-remaining-minutes {
+  /* Just as thick as the original ring */
+  stroke-width: 4px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: #8e44ad;
+}
+
+.base-timer__path-remaining-seconds {
+  /* Just as thick as the original ring */
+  stroke-width: 4px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: #f39c12;
+}
+
+.base-timer__svg {
+  /* Flips the svg and makes the animation to move left-to-right */
+  transform: scaleX(-1);
 }
