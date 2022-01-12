@@ -163,7 +163,7 @@ function runCountdown() {
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => { fetchAndUpdateProgress(); }}
+      {() => { fetchAndUpdateProgress(); runCountdown(); }}
     </BrowserOnly>
   )
 }
@@ -171,8 +171,6 @@ const BrowserOnlyAxios = () => {
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-
-  runCountdown();
 
   return (
     <Layout
