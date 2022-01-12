@@ -136,19 +136,6 @@ code {
   font-size: large;
 }
 
-@media screen and (max-width: 768px)) {
-  #timerContainer {
-    visibility: hidden;
-    display: none;
-  }
-  #countdownLabel {
-    margin-top: 30px;
-    font-size: large;
-    visibility: hidden;
-    display: none;
-  }
-}
-
 .base-timer {
   position: relative;
   display: flex;
@@ -258,3 +245,4 @@ code {
   /* Flips the svg and makes the animation to move left-to-right */
   transform: scaleX(-1);
 }
+

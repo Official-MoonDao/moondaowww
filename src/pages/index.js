@@ -105,6 +105,12 @@ async function fetchAndUpdateProgress() {
 }
 
 function runCountdown() {
+  if (screen.width < 1000) {
+    console.log("HERE");
+    document.getElementById('timerContainer').style.display = 'none';
+    document.getElementById('countdownLabel').style.display = 'none';
+  }
+
   var currentTime = new Date();
   const finalDateStr = "1/16/2022";
   var finalTime = new Date(finalDateStr);
