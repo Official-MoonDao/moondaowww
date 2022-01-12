@@ -106,9 +106,10 @@ async function fetchAndUpdateProgress() {
 
 function runCountdown() {
   if (screen.width < 1000) {
-    console.log("HERE");
+    console.log(screen.width);
     document.getElementById('timerContainer').style.display = 'none';
     document.getElementById('countdownLabel').style.display = 'none';
+    return;
   }
 
   var currentTime = new Date();
@@ -119,8 +120,6 @@ function runCountdown() {
   const fundraiseStartStr = "12/17/2021"
   var fundraiseStartTime = new Date(fundraiseStartStr);
   fundraiseStartTime.setHours(fundraiseStartTime.getHours()+17);
-
-  console.log(finalTime);
 
   const fundraiseTotalTimeSeconds = Math.abs(finalTime.getTime() - fundraiseStartTime.getTime()) / 1000;
 
@@ -134,10 +133,12 @@ function runCountdown() {
 
     secondsRemaining = secondsRemaining - daysRemainingDisplay*24*3600;
 
+    var hoursRemainingProgress = secondsRemaining / (3600*24.0);
     var hoursRemaining = Math.floor(secondsRemaining / 3600);
 
     secondsRemaining = secondsRemaining - hoursRemaining*3600;
 
+    var minutesRemainingProgress = secondsRemaining / 3600.0;
     var minutesRemaining = Math.floor(secondsRemaining / 60);
 
     secondsRemaining = Math.floor(secondsRemaining - minutesRemaining*60);
@@ -152,11 +153,11 @@ function runCountdown() {
     ).toFixed(0)} 283`;
     document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
     const circleDasharrayHours = `${(
-      (hoursRemaining/24) * 283
+      hoursRemainingProgress * 283
     ).toFixed(0)} 283`;
     document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
     const circleDasharrayMinutes = `${(
-      (minutesRemaining/60) * 283
+      minutesRemainingProgress * 283
     ).toFixed(0)} 283`;
     document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
     const circleDasharraySeconds = `${(
