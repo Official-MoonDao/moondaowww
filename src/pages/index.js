@@ -163,7 +163,7 @@ function runCountdown() {
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => { fetchAndUpdateProgress(); runCountdown();}}
+      {() => { fetchAndUpdateProgress(); }}
     </BrowserOnly>
   )
 }
@@ -190,7 +190,7 @@ export default function Home() {
               <p className='BigP'>
                 Buy $MOONEY to join MoonDAO and send a fren to space in 2022!
               </p>
-              <h2 className='daoColor' id='countdownLabel'>
+              {/* <h2 className='daoColor' id='countdownLabel'>
                 Time until end of fundraise
               </h2>
               <div id='timerContainer'>
@@ -270,7 +270,7 @@ export default function Home() {
                   </svg>
                   <span id='base-timer-label-seconds' class='base-timer__label'></span>
                 </div>
-              </div>
+              </div> */}
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
                 <span id='moneyAmounts'> </span>
