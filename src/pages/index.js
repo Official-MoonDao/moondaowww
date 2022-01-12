@@ -108,8 +108,7 @@ function runCountdown() {
   if (screen.width < 1000) {
     console.log(screen.width);
     document.getElementById('timerContainer').style.display = 'none';
-    document.getElementById('countdownLabel').style.display = 'none';
-    return;
+    document.getElementById('timerContainerMobile').style.display = 'block';
   }
 
   var currentTime = new Date();
@@ -143,27 +142,36 @@ function runCountdown() {
 
     secondsRemaining = Math.floor(secondsRemaining - minutesRemaining*60);
 
-    document.getElementById("base-timer-label-days").innerHTML = String(daysRemainingDisplay) + " D";
-    document.getElementById("base-timer-label-hours").innerHTML = String(hoursRemaining) + " H";
-    document.getElementById("base-timer-label-minutes").innerHTML = String(minutesRemaining) + " M";
-    document.getElementById("base-timer-label-seconds").innerHTML = String(secondsRemaining) + " S";
-    
-    const circleDasharrayDays = `${(
-      daysRemainingProgress * 283
-    ).toFixed(0)} 283`;
-    document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
-    const circleDasharrayHours = `${(
-      hoursRemainingProgress * 283
-    ).toFixed(0)} 283`;
-    document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
-    const circleDasharrayMinutes = `${(
-      minutesRemainingProgress * 283
-    ).toFixed(0)} 283`;
-    document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
-    const circleDasharraySeconds = `${(
-      (secondsRemaining/60) * 283
-    ).toFixed(0)} 283`;
-    document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
+    if (screen.width < 1000) {
+      document.getElementById("base-timer-label-days-m").innerHTML = String(daysRemainingDisplay) + " D";
+      document.getElementById("base-timer-label-hours-m").innerHTML = String(hoursRemaining) + " H";
+      document.getElementById("base-timer-label-minutes-m").innerHTML = String(minutesRemaining) + " M";
+      document.getElementById("base-timer-label-seconds-m").innerHTML = String(secondsRemaining) + " S";
+    }
+    else {
+      document.getElementById("base-timer-label-days").innerHTML = String(daysRemainingDisplay) + " D";
+      document.getElementById("base-timer-label-hours").innerHTML = String(hoursRemaining) + " H";
+      document.getElementById("base-timer-label-minutes").innerHTML = String(minutesRemaining) + " M";
+      document.getElementById("base-timer-label-seconds").innerHTML = String(secondsRemaining) + " S";
+      
+      const circleDasharrayDays = `${(
+        daysRemainingProgress * 283
+      ).toFixed(0)} 283`;
+      document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
+      const circleDasharrayHours = `${(
+        hoursRemainingProgress * 283
+      ).toFixed(0)} 283`;
+      document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
+      const circleDasharrayMinutes = `${(
+        minutesRemainingProgress * 283
+      ).toFixed(0)} 283`;
+      document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
+      const circleDasharraySeconds = `${(
+        (secondsRemaining/60) * 283
+      ).toFixed(0)} 283`;
+      document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
+    }
+
   }, 1000);
 }
 
@@ -199,6 +207,12 @@ export default function Home() {
               <h2 className='daoColor' id='countdownLabel'>
                 Time until end of fundraise
               </h2>
+              <div id='timerContainerMobile'>
+                <span id='base-timer-label-days-m' class='mobile-countdown-digit'></span>
+                <span id='base-timer-label-hours-m' class='mobile-countdown-digit'></span>
+                <span id='base-timer-label-minutes-m' class='mobile-countdown-digit'></span>
+                <span id='base-timer-label-seconds-m' class='mobile-countdown-digit'></span>
+              </div>
               <div id='timerContainer'>
                 <div id='daysTimer' class='base-timer'>
                   <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>

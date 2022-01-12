@@ -131,6 +131,15 @@ code {
   display: flex;
 }
 
+#timerContainerMobile {
+  display: none;
+}
+
+.mobile-countdown-digit {
+  margin-left: 15px;
+  font-size: x-large;
+}
+
 #countdownLabel {
   margin-top: 30px;
   font-size: large;
