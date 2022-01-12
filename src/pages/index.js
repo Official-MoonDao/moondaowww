@@ -22,7 +22,7 @@ const ETHERSCAN_API_BASE = 'https://api.etherscan.io/api';
 const ETHERSCAN_API_KEY = 'TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS';
 
 // Target USD amount for the initial MoonDAO funds raised.
-const TARGET_USD = 1_000_000;
+const TARGET_USD = 2_000_000;
 
 // Get the ETH balance for the Juicbox contract.
 async function getJuiceboxBalance(axios) {
@@ -166,7 +166,7 @@ export default function Home() {
               <div className='Column--100'>
                 <h3>Our plan to send a MoonDAO member to space in 2022:</h3>
                 <ol>
-                  <li>Offer governance tokens to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens.</strong></li>
+                  <li>Offer <a href='/docs/token'>$MOONEY governance tokens</a> to begin decentralized community governance of MoonDAO. <strong> This will be our only supply of tokens.</strong></li>
                   <li>Release the <strong>Ticket to Space</strong> NFT collection. These NFTs will give you a chance to fly to space in 2022.</li>
                   <li>Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.</li>
                   <li>Send MoonDAO member(s) to space in 2022.</li>
@@ -220,10 +220,7 @@ export default function Home() {
                   moon and other celestial bodies.
                 </p>
                 <p>
-                  It is very important to note that the core team has not pre-mined
-                  any tokens for ourselves. We have not given “special terms” to any
-                  Venture Capitalists, Influencers, Angel Investors, Rich Friends or
-                  Family, or any other person. We are all being treated equally.
+                  It is very important to note that the core team has not pre-mined any tokens for ourselves. We have not given “special terms” to any Venture Capitalists, Influencers, Angel Investors, Rich Friends or Family, or any other person. We are all being treated equally.
                 </p>
               </div>
             </div>
@@ -240,15 +237,10 @@ export default function Home() {
                   <strong>Deploy a token for decentralized governance of MoonDAO.</strong>
                 </p>
                 <p className='small'>
-                  In order to be a DAO, we need a governance token for decision making.
-                  This is our first step. There is no expectation of profit with this token,
-                  this token’s purpose is to coordinate our governance.
+                  In order to be a DAO, we need a governance token for decision making. Launching the <a href='/docs/token'>$MOONEY governance token</a> is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance.
                 </p>
                 <p className='small'>
-                  Every investor, builder, or fren, big or small, has gotten the same terms.
-                  No special treatment for anyone. This is unusual for an Ethereum project,
-                  but we thought it would be more fair for everyone involved that we did not
-                  airdrop or pre-mine any number of tokens for people ahead of time. We are
+                  Every investor, builder, or fren, big or small, has gotten the same terms. No special treatment for anyone. This is unusual for an Ethereum project, but we thought it would be more fair for everyone involved that we did not airdrop or pre-mine any number of tokens for people ahead of time. We are
                   not VC funded, we are community organized and led, this is very important to us!
                 </p>
               </div>
@@ -266,17 +258,10 @@ export default function Home() {
                   <strong>Send a MoonDAO member to space.</strong>
                 </p>
                 <p className='small'>
-                  Virgin Galactic advertises its tickets will be sold for “as low as” $450K
-                  and it has been reported that Blue Origin’s tickets are have gone up for
-                  auction for over $28M. The range is large. MoonDAO wants to help create a
-                  world where anyone can fly to space regardless of their financial situation.
-                  We hope that this can be a meaningful and inspirational first step in
-                  decentralizing space exploration.
+                  Virgin Galactic advertises its tickets will be sold for “as low as” $450K and it has been reported that Blue Origin’s tickets are have gone up for auction for over $28M. The range is large. MoonDAO wants to help create a world where anyone can fly to space regardless of their financial situation. We hope that this can be a meaningful and inspirational first step in decentralizing space exploration.
                 </p>
                 <p className='small'>
-                  So far in history, space exploration has been gated to the rest of the world
-                  — accessible to only the privileged. MoonDAO changes this for the first time
-                  in history.
+                  So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO changes this for the first time in history.
                 </p>
               </div>
               <div className='Column--33'>
@@ -294,16 +279,10 @@ export default function Home() {
                 <p className='small'>
                   We don’t want to just take a ride on someone else’s rockets,
                   we’d like to fund and coordinate our own plans. We think an
-                  international collective could move much faster than any red-taped
-                  organization, and we can contract out certain aspects of rocket
-                  development to private companies -- just like NASA.
+                  international collective could move much faster than any red-taped organization, and we can contract out certain aspects of rocket development to private companies -- just like NASA.
                 </p>
                 <p className='small'>
-                  The exploration of space should unify the world, not pit us against
-                  each other like the last space race. After all, aren't we all just
-                  curious earthlings that want to explore the unknown? Now, Web 3.0
-                  represents a technology that can unify earthlings and decentralize
-                  space exploration.
+                  The exploration of space should unify the world, not pit us against each other like the last space race. After all, aren't we all just curious earthlings that want to explore the unknown? Now, Web 3.0 represents a technology that can unify earthlings and decentralize space exploration.
                 </p>
               </div>
               <div className='Column--33'>
@@ -324,13 +303,10 @@ export default function Home() {
                 <p className='small'>
                   The 1967 Space Treaty forms the basis for all law concerning
                   space. In this treaty it states that no national appropriation
-                  of the Moon can take place. However, a DAO is not a nation — it
-                  is an international collective of frens.
+                  of the Moon can take place. However, a DAO is not a nation — it is an international collective of frens.
                 </p>
                 <p className='small'>
-                  We have the opportunity to use these new governance and coordination
-                  tools in order to form a more perfect union as we extend the rights
-                  and liberties of every human on earth into the solar system.
+                  We have the opportunity to use these new governance and coordination tools in order to form a more perfect union as we extend the rights and liberties of every human on earth into the solar system.
                 </p>
               </div>
               <div className='Column--33'>
