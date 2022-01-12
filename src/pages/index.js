@@ -163,7 +163,7 @@ function runCountdown() {
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => { fetchAndUpdateProgress(); runCountdown();}}
+      {() => { fetchAndUpdateProgress(); }}
     </BrowserOnly>
   )
 }
@@ -171,7 +171,8 @@ const BrowserOnlyAxios = () => {
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  
+
+  runCountdown();
 
   return (
     <Layout
@@ -193,7 +194,7 @@ export default function Home() {
               <h2 className='daoColor' id='countdownLabel'>
                 Time until end of fundraise
               </h2>
-              <div id='timerContainer' class='hidden-moblie'>
+              <div id='timerContainer'>
                 <div id='daysTimer' class='base-timer'>
                   <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
                     <g class='base-timer__circle'>
