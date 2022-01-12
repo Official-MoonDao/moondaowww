@@ -7,7 +7,7 @@ sidebar_label: $MOONEY token
 sidebar_position: 2
 ---
 
-The $MOONEY token launched on **Friday, December 17, 2021** on Juicebox. The funding period will last for one lunar cycle and will end on **Sunday, January 16, 2022 at 6:48 PM EST.
+The $MOONEY token launched on **Friday, December 17, 2021** on Juicebox. The funding period will last for one lunar cycle and will end on **Sunday, January 16, 2022 at 3:18 PM EST.
 
 [Buy $MOONEY on Juicebox](https://juicebox.money/#/p/moondao)
 
