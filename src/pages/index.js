@@ -106,18 +106,18 @@ async function fetchAndUpdateProgress() {
 
 function runCountdown() {
   if (screen.width < 1000) {
-    console.log(screen.width);
     document.getElementById('timerContainer').style.display = 'none';
     document.getElementById('timerContainerMobile').style.display = 'block';
   }
 
   var currentTime = new Date();
-  const finalDateStr = "1/16/2022";
-  var finalTime = new Date(finalDateStr);
+  const offset = currentTime.getTimezoneOffset();
+  currentTime.setMinutes(currentTime.getMinutes()+offset);
+  var finalTime = new Date("2022-01-16T10:18:00Z");
   finalTime.setHours(finalTime.getHours()+15);
   finalTime.setMinutes(finalTime.getMinutes()+18);
-  const fundraiseStartStr = "12/17/2021"
-  var fundraiseStartTime = new Date(fundraiseStartStr);
+  var fundraiseStartTime = new Date("2021-12-17T12:00:00Z");
+  console.log(fundraiseStartTime);
   fundraiseStartTime.setHours(fundraiseStartTime.getHours()+17);
 
   const fundraiseTotalTimeSeconds = Math.abs(finalTime.getTime() - fundraiseStartTime.getTime()) / 1000;
