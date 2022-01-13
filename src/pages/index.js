@@ -112,9 +112,11 @@ function runCountdown() {
 
   var currentTime = new Date();
   const offset = currentTime.getTimezoneOffset();
-  currentTime.setMinutes(currentTime.getMinutes()-offset);
-  var finalTime = new Date("2022-01-16T15:18:00Z");
-  var fundraiseStartTime = new Date("2021-12-17T17:00:00Z");
+  currentTime.setMinutes(currentTime.getMinutes()+offset);
+  var finalTime = new Date("2022-01-16T20:18:00Z");
+  finalTime.setMinutes(finalTime.getMinutes()+offset);
+  var fundraiseStartTime = new Date("2021-12-17T22:00:00Z");
+  fundraiseStartTime.setMinutes(fundraiseStartTime.getMinutes()+offset);
 
   console.log(currentTime);
   console.log(finalTime);
