@@ -22,7 +22,7 @@ const ETHERSCAN_API_BASE = 'https://api.etherscan.io/api';
 const ETHERSCAN_API_KEY = 'TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS';
 
 // Target USD amount for the initial MoonDAO funds raised.
-const TARGET_USD = 4_000_000;
+const TARGET_USD = 5_000_000;
 
 // Get the ETH balance for the Juicbox contract.
 async function getJuiceboxBalance(axios) {
@@ -155,7 +155,7 @@ function runCountdown() {
       document.getElementById("base-timer-label-hours").innerHTML = String(hoursRemaining) + " H";
       document.getElementById("base-timer-label-minutes").innerHTML = String(minutesRemaining) + " M";
       document.getElementById("base-timer-label-seconds").innerHTML = String(secondsRemaining) + " S";
-      
+
       const circleDasharrayDays = `${(
         daysRemainingProgress * 283
       ).toFixed(0)} 283`;
