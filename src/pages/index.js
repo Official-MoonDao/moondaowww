@@ -303,6 +303,10 @@ export default function Home() {
                   <span id='goalAmounts'> </span>
                 </span>
               </h2>
+              <h2 className='daoColor' id='goal'>
+                Current Goal:
+                <span id='goalAmounts'> </span>
+              </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
               </div>
