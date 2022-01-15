@@ -114,6 +114,11 @@ code {
    font-size: large;
  }
 
+ #disclaimer {
+  margin-top: 5px;
+  font-size: small;
+}
+
  #heroButton {
    background-color: #5ce0d8;
    color: black;
