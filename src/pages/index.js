@@ -22,7 +22,7 @@ const ETHERSCAN_API_BASE = 'https://api.etherscan.io/api';
 const ETHERSCAN_API_KEY = 'TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS';
 
 // Target USD amount for the initial MoonDAO funds raised.
-const TARGET_USD = 7_000_000;
+const TARGET_USD = 8_888_888;
 
 // Get the ETH balance for the Juicbox contract.
 async function getJuiceboxBalance(axios) {
@@ -108,6 +108,9 @@ async function fetchAndUpdateProgress() {
 }
 
 function runCountdown() {
+  var timerInterval = setInterval(() => {
+    fetchAndUpdateProgress();
+  }, 10000);
   if (screen.width < 1000) {
     document.getElementById('timerContainer').style.display = 'none';
     document.getElementById('timerContainerMobile').style.display = 'block';
@@ -133,6 +136,19 @@ function runCountdown() {
     currentTime.setSeconds(currentTime.getSeconds()+1);
 
     var secondsRemaining = Math.abs(finalTime.getTime() - currentTime.getTime()) / 1000;
+
+    console.log(secondsRemaining);
+    if (secondsRemaining < 1) {
+      // document.getElementById('progress-bar-container').style.display = 'none';
+      // document.getElementById('fundsRaised').style.display = 'none';
+      // document.getElementById('fundsRaisedMobile').style.display = 'none';
+      document.getElementById("base-timer-label-seconds-m").innerHTML = '0' + " S";
+      document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
+      // document.getElementById('endRaise').innerHTML = "Funds Raised:   " + document.getElementById('moneyAmounts').innerHTML;
+      // document.getElementById("endRaise").style.display = 'block';
+      // document.getElementById("thankYou").style.display = 'block';
+      clearInterval(timerInterval);
+    }
 
     var daysRemainingProgress = secondsRemaining / (fundraiseTotalTimeSeconds*1.0);
     var daysRemainingDisplay = Math.floor(daysRemainingProgress*((fundraiseTotalTimeSeconds*1.0)/(24*3600)));
@@ -298,6 +314,11 @@ export default function Home() {
                   <span id='base-timer-label-seconds' class='base-timer__label'></span>
                 </div>
               </div>
+              <h1 className='daoColor' id='endRaise'>
+              </h1>
+              <h1 className='daoColor' id='thankYou'>
+                Thanks for everyone's contributions!
+              </h1>
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
                 <span id='moneyAmounts'> </span>
@@ -310,7 +331,7 @@ export default function Home() {
                 Current Goal: 
                 <span id='goalAmountsMobile'> </span>
               </h2>
-              <div className='progress'>
+              <div className='progress' id='progress-bar-container'>
                 <span className='progress-bar' id='progress-bar'></span>
               </div>
               <div className='HeroButtonGroup'>
