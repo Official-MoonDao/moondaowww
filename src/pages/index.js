@@ -100,8 +100,10 @@ async function fetchAndUpdateProgress() {
   const ethReadable = (eth).toFixed(2);
   const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const targetUSDreadble = TARGET_USD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const ethGoal = (TARGET_USD / usdToEth).toFixed(2);
   document.getElementById('progress-bar').style.width = `${percentRaised}%`;
-  document.getElementById('moneyAmounts').textContent = '$' + usdReadable + ' / $' + targetUSDreadble + '  (' + ethReadable + ' ETH)';
+  document.getElementById('moneyAmounts').textContent = '$' + usdReadable + '  (' + ethReadable + ' ETH)';
+  document.getElementById('goalAmounts').textContent = '$' + targetUSDreadble + '   (' + ethGoal + ' ETH)';
 }
 
 function runCountdown() {
@@ -296,13 +298,14 @@ export default function Home() {
               <h2 className='daoColor' id='fundsRaised'>
                 Funds Raised:
                 <span id='moneyAmounts'> </span>
+                <span class Name='daoColor' id='goal'> 
+                  Current Goal: 
+                  <span id='goalAmounts'> </span>
+                </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>
               </div>
-              <h2 className='daoColor' id='disclaimer'>
-                *Fundraise is not capped and the goal will increase when it is met*
-              </h2>
               <div className='HeroButtonGroup'>
                 <a
                   href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'

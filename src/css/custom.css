@@ -72,7 +72,12 @@ code {
 }
 
 #moneyAmounts {
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+#goalAmounts {
+  margin-left: 10px;
 }
 
 .progress {
@@ -113,6 +118,11 @@ code {
    margin-top: 30px;
    font-size: large;
  }
+
+ #goal {
+  margin-top: 1px;
+  font-size: large;
+}
 
  #disclaimer {
   margin-top: 5px;
