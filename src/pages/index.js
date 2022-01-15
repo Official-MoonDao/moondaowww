@@ -104,12 +104,15 @@ async function fetchAndUpdateProgress() {
   document.getElementById('progress-bar').style.width = `${percentRaised}%`;
   document.getElementById('moneyAmounts').textContent = '$' + usdReadable + '  (' + ethReadable + ' ETH)';
   document.getElementById('goalAmounts').textContent = '$' + targetUSDreadble + '   (' + ethGoal + ' ETH)';
+  document.getElementById('goalAmountsMobile').textContent = '$' + targetUSDreadble + '   (' + ethGoal + ' ETH)';
 }
 
 function runCountdown() {
   if (screen.width < 1000) {
     document.getElementById('timerContainer').style.display = 'none';
     document.getElementById('timerContainerMobile').style.display = 'block';
+    document.getElementById("fundsRaisedMobile").style.display = 'block';
+    document.getElementById("goal").style.display = 'none';
   }
 
   var currentTime = new Date();
@@ -302,6 +305,10 @@ export default function Home() {
                   Current Goal: 
                   <span id='goalAmounts'> </span>
                 </span>
+              </h2>
+              <h2 className='daoColor' id='fundsRaisedMobile'>
+                Current Goal: 
+                <span id='goalAmountsMobile'> </span>
               </h2>
               <div className='progress'>
                 <span className='progress-bar' id='progress-bar'></span>

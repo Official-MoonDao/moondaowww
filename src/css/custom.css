@@ -80,8 +80,8 @@ code {
   margin-left: 10px;
 }
 
-#goalAmounts {
-  margin-left: 20px;
+#goalAmountsMobile {
+  margin-left: 10px;
 }
 
 .progress {
@@ -123,6 +123,12 @@ code {
    font-size: large;
    margin-bottom: 10px;
  }
+
+ #fundsRaisedMobile {
+  display: none;
+  font-size: large;
+  margin-bottom: 10px;
+}
 
  #goal {
   margin-top: 1px;
