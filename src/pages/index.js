@@ -128,10 +128,6 @@ function runCountdown() {
   var fundraiseStartTime = new Date("2021-12-17T22:00:00Z");
   fundraiseStartTime.setMinutes(fundraiseStartTime.getMinutes()+offset);
 
-  console.log(currentTime);
-  console.log(finalTime);
-  console.log(fundraiseStartTime);
-
   const fundraiseTotalTimeSeconds = Math.abs(finalTime.getTime() - fundraiseStartTime.getTime()) / 1000;
 
   var timerInterval = setInterval(() => {
@@ -139,13 +135,13 @@ function runCountdown() {
 
     var secondsRemaining = Math.abs(finalTime.getTime() - currentTime.getTime()) / 1000;
 
-    console.log(secondsRemaining);
     if (secondsRemaining < 1) {
       // document.getElementById('progress-bar-container').style.display = 'none';
       // document.getElementById('fundsRaised').style.display = 'none';
       // document.getElementById('fundsRaisedMobile').style.display = 'none';
       document.getElementById("base-timer-label-seconds-m").innerHTML = '0' + " S";
       document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
+      document.getElementById("confetti").style.display = 'block';
       // document.getElementById('endRaise').innerHTML = "Funds Raised:   " + document.getElementById('moneyAmounts').innerHTML;
       // document.getElementById("endRaise").style.display = 'block';
       // document.getElementById("thankYou").style.display = 'block';
@@ -229,6 +225,7 @@ export default function Home() {
               <p className='BigP'>
                 <Translate>Buy $MOONEY to join MoonDAO and send a fren to space in 2022!</Translate>
               </p>
+              <img id='confetti' src='img/confetti-40.gif'/>
               <h2 className='daoColor' id='countdownLabel'>
                 <Translate>Time until end of fundraise</Translate>
               </h2>

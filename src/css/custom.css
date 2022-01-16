@@ -83,6 +83,11 @@ code {
   display: none;
 }
 
+#confetti {
+  position: absolute;
+  display: none;
+}
+
 #moneyAmounts {
   margin-left: 10px;
   margin-right: 50px;
