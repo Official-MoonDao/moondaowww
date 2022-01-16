@@ -164,16 +164,16 @@ function runCountdown() {
     secondsRemaining = Math.floor(secondsRemaining - minutesRemaining*60);
 
     if (screen.width < 1000) {
-      document.getElementById("base-timer-label-days-m").innerHTML = String(daysRemainingDisplay) + " D";
-      document.getElementById("base-timer-label-hours-m").innerHTML = String(hoursRemaining) + " H";
-      document.getElementById("base-timer-label-minutes-m").innerHTML = String(minutesRemaining) + " M";
-      document.getElementById("base-timer-label-seconds-m").innerHTML = String(secondsRemaining) + " S";
+      document.getElementById("base-timer-label-days-m").innerHTML = '0' + " D";
+      document.getElementById("base-timer-label-hours-m").innerHTML = '0' + " H";
+      document.getElementById("base-timer-label-minutes-m").innerHTML = '0' + " M";
+      document.getElementById("base-timer-label-seconds-m").innerHTML = '0' + " S";
     }
     else {
-      document.getElementById("base-timer-label-days").innerHTML = String(daysRemainingDisplay) + " D";
-      document.getElementById("base-timer-label-hours").innerHTML = String(hoursRemaining) + " H";
-      document.getElementById("base-timer-label-minutes").innerHTML = String(minutesRemaining) + " M";
-      document.getElementById("base-timer-label-seconds").innerHTML = String(secondsRemaining) + " S";
+      document.getElementById("base-timer-label-days").innerHTML = '0' + " D";
+      document.getElementById("base-timer-label-hours").innerHTML = '0' + " H";
+      document.getElementById("base-timer-label-minutes").innerHTML = '0' + " M";
+      document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
 
       const circleDasharrayDays = `${(
         daysRemainingProgress * 283
