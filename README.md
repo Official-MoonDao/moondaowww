@@ -47,6 +47,53 @@ A repository administrator will review and merge your changes.
 
 If you would like to be an official repository contributor, head over to our [Discord](https://discord.gg/5nAu7K9aES) and say hi in the #introduce-yourself channel.
 
+## Internationalization
+
+To run the site for local development with a different locale, pass the locale
+flag at startup. Each locale is hosted as a different app so you cannot change
+the locale without stopping and starting the development server.
+
+```
+yarn run start -- --locale zh-Hans
+```
+
+Ensure that all text tags are wrapped in the Translate element as shown here:
+`<Translate>Some Text<Translate>`.
+
+You will need to generate the translation files after new text is added to the
+site. This is done by running the following command for each locale:
+
+```
+yarn run write-translations -- --locale zh-Hans
+```
+
+This command will update the `i18n/zh-Hans/code.json` file which contains the
+translations for Chinese. The file contains a JSON object where keys are in
+English and the `message` field is the translated text. The command will
+intitialize the `message` field with the English text. Translators should update
+this text to the translated message.
+
+For example, the message:
+
+```json
+"Send a MoonDAO member to space": {
+  "message": "Send a MoonDAO member to space"
+},
+```
+
+should be updated to be:
+
+```json
+"Send a MoonDAO member to space": {
+  "message": "将 MoonDAO 成员送入太空"
+},
+```
+
+Create a PR and send it for review after updating the code.json file.
+
+See the [Docusaurus documentation](https://docusaurus.io/docs/i18n/tutorial) 
+for more details
+
 ## See a problem?
 
 Open a Github issue and we'll take a look :-)

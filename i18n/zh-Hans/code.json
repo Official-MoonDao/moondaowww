@@ -1,0 +1,342 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "页面已崩溃。",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "重试",
+    "description": "The label of the button to try again when the page crashed"
+  },
+  "theme.NotFound.title": {
+    "message": "找不到页面",
+    "description": "The title of the 404 page"
+  },
+  "theme.NotFound.p1": {
+    "message": "我们找不到您要找的页面。",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "请联系原始链接来源网站的所有者，并告知他们链接已损坏。",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "关闭",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "回到顶部",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "历史博文",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "历史博文",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "博文列表分页导航",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "较新的博文",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "较旧的博文",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "{readingTime} 分钟阅读",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.post.readMore": {
+    "message": "阅读更多",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "博文分页导航",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "较新一篇",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "较旧一篇",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "最近博文导航",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} 篇博文",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} 含有标签「{tagName}」",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "查看所有标签",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "复制代码到剪贴板",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "复制成功",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "复制",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "展开侧边栏",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "展开侧边栏",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "文档分页导航",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "上一页",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "下一页",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "收起侧边栏",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "收起侧边栏",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
+    "message": "打开/收起侧边栏菜单「{label}」",
+    "description": "The ARIA label to toggle the collapsible sidebar category"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "{count} 篇文档带有标签",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} 篇带有标签「{tagName}」",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "此为 {siteTitle} {versionLabel} 版尚未发行的文档。",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "此为 {siteTitle} {versionLabel} 版的文档，现已不再积极维护。",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "最新的文档请参阅 {latestVersionLink} ({versionLabel})。",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "最新版本",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "编辑此页",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "标题的直接链接",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": "于 {date} ",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": "由 {user} ",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "最后{byUser}{atDate}更新",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← 回到主菜单",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "选择版本",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "跳到主要内容",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "本页总览",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "标签：",
+    "description": "The label alongside a tag list"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "标签",
+    "description": "The title of the tag list page"
+  },
+  "Send a MoonDAO member to space": {
+    "message": "将 MoonDAO 成员送入太空"
+  },
+  "Buy $MOONEY to join MoonDAO and send a fren to space in 2022!": {
+    "message": "Buy $MOONEY to join MoonDAO and send a fren to space in 2022!"
+  },
+  "Time until end of fundraise": {
+    "message": "Time until end of fundraise"
+  },
+  "Thanks for everyone's contributions!": {
+    "message": "Thanks for everyone's contributions!"
+  },
+  "Funds Raised:": {
+    "message": "Funds Raised:"
+  },
+  "Current Goal:": {
+    "message": "Current Goal:"
+  },
+  "Learn more": {
+    "message": "Learn more"
+  },
+  "Buy token": {
+    "message": "Buy token"
+  },
+  "Our plan to send a MoonDAO member to space in 2022:": {
+    "message": "Our plan to send a MoonDAO member to space in 2022:"
+  },
+  "Offer {token} to begin decentralized community governance of MoonDAO.": {
+    "message": "Offer {token} to begin decentralized community governance of MoonDAO."
+  },
+  "This will be our only supply of tokens.": {
+    "message": "This will be our only supply of tokens."
+  },
+  "Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022.": {
+    "message": "Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022."
+  },
+  "Ticket to Space": {
+    "message": "Ticket to Space"
+  },
+  "Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.": {
+    "message": "Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship."
+  },
+  "Send MoonDAO member(s) to space in 2022.": {
+    "message": "Send MoonDAO member(s) to space in 2022."
+  },
+  "Mission": {
+    "message": "Mission"
+  },
+  "MoonDAO is going to the moon.": {
+    "message": "MoonDAO is going to the moon."
+  },
+  "MoonDAO is an international collective of people united by the mission of decentralizing access to space research and exploration. We are currently living at the inflection point of a privatized space race, and the implications of this moment will define our future. Making life multi-planetary is one of the most inspiring and important missions in our lifetime. The big question is: how? We believe that an international, decentralized, inclusive, and transparent organization would be much better aligned with the needs of the everyday person.": {
+    "message": "MoonDAO is an international collective of people united by the mission of decentralizing access to space research and exploration. We are currently living at the inflection point of a privatized space race, and the implications of this moment will define our future. Making life multi-planetary is one of the most inspiring and important missions in our lifetime. The big question is: how? We believe that an international, decentralized, inclusive, and transparent organization would be much better aligned with the needs of the everyday person."
+  },
+  "All civilizations become either spacefaring or extinct.": {
+    "message": "All civilizations become either spacefaring or extinct."
+  },
+  "Values": {
+    "message": "Values"
+  },
+  "Space should be in the hands of the people.": {
+    "message": "Space should be in the hands of the people."
+  },
+  "We uphold values of inclusion, peace, transparency, freedom of organization and speech. Space should be in the hands of the people, not any one nation or private entity.": {
+    "message": "We uphold values of inclusion, peace, transparency, freedom of organization and speech. Space should be in the hands of the people, not any one nation or private entity."
+  },
+  "As such, MoonDAO will support funding for individuals to go to space and fund future space research and exploration as it fits into the mission of becoming a governing body for the moon and other celestial bodies.": {
+    "message": "As such, MoonDAO will support funding for individuals to go to space and fund future space research and exploration as it fits into the mission of becoming a governing body for the moon and other celestial bodies."
+  },
+  "It is very important to note that the core team has not pre-mined any tokens for ourselves. We have not given “special terms” to any Venture Capitalists, Influencers, Angel Investors, Rich Friends or Family, or any other person. We are all being treated equally.": {
+    "message": "It is very important to note that the core team has not pre-mined any tokens for ourselves. We have not given “special terms” to any Venture Capitalists, Influencers, Angel Investors, Rich Friends or Family, or any other person. We are all being treated equally."
+  },
+  "Moon Phases": {
+    "message": "Moon Phases"
+  },
+  "Our roadmap to the stars.": {
+    "message": "Our roadmap to the stars."
+  },
+  "Moon phase 1": {
+    "message": "Moon phase 1"
+  },
+  "Deploy a token for decentralized governance of MoonDAO.": {
+    "message": "Deploy a token for decentralized governance of MoonDAO."
+  },
+  "In order to be a DAO, we need a governance token for decision making. Launching the $token is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance.": {
+    "message": "In order to be a DAO, we need a governance token for decision making. Launching the $token is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance."
+  },
+  "Every investor, builder, or fren, big or small, has gotten the same terms. No special treatment for anyone. This is unusual for an Ethereum project, but we thought it would be more fair for everyone involved that we did not airdrop or pre-mine any number of tokens for people ahead of time. We are not VC funded, we are community organized and led, this is very important to us!": {
+    "message": "Every investor, builder, or fren, big or small, has gotten the same terms. No special treatment for anyone. This is unusual for an Ethereum project, but we thought it would be more fair for everyone involved that we did not airdrop or pre-mine any number of tokens for people ahead of time. We are not VC funded, we are community organized and led, this is very important to us!"
+  },
+  "Moon phase 2": {
+    "message": "Moon phase 2"
+  },
+  "Send a MoonDAO member to space.": {
+    "message": "Send a MoonDAO member to space."
+  },
+  "Virgin Galactic advertises its tickets will be sold for “as low as” $450K and it has been reported that Blue Origin’s tickets are have gone up for auction for over $28M. The range is large. MoonDAO wants to help create a world where anyone can fly to space regardless of their financial situation. We hope that this can be a meaningful and inspirational first step in decentralizing space exploration.": {
+    "message": "Virgin Galactic advertises its tickets will be sold for “as low as” $450K and it has been reported that Blue Origin’s tickets are have gone up for auction for over $28M. The range is large. MoonDAO wants to help create a world where anyone can fly to space regardless of their financial situation. We hope that this can be a meaningful and inspirational first step in decentralizing space exploration."
+  },
+  "So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO changes this for the first time in history.": {
+    "message": "So far in history, space exploration has been gated to the rest of the world — accessible to only the privileged. MoonDAO changes this for the first time in history."
+  },
+  "Moon phase 3": {
+    "message": "Moon phase 3"
+  },
+  "Provide funding to space research and exploration.": {
+    "message": "Provide funding to space research and exploration."
+  },
+  "We don’t want to just take a ride on someone else’s rockets, we’d like to fund and coordinate our own plans. We think an international collective could move much faster than any red-taped organization, and we can contract out certain aspects of rocket development to private companies -- just like NASA.": {
+    "message": "We don’t want to just take a ride on someone else’s rockets, we’d like to fund and coordinate our own plans. We think an international collective could move much faster than any red-taped organization, and we can contract out certain aspects of rocket development to private companies -- just like NASA."
+  },
+  "The exploration of space should unify the world, not pit us against each other like the last space race. After all, aren't we all just curious earthlings that want to explore the unknown? Now, Web 3.0 represents a technology that can unify earthlings and decentralize space exploration.": {
+    "message": "The exploration of space should unify the world, not pit us against each other like the last space race. After all, aren't we all just curious earthlings that want to explore the unknown? Now, Web 3.0 represents a technology that can unify earthlings and decentralize space exploration."
+  },
+  "Moon phase 4": {
+    "message": "Moon phase 4"
+  },
+  "Put a MoonDAO colony on the moon.": {
+    "message": "Put a MoonDAO colony on the moon."
+  },
+  "That's one small step for man, one giant leap for mankind.": {
+    "message": "That's one small step for man, one giant leap for mankind."
+  },
+  "The 1967 Space Treaty forms the basis for all law concerning space. In this treaty it states that no national appropriation of the Moon can take place. However, a DAO is not a nation — it is an international collective of frens.": {
+    "message": "The 1967 Space Treaty forms the basis for all law concerning space. In this treaty it states that no national appropriation of the Moon can take place. However, a DAO is not a nation — it is an international collective of frens."
+  },
+  "We have the opportunity to use these new governance and coordination tools in order to form a more perfect union as we extend the rights and liberties of every human on earth into the solar system.": {
+    "message": "We have the opportunity to use these new governance and coordination tools in order to form a more perfect union as we extend the rights and liberties of every human on earth into the solar system."
+  },
+  "Moon phase 5": {
+    "message": "Moon phase 5"
+  },
+  "Have sweet moon parties (everyone's invited).": {
+    "message": "Have sweet moon parties (everyone's invited)."
+  },
+  "They're gonna be sweet. BYOB but we'll provide transportation.": {
+    "message": "They're gonna be sweet. BYOB but we'll provide transportation."
+  },
+  "Join our mission.": {
+    "message": "Join our mission."
+  },
+  "Contribute to our efforts by buying our governance token to fund our treasury, or lend us your brain power and help us build the world's first decentralized public space program.": {
+    "message": "Contribute to our efforts by buying our governance token to fund our treasury, or lend us your brain power and help us build the world's first decentralized public space program."
+  }
+}
