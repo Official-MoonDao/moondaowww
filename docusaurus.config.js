@@ -40,6 +40,10 @@ module.exports = {
       hideOnScroll: true,
       items: [
         {
+          type: 'localeDropdown',
+          position: 'left',
+        },
+        {
           to: "/docs/introduction",
           activeBasePath: "docs",
           label: "Documentation",
@@ -96,4 +100,8 @@ module.exports = {
     ],
   ],
   plugins: ["docusaurus-plugin-sass"],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh-Hans'],
+  },
 };
