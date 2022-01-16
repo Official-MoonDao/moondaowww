@@ -175,23 +175,23 @@ function runCountdown() {
       document.getElementById("base-timer-label-minutes").innerHTML = '0' + " M";
       document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
 
-    //   const circleDasharrayDays = `${(
-    //     daysRemainingProgress * 283
-    //   ).toFixed(0)} 283`;
-    //   document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
-    //   const circleDasharrayHours = `${(
-    //     hoursRemainingProgress * 283
-    //   ).toFixed(0)} 283`;
-    //   document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
-    //   const circleDasharrayMinutes = `${(
-    //     minutesRemainingProgress * 283
-    //   ).toFixed(0)} 283`;
-    //   document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
-    //   const circleDasharraySeconds = `${(
-    //     (secondsRemaining/60) * 283
-    //   ).toFixed(0)} 283`;
-    //   document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
-    // }
+      // const circleDasharrayDays = `${(
+      //   daysRemainingProgress * 283
+      // ).toFixed(0)} 283`;
+      // document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
+      // const circleDasharrayHours = `${(
+      //   hoursRemainingProgress * 283
+      // ).toFixed(0)} 283`;
+      // document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
+      // const circleDasharrayMinutes = `${(
+      //   minutesRemainingProgress * 283
+      // ).toFixed(0)} 283`;
+      // document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
+      // const circleDasharraySeconds = `${(
+      //   (secondsRemaining/60) * 283
+      // ).toFixed(0)} 283`;
+      // document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
+    }
 
   }, 1000);
 }
