@@ -10,7 +10,9 @@
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "write-translations": "docusaurus write-translations"
+    "write-translations": "docusaurus write-translations",
+    "prepare": "husky install",
+    "lint": "prettier --ignore-unknown --write ."
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.13",
@@ -48,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --ignore-unknown --write"
   }
 }

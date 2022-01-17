@@ -1,0 +1,6 @@
+.docusaurus
+.github
+build
+i18n
+node_modules
+static
