@@ -480,7 +480,7 @@ export default function Home() {
               </div>
               <div className='Column--50'>
                 <p className='center'>
-                  <img width='75%' src='img/undraw_launch_day_4e04.svg' alt='moondao logo'/>
+                  <img width='75%' src='img/undraw_launch_day_4e04.svg' alt='illustration of astronaut in space with moon in distance'/>
                 </p>
               </div>
             </div>
