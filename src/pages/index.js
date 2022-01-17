@@ -26,6 +26,9 @@ const ETHERSCAN_API_KEY = 'TJ95PY19ASCIBJQWX4T77V9MTHG7P57CKS';
 // Target USD amount for the initial MoonDAO funds raised.
 const TARGET_USD = 8_888_888;
 
+// Final ETH amount raised on juicebox
+const RAISED_ETH = 2503.78;
+
 // Get the ETH balance for the Juicbox contract.
 async function getJuiceboxBalance(axios) {
   // balanceOf(199)
@@ -97,109 +100,19 @@ async function fetchAndUpdateProgress() {
 
   const eth = juiceBoxBalance + multisigBalance;
   console.log('ETH: ' + eth);
-  const usdRaised = (eth * usdToEth).toFixed(0);
+  const usdRaised = (RAISED_ETH * usdToEth).toFixed(0);
   const percentRaised = (usdRaised / TARGET_USD) * 100;
   const ethReadable = (eth).toFixed(2);
   const usdReadable = usdRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const targetUSDreadble = TARGET_USD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const ethGoal = (TARGET_USD / usdToEth).toFixed(2);
-  document.getElementById('progress-bar').style.width = `${percentRaised}%`;
-  document.getElementById('moneyAmounts').textContent = '$' + usdReadable + '  (' + ethReadable + ' ETH)';
-  document.getElementById('goalAmounts').textContent = '$' + targetUSDreadble + '   (' + ethGoal + ' ETH)';
-  document.getElementById('goalAmountsMobile').textContent = '$' + targetUSDreadble + '   (' + ethGoal + ' ETH)';
-}
-
-function runCountdown() {
-  var timerInterval = setInterval(() => {
-    fetchAndUpdateProgress();
-  }, 10000);
-  if (screen.width < 1000) {
-    document.getElementById('timerContainer').style.display = 'none';
-    document.getElementById('timerContainerMobile').style.display = 'block';
-    document.getElementById("fundsRaisedMobile").style.display = 'block';
-    document.getElementById("goal").style.display = 'none';
-  }
-
-  var currentTime = new Date();
-  const offset = currentTime.getTimezoneOffset();
-  currentTime.setMinutes(currentTime.getMinutes()+offset);
-  var finalTime = new Date("2022-01-16T20:18:00Z");
-  finalTime.setMinutes(finalTime.getMinutes()+offset);
-  var fundraiseStartTime = new Date("2021-12-17T22:00:00Z");
-  fundraiseStartTime.setMinutes(fundraiseStartTime.getMinutes()+offset);
-
-  const fundraiseTotalTimeSeconds = Math.abs(finalTime.getTime() - fundraiseStartTime.getTime()) / 1000;
-
-  var timerInterval = setInterval(() => {
-    currentTime.setSeconds(currentTime.getSeconds()+1);
-
-    var secondsRemaining = Math.abs(finalTime.getTime() - currentTime.getTime()) / 1000;
-
-    if (secondsRemaining < 1) {
-      // document.getElementById('progress-bar-container').style.display = 'none';
-      // document.getElementById('fundsRaised').style.display = 'none';
-      // document.getElementById('fundsRaisedMobile').style.display = 'none';
-      document.getElementById("base-timer-label-seconds-m").innerHTML = '0' + " S";
-      document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
-      document.getElementById("confetti").style.display = 'block';
-      // document.getElementById('endRaise').innerHTML = "Funds Raised:   " + document.getElementById('moneyAmounts').innerHTML;
-      // document.getElementById("endRaise").style.display = 'block';
-      // document.getElementById("thankYou").style.display = 'block';
-      clearInterval(timerInterval);
-    }
-
-    var daysRemainingProgress = secondsRemaining / (fundraiseTotalTimeSeconds*1.0);
-    var daysRemainingDisplay = Math.floor(daysRemainingProgress*((fundraiseTotalTimeSeconds*1.0)/(24*3600)));
-
-    secondsRemaining = secondsRemaining - daysRemainingDisplay*24*3600;
-
-    var hoursRemainingProgress = secondsRemaining / (3600*24.0);
-    var hoursRemaining = Math.floor(secondsRemaining / 3600);
-
-    secondsRemaining = secondsRemaining - hoursRemaining*3600;
-
-    var minutesRemainingProgress = secondsRemaining / 3600.0;
-    var minutesRemaining = Math.floor(secondsRemaining / 60);
-
-    secondsRemaining = Math.floor(secondsRemaining - minutesRemaining*60);
-
-    if (screen.width < 1000) {
-      document.getElementById("base-timer-label-days-m").innerHTML = '0' + " D";
-      document.getElementById("base-timer-label-hours-m").innerHTML = '0' + " H";
-      document.getElementById("base-timer-label-minutes-m").innerHTML = '0' + " M";
-      document.getElementById("base-timer-label-seconds-m").innerHTML = '0' + " S";
-    }
-    else {
-      document.getElementById("base-timer-label-days").innerHTML = '0' + " D";
-      document.getElementById("base-timer-label-hours").innerHTML = '0' + " H";
-      document.getElementById("base-timer-label-minutes").innerHTML = '0' + " M";
-      document.getElementById("base-timer-label-seconds").innerHTML = '0' + " S";
-
-      // const circleDasharrayDays = `${(
-      //   daysRemainingProgress * 283
-      // ).toFixed(0)} 283`;
-      // document.getElementById("base-timer-path-remaining-days").setAttribute("stroke-dasharray", circleDasharrayDays);
-      // const circleDasharrayHours = `${(
-      //   hoursRemainingProgress * 283
-      // ).toFixed(0)} 283`;
-      // document.getElementById("base-timer-path-remaining-hours").setAttribute("stroke-dasharray", circleDasharrayHours);
-      // const circleDasharrayMinutes = `${(
-      //   minutesRemainingProgress * 283
-      // ).toFixed(0)} 283`;
-      // document.getElementById("base-timer-path-remaining-minutes").setAttribute("stroke-dasharray", circleDasharrayMinutes);
-      // const circleDasharraySeconds = `${(
-      //   (secondsRemaining/60) * 283
-      // ).toFixed(0)} 283`;
-      // document.getElementById("base-timer-path-remaining-seconds").setAttribute("stroke-dasharray", circleDasharraySeconds);
-    }
-
-  }, 1000);
+  document.getElementById('endRaise').textContent += ' $' + usdReadable;
 }
 
 const BrowserOnlyAxios = () => {
   return (
     <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => { fetchAndUpdateProgress(); runCountdown(); }}
+      {() => { fetchAndUpdateProgress(); }}
     </BrowserOnly>
   )
 }
@@ -215,6 +128,7 @@ export default function Home() {
     >
       <BrowserOnlyAxios>
       </BrowserOnlyAxios>
+      <meta charset="UTF-8"/>
       <div className='Home'>
         <div className='HomeHero'>
           <div className='BigHero'>
@@ -225,114 +139,15 @@ export default function Home() {
               <p className='BigP'>
                 <Translate>Buy $MOONEY to join MoonDAO and send a fren to space in 2022!</Translate>
               </p>
-              <img id='confetti' src='img/confetti-40.gif'/>
-              <h2 className='daoColor' id='countdownLabel'>
-                <Translate>Time until end of fundraise</Translate>
+              <h2 className='daoColor' id='endRaiseTitle'>
+                <Translate>Our token launch raised...</Translate>
               </h2>
-              <div id='timerContainerMobile'>
-                <span id='base-timer-label-days-m' class='mobile-countdown-digit'></span>
-                <span id='base-timer-label-hours-m' class='mobile-countdown-digit'></span>
-                <span id='base-timer-label-minutes-m' class='mobile-countdown-digit'></span>
-                <span id='base-timer-label-seconds-m' class='mobile-countdown-digit'></span>
-              </div>
-              <div id='timerContainer'>
-                <div id='daysTimer' class='base-timer'>
-                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
-                    <g class='base-timer__circle'>
-                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
-                      <path
-                        id="base-timer-path-remaining-days"
-                        stroke-dasharray="283"
-                        class="base-timer__path-remaining-days"
-                        d="
-                          M 50, 50
-                          m -45, 0
-                          a 45,45 0 1,0 90,0
-                          a 45,45 0 1,0 -90,0
-                        "
-                      ></path>
-                    </g>
-                  </svg>
-                  <span id='base-timer-label-days' class='base-timer__label'></span>
-                </div>
-                <div id='hoursTimer' class='base-timer'>
-                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
-                    <g class='base-timer__circle'>
-                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
-                      <path
-                        id="base-timer-path-remaining-hours"
-                        stroke-dasharray="283"
-                        class="base-timer__path-remaining-hours"
-                        d="
-                          M 50, 50
-                          m -45, 0
-                          a 45,45 0 1,0 90,0
-                          a 45,45 0 1,0 -90,0
-                        "
-                      ></path>
-                    </g>
-                  </svg>
-                  <span id='base-timer-label-hours' class='base-timer__label'></span>
-                </div>
-                <div id='minutesTimer' class='base-timer'>
-                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
-                    <g class='base-timer__circle'>
-                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
-                      <path
-                        id="base-timer-path-remaining-minutes"
-                        stroke-dasharray="283"
-                        class="base-timer__path-remaining-minutes"
-                        d="
-                          M 50, 50
-                          m -45, 0
-                          a 45,45 0 1,0 90,0
-                          a 45,45 0 1,0 -90,0
-                        "
-                      ></path>
-                    </g>
-                  </svg>
-                  <span id='base-timer-label-minutes' class='base-timer__label'></span>
-                </div>
-                <div id='secondsTimer' class='base-timer'>
-                  <svg class='base-timer__svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
-                    <g class='base-timer__circle'>
-                      <circle class='base-timer__path-elapsed' cx='50' cy='50' r='45' />
-                      <path
-                        id="base-timer-path-remaining-seconds"
-                        stroke-dasharray="283"
-                        class="base-timer__path-remaining-seconds"
-                        d="
-                          M 50, 50
-                          m -45, 0
-                          a 45,45 0 1,0 90,0
-                          a 45,45 0 1,0 -90,0
-                        "
-                      ></path>
-                    </g>
-                  </svg>
-                  <span id='base-timer-label-seconds' class='base-timer__label'></span>
-                </div>
-              </div>
-              <h1 className='daoColor' id='endRaise'>
+              <h1 className='BigP' id='endRaise'>
+                2508.78 ETH &#x23E9;
               </h1>
-              <h1 className='daoColor' id='thankYou'>
-                <Translate>Thanks for everyone's contributions!</Translate>
-              </h1>
-              <h2 className='daoColor' id='fundsRaised'>
-                <Translate>Funds Raised:</Translate>
-                <span id='moneyAmounts'> </span>
-                <span class Name='daoColor' id='goal'>
-                  <Translate>Current Goal:</Translate>
-                  <span id='goalAmounts'> </span>
-                </span>
-              </h2>
-              <h2 className='daoColor' id='fundsRaisedMobile'>
-                <Translate>Current Goal:</Translate>
-                <span id='goalAmountsMobile'> </span>
-              </h2>
-              <div className='progress' id='progress-bar-container'>
-                <span className='progress-bar' id='progress-bar'></span>
-              </div>
+              <p className='BigP' id='thankYou'>
+                <Translate>Thanks for everyone's contributions! Our next step swill be releasing TicketToSpace NFTs and sending a member to space! &#x1f680; &#x1f680; &#x1f680;</Translate>
+              </p>
               <div className='HeroButtonGroup'>
                 <a
                   href='https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8'
@@ -340,14 +155,14 @@ export default function Home() {
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
-                  <Translate>Learn more</Translate>
+                  <Translate>Learn More</Translate>
                 </a>
                 <a
-                  href='https://juicebox.money/#/p/moondao'
+                  href='http://localhost:3000/zh-Hans/docs/launch-path#-moon-phase-2-send-a-moondao-member-to-space-in-2022'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
-                  <Translate>Buy token</Translate>
+                  <Translate>What's Next?</Translate>
                 </a>
               </div>
             </div>
@@ -632,7 +447,7 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='https://juicebox.money/#/p/moondao'
+                      href='https://app.uniswap.org/#/swap?&inputCurrency=0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395&outputCurrency=ETH'
                       className='Button Primary Outlined'
                     >
                       <Translate>Buy token</Translate>

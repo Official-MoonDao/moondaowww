@@ -74,13 +74,16 @@ code {
 #endRaise {
   margin-top: 20px;
   padding-top: 0px;
-  display: none;
+}
+
+#endRaiseTitle {
+  margin-top: 70px;
+  padding-top: 0px;
 }
 
 #thankYou {
-  margin-top: 20px;
+  margin-top: 50px;
   padding-top: 0px;
-  display: none;
 }
 
 #confetti {
