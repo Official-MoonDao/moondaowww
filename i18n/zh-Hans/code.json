@@ -229,7 +229,7 @@
     "message": "这是我们代币唯一的供应量。"
   },
   "Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022.": {
-    "message": "发放{ticketToSpace} NFT珍藏系列. 这些NFT将让你有机会在2022年飞向太空。"
+    "message": "发放{ticketToSpace} NFT珍藏系列。这些NFT将让你有机会在2022年飞向太空。"
   },
   "Ticket to Space": {
     "message": "太空船票"
@@ -274,7 +274,7 @@
     "message": "我们的动态蓝图."
   },
   "Moon phase 1": {
-    "message": "月相1-蛾眉月"
+    "message": "月相1 - 蛾眉月"
   },
   "Deploy a token for decentralized governance of MoonDAO.": {
     "message": "部署MoonDAO的去中心化治理的代币"
@@ -286,7 +286,7 @@
     "message": "每一个投资者，创建者或小朋友，无论大小，都得到了相同的条件。对任何人都没有特殊待遇。这对于以太坊项目来说是不寻常的。这是因为我们认为，没有提前为任何人空投或预挖任何数量的代币对所有参与者来说更为公平。我们没有风投融资，我们是社群主导和组织，这对我们来说是非常重要！"
   },
   "Moon phase 2": {
-    "message": "月相2-上弦月"
+    "message": "月相2 - 上弦月"
   },
   "Send a MoonDAO member to space.": {
     "message": "将MoonDAO成员送入太空。"
@@ -298,7 +298,7 @@
     "message": "迄今为止，太空探索一直是只有特权人群可以享受的待遇。 但MoonDAO第一次改变了历史。"
   },
   "Moon phase 3": {
-    "message": "月相3-盈凸月"
+    "message": "月相3 - 盈凸月"
   },
   "Provide funding to space research and exploration.": {
     "message": "资助空间研究和探索"
@@ -310,7 +310,7 @@
     "message": "太空探索应该是团结世界，而不是像上次太空竞赛那样让我们相互对抗。毕竟，我们不都是好奇的地球人，想要探索未知吗？现在，Web 3.0 意味着新的科技可以团结所有地球人并且分散太空探索。"
   },
   "Moon phase 4": {
-    "message": "月相4-满月"
+    "message": "月相4 - 满月"
   },
   "Put a MoonDAO colony on the moon.": {
     "message": "MoonDAO殖民月球"
