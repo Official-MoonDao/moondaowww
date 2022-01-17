@@ -291,10 +291,7 @@ export default function Home() {
                 <p className='small'>
                   <Translate
                     values={{token: <Link to="/docs/token">$MOONEY governance tokens</Link>}}>
-                    In order to be a DAO, we need a governance token for
-                    decision making. Launching the $token is our first step.
-                    There is no expectation of profit with this token, this
-                    token’s purpose is to coordinate our governance.
+                    {'In order to be a DAO, we need a governance token for decision making. Launching the {token} is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance.'}
                   </Translate>
                 </p>
                 <p className='small'>

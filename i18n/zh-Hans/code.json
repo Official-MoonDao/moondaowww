@@ -279,8 +279,8 @@
   "Deploy a token for decentralized governance of MoonDAO.": {
     "message": "部署MoonDAO的去中心化治理的代币"
   },
-  "In order to be a DAO, we need a governance token for decision making. Launching the $token is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance.": {
-    "message": "为了成为一个DAO，我们需要一个用于决策的治理代币。启动 $token 是我们的第一步。这个代币没有利润的期望，目的是协调我们的治理。"
+  "In order to be a DAO, we need a governance token for decision making. Launching the {token} is our first step. There is no expectation of profit with this token, this token’s purpose is to coordinate our governance.": {
+    "message": "为了成为一个DAO，我们需要一个用于决策的治理代币。启动 {token} 是我们的第一步。这个代币没有利润的期望，目的是协调我们的治理。"
   },
   "Every investor, builder, or fren, big or small, has gotten the same terms. No special treatment for anyone. This is unusual for an Ethereum project, but we thought it would be more fair for everyone involved that we did not airdrop or pre-mine any number of tokens for people ahead of time. We are not VC funded, we are community organized and led, this is very important to us!": {
     "message": "每一个投资者，创建者或小盆友，无论大小，都得到了相同的条件。对任何人都没有特殊待遇。这对于以太坊项目来说是不寻常的。这是因为我们认为，没有提前为任何人空投或预挖任何数量的代币对所有参与者来说更为公平。我们没有风投融资，我们是社群主导和组织，这对我们来说是非常重要！"
