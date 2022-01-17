@@ -572,7 +572,7 @@ export default function Home() {
                 </p>
                 <p className='small'>
                   <Translate>
-                  That's one small step for man, one giant leap for mankind.
+                  That's one small step for man, one giant leap for mankind.
                   </Translate>
                 </p>
                 <p className='small'>
