@@ -444,10 +444,10 @@ export default function Home() {
                 <div id='community_actions' className='Row AlignCenter'>
                   <div>
                     <a
-                      href='https://app.uniswap.org/#/swap?&inputCurrency=0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395&outputCurrency=ETH'
+                      href='https://moondao.com/docs/contribute'
                       className='Button Primary Outlined'
                     >
-                      <Translate>Buy token</Translate>
+                      <Translate>Contribute</Translate>
                     </a>
                   </div>
                   <div className='Social'>
