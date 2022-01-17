@@ -158,7 +158,7 @@ export default function Home() {
                   <Translate>Learn More</Translate>
                 </a>
                 <a
-                  href='http://localhost:3000/zh-Hans/docs/launch-path#-moon-phase-2-send-a-moondao-member-to-space-in-2022'
+                  href='https://moondao.com/docs/launch-path#-moon-phase-2-send-a-moondao-member-to-space-in-2022'
                   className='Button Big Primary Outlined'
                   id='heroButton'
                 >
