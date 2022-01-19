@@ -1,18 +1,18 @@
 // Typography
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 //Set Fonts
 
-$heading-font: "Poppins", sans-serif;
-$body-font: "Open Sans", sans-serif;
+$heading-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
 //Color Palette
-$primary: #5CE0D8; // rgba(81, 62, 151)
-$secondary: #01345B;
-$tertiary: #FFCF43;
+$primary: #5ce0d8; // rgba(81, 62, 151)
+$secondary: #01345b;
+$tertiary: #ffcf43;
 
 // Other Colors
-$primary-background: #01345B; // rgba(14, 15, 53)
+$primary-background: #01345b; // rgba(14, 15, 53)
 $primary-dark: #050a1b;
 $blue: #001aff;
 $orange: #ea8923;

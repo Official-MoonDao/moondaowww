@@ -2,13 +2,28 @@
 id: team
 title: Our (growing) team
 description: Get to know our growing team of Contributors.
-keywords: [Contributors, Team, Core Team, Progressive Governance, Titles, Astronauts, Cosmonauts, Rocketeers, Moon Settlers, Earthlings, Subject Roles]
+keywords:
+  [
+    Contributors,
+    Team,
+    Core Team,
+    Progressive Governance,
+    Titles,
+    Astronauts,
+    Cosmonauts,
+    Rocketeers,
+    Moon Settlers,
+    Earthlings,
+    Subject Roles,
+  ]
 sidebar_label: Team
 sidebar_position: 5
 ---
+
 **Disclaimer:** We're providing this info because we think it helps build trust to have our names and reputation behind this effort (we're not a rug pull). However we don't claim to be the "leaders" of this DAO, we're just helping guide it during its early life and then like proud parents will let it run free once it reaches maturity.
 
 ## Core team
+
 ### Pablo Moncada-Larrotiz
 
 **Astronaut / Ops / Tech**

@@ -2,13 +2,24 @@
 id: contribute
 title: How to contribute to MoonDAO
 description: Learn how to contribute to MoonDAO, understand Progressive Governance, and Titles and their Subject Roles.
-keywords: [Contribute, Progressive Governance, Titles, Astronauts, Cosmonauts, Rocketeers, Moon Settlers, Earthlings, Subject Roles, Decentralization]
+keywords:
+  [
+    Contribute,
+    Progressive Governance,
+    Titles,
+    Astronauts,
+    Cosmonauts,
+    Rocketeers,
+    Moon Settlers,
+    Earthlings,
+    Subject Roles,
+    Decentralization,
+  ]
 sidebar_label: Contribute
 sidebar_position: 6
 ---
 
 If you have any more questions, or would like to hang out with the community and get involved, join our Discord or follow us on Twitter.
-
 
 - [Discord](https://discord.gg/RpDEtQHcPw)
 - [Twitter](https://twitter.com/OfficialMoonDAO)
@@ -16,9 +27,9 @@ If you have any more questions, or would like to hang out with the community and
 
 ## Progressive Governance
 
-Our Progressive governance model enables anyone to contribute to the DAO. 
+Our Progressive governance model enables anyone to contribute to the DAO.
 
-## Titles Include: 
+## Titles Include:
 
 - **@Astronaut** - (Temporary) leaders and administrators of MoonDAO
 - **@Cosmonauts** - Members of the MoonDAO Core Team
@@ -27,9 +38,8 @@ Our Progressive governance model enables anyone to contribute to the DAO.
 - **@Earthlings** - Verified members of MoonDAO
 
 ## Subject Roles
-Here are some of the ways you can specialise in MoonDAO:
-@Legal @Finance @Eth Dev @Web Dev @Design @Marketing
-All roles are earnable.
+
+Here are some of the ways you can specialise in MoonDAO: @Legal @Finance @Eth Dev @Web Dev @Design @Marketing All roles are earnable.
 
 As MoonDAO matures, **@Moon Settlers**, **@Rocketeers**, **@Cosmonauts** and **@Astronauts** will be decided in a decentralised, bottom-up approach through wider community vote. The 'in' group should not decide roles- MoonDAO is not a clique it's a community. Eventually once MoonDAO reaches full-maturity we can get rid of roles altogether.
 
