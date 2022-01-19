@@ -155,7 +155,7 @@ export default function Home() {
               </h1>
               <p className="BigP" id="thankYou">
                 <Translate>
-                  Thanks for everyone's contributions! Our next step swill be
+                  Thanks for everyone's contributions! Our next step will be
                   releasing TicketToSpace NFTs and sending a member to space!
                   &#x1f680; &#x1f680; &#x1f680;
                 </Translate>
