@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 // Typography
 
@@ -62,14 +62,15 @@ p {
     font-size: 1.25em;
   }
   &.small {
-    font-size: .8em;
+    font-size: 0.8em;
   }
   &.center {
     text-align: center;
   }
 }
 
-ol, ul {
+ol,
+ul {
   max-width: 800px;
   margin: 10px 0px 10px 0px;
 }
@@ -128,7 +129,7 @@ a {
 
 blockquote {
   font-family: 'Poppins';
-  margin-top:40px;
+  margin-top: 40px;
   font-size: 1.25em;
   font-weight: bold;
   border-left-width: 1px;
@@ -141,7 +142,7 @@ img {
 
 // Typography Utils
 .Data {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   word-break: break-all;
 }
 
@@ -530,7 +531,7 @@ p.Large {
 .video-container {
   overflow: hidden;
   position: relative;
-  width:100%;
+  width: 100%;
 }
 
 .video-container::after {
@@ -561,7 +562,7 @@ p.Large {
     margin: 0 auto;
   }
   width: calc(100% - 100px);
-  &.NoCode input:not([type="checkbox"]):not([type="submit"]),
+  &.NoCode input:not([type='checkbox']):not([type='submit']),
   &.NoCode textarea {
     max-width: 100%;
     resize: vertical;
@@ -600,7 +601,7 @@ p.Large {
   position: relative;
 }
 
-input:not([type="checkbox"]):not([type="submit"]),
+input:not([type='checkbox']):not([type='submit']),
 textarea {
   height: 40px;
   // border-radius: 50px;
@@ -617,7 +618,7 @@ textarea {
   }
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   float: left;
   margin-right: 10px;
   vertical-align: middle;
@@ -680,7 +681,7 @@ label.Select {
   position: relative;
   width: 100%;
   &::after {
-    content: "";
+    content: '';
     // background-image: url("../assets/icon__dropdown-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;

@@ -2,12 +2,23 @@
 id: token
 title: The $MOONEY token
 description: Learn more about the $MOONEY token, and how you can help fund the decentralization of space travel.
-keywords: [Token, Tokenomics, Distribution, Multi-Sig, Juicebox, Donations, MoonDAO, MOONEY, Space Travel]
+keywords:
+  [
+    Token,
+    Tokenomics,
+    Distribution,
+    Multi-Sig,
+    Juicebox,
+    Donations,
+    MoonDAO,
+    MOONEY,
+    Space Travel,
+  ]
 sidebar_label: $MOONEY token
 sidebar_position: 2
 ---
 
-The $MOONEY token launched on **Friday, December 17, 2021** on Juicebox. The funding period will last for one lunar cycle and will end on **Sunday, January 16, 2022 at 3:18 PM EST.
+The $MOONEY token launched on **Friday, December 17, 2021** on Juicebox. The funding period will last for one lunar cycle and will end on \*\*Sunday, January 16, 2022 at 3:18 PM EST.
 
 [Buy $MOONEY on Juicebox](https://juicebox.money/#/p/moondao)
 
@@ -28,6 +39,7 @@ The following videos in English and Spanish explain how to buy $MOONEY with ETH 
 </div>
 
 ## Distribution & Tokenomics
+
 1. Our token will have a fixed supply. Once our initial token raise is over, we will never increase the supply of the tokens.
 
 2. Our token will be used for governance decisions. We will have proportional governance up to a community decided limit. The limit is needed so that if one person buys more than 51% of the tokens they cannot centrally control the DAO’s decisions. To begin, we will use a 4% limit of the total coin supply, however anyone is welcome to purchase more than 4% if they would like to contribute more.

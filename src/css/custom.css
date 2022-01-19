@@ -17,10 +17,10 @@
   --ifm-code-font-size: 95%;
   --ifm-background-color: #f6f6f2;
   --ifm-footer-background-color: #f6f6f2;
-  --ifm-footer-color: #01345B;
+  --ifm-footer-color: #01345b;
   --ifm-navbar-background-color: #000000;
-  --ifm-navbar-link-color: #FFFFFF;
-  --ifm-navbar-link-hover-color: #FFFFFF;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #ffffff;
   --ifm-navbar-height: 80px;
   --ifm-dropdown-background-color: #050a1b;
   --ifm-dropdown-link-color: #0e99c4;
@@ -35,15 +35,15 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -117,7 +117,16 @@ code {
 .progress-bar {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
+  background: linear-gradient(
+    90deg,
+    #ffd33d,
+    #ea4aaa 17%,
+    #b34bff 34%,
+    #01feff 51%,
+    #ffd33d 68%,
+    #ea4aaa 85%,
+    #b34bff
+  );
   background-size: 300% 100%;
   animation: progress-animation 2s linear infinite;
   width: 25.71%;
@@ -131,44 +140,44 @@ code {
     background-position: 0;
   }
 }
- .progressTitle {
+.progressTitle {
   font-weight: 900;
   font-size: 2.5em;
   letter-spacing: -2px;
- }
+}
 
- #fundsRaised {
-   margin-top: 30px;
-   font-size: large;
-   margin-bottom: 10px;
- }
+#fundsRaised {
+  margin-top: 30px;
+  font-size: large;
+  margin-bottom: 10px;
+}
 
- #fundsRaisedMobile {
+#fundsRaisedMobile {
   display: none;
   font-size: large;
   margin-bottom: 10px;
 }
 
- #goal {
+#goal {
   margin-top: 1px;
   font-size: large;
 }
 
- #disclaimer {
+#disclaimer {
   margin-top: 5px;
   font-size: small;
 }
 
- #heroButton {
-   background-color: #5ce0d8;
-   color: black;
- }
+#heroButton {
+  background-color: #5ce0d8;
+  color: black;
+}
 
- #MoonPhase {
-   margin-top: 20px;
- }
+#MoonPhase {
+  margin-top: 20px;
+}
 
- #MoonPhase5 {
+#MoonPhase5 {
   margin-top: 5px;
 }
 
@@ -210,12 +219,12 @@ code {
 
 .base-timer__label {
   position: absolute;
-  
+
   width: 150px;
   height: 150px;
-  
+
   top: 0;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,4 +308,3 @@ code {
   /* Flips the svg and makes the animation to move left-to-right */
   transform: scaleX(-1);
 }
-
