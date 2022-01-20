@@ -114,6 +114,7 @@ async function fetchAndUpdateProgress() {
     ',',
   );
   const ethGoal = (TARGET_USD / usdToEth).toFixed(2);
+  document.getElementById('endRaise').textContent = document.getElementById('endRaise').textContent.slice(0, -3);
   document.getElementById('endRaise').textContent += ' $' + usdReadable;
 }
 
@@ -151,7 +152,7 @@ export default function Home() {
                 <Translate>Our token launch raised...</Translate>
               </h2>
               <h1 className="BigP" id="endRaise">
-                2508.78 ETH &#x23E9;
+                2508.78 ETH &#x23E9; ...
               </h1>
               <p className="BigP" id="thankYou">
                 <Translate>
