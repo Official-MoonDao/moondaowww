@@ -4,11 +4,15 @@
     "description": "The title in the navbar"
   },
   "item.label.Documentation": {
-    "message": "Documentation",
+    "message": "文件",
     "description": "Navbar item with label Documentation"
   },
   "item.label.Contribute": {
-    "message": "Contribute",
+    "message": "贡献",
+    "description": "Navbar item with label Contribute"
+  },
+  "item.label.Governance": {
+    "message": "治理",
     "description": "Navbar item with label Contribute"
   }
 }

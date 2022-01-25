@@ -54,6 +54,11 @@ module.exports = {
           label: 'Contribute',
           position: 'right',
         },
+        {
+          to: 'https://snapshot.org/#/tomoondao.eth',
+          label: 'Governance',
+          position: 'right',
+        },
       ],
     },
     footer: {
