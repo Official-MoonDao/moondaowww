@@ -353,5 +353,11 @@
   },
   "Contribute": {
     "message": "Contribuir"
+  },
+  "Thanks for everyone's contributions! Our next step will be releasing TicketToSpace NFTs and sending a member to space! 🚀 🚀 🚀": {
+    "message": "Thanks for everyone's contributions! Our next step will be releasing TicketToSpace NFTs and sending a member to space! 🚀 🚀 🚀"
+  },
+  "Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022.": {
+    "message": "Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022."
   }
 }
