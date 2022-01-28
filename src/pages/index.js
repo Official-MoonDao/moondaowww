@@ -114,7 +114,7 @@ async function fetchAndUpdateProgress() {
     ',',
   );
   const ethGoal = (TARGET_USD / usdToEth).toFixed(2);
-  document.getElementById('endRaise').textContent = '2503.78 ETH ' + String.fromCodePoint(0x23E9) + ' $' + usdReadable;
+  //document.getElementById('endRaise').textContent = '2495.15 ETH ' + String.fromCodePoint(0x23E9) + ' $' + usdReadable;
 }
 
 const BrowserOnlyAxios = () => {
@@ -142,16 +142,11 @@ export default function Home() {
               <h1 className="daoColor" id="homeTitle">
                 <Translate>Send a MoonDAO member to space</Translate>
               </h1>
-              <p className="BigP">
-                <Translate>
-                  Buy $MOONEY to join MoonDAO and send a fren to space in 2022!
-                </Translate>
-              </p>
               <h2 className="daoColor" id="endRaiseTitle">
                 <Translate>Our token launch raised...</Translate>
               </h2>
               <h1 className="BigP" id="endRaise">
-                2503.78 ETH &#x23E9; ...
+                2495.15 ETH
               </h1>
               <p className="BigP" id="thankYou">
                 <Translate>
