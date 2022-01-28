@@ -107,6 +107,6 @@ module.exports = {
   plugins: ['docusaurus-plugin-sass'],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    locales: ['en', 'zh-Hans', 'es'],
   },
 };
