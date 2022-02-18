@@ -140,7 +140,7 @@ export default function Home() {
           <div className="BigHero">
             <div className="Block__Contents" id="homeTitle">
               <h1 className="daoColor" id="homeTitle">
-                <Translate>Send a MoonDAO member to space</Translate>
+                <Translate>We are sending MoonDAO members to space!</Translate>
               </h1>
               <h2 className="daoColor" id="endRaiseTitle">
                 <Translate>Our token launch raised...</Translate>
@@ -151,7 +151,7 @@ export default function Home() {
               <p className="BigP" id="thankYou">
                 <Translate>
                   Thanks for everyone's contributions! Our next step will be
-                  releasing TicketToSpace NFTs and sending a member to space!
+                  releasing TicketToSpace NFTs and sending members to space!
                   &#x1f680; &#x1f680; &#x1f680;
                 </Translate>
               </p>
@@ -164,10 +164,10 @@ export default function Home() {
                   <Translate>Learn More</Translate>
                 </a>
                 <a
-                  href="https://moondao.com/docs/launch-path#-moon-phase-2-send-a-moondao-member-to-space-in-2022"
+                  href="https://app.uniswap.org/#/swap?&inputCurrency=ETH&outputCurrency=0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395"
                   className="Button Big Primary Outlined"
                   id="heroButton">
-                  <Translate>What's Next?</Translate>
+                  <Translate>Buy $MOONEY</Translate>
                 </a>
               </div>
             </div>
