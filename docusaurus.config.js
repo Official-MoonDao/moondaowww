@@ -32,10 +32,10 @@ module.exports = {
       disableSwitch: true,
     },
     navbar: {
-      title: 'MoonDAO',
+      // title: 'MoonDAO',
       logo: {
         alt: 'MoonDAO Logo moon dao',
-        src: 'img/moondaologo.png',
+        src: 'img/Original_White.png',
       },
       hideOnScroll: true,
       items: [
@@ -86,7 +86,7 @@ module.exports = {
       ],
       logo: {
         alt: 'MoonDAO logo moondao moon dao',
-        src: 'img/moondaologo.png',
+        src: 'img/Original_Black.png',
       },
       copyright: `Copyright © ${new Date().getFullYear()} MoonDAO.`,
     },
