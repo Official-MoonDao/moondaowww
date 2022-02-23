@@ -10,5 +10,9 @@
   "item.label.Contribute": {
     "message": "Contribuir",
     "description": "Navbar item with label Contribute"
+  },
+   "item.label.Governance": {
+    "message": "Gobernanza",
+    "description": "Navbar item with label Contribute"
   }
 }
