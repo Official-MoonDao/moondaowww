@@ -55,9 +55,18 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'https://snapshot.org/#/tomoondao.eth',
           label: 'Governance',
           position: 'right',
+          items: [
+            {
+              label: 'Snapshot',
+              href: 'https://snapshot.org/#/tomoondao.eth',
+            },
+            {
+              label: 'Forum',
+              href: 'https://forum.moondao.com/',
+            },
+          ],
         },
       ],
     },
