@@ -187,7 +187,7 @@ export default function Home() {
                     <Translate
                       values={{
                         token: (
-                          <Link to="/docs/token">
+                          <Link to="/docs/to-the-moon/token">
                             $MOONEY governance tokens
                           </Link>
                         ),
@@ -204,6 +204,12 @@ export default function Home() {
                     </strong>
                   </li>
                   <li>
+                    <Translate>
+                      Buy tickets to space on a SpaceX/Blue Origin/Virgin
+                      Galactic etc. rocket ship.
+                    </Translate>
+                  </li>
+                  <li>
                     <Translate
                       values={{
                         ticketToSpace: (
@@ -215,12 +221,6 @@ export default function Home() {
                       {
                         'Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022.'
                       }
-                    </Translate>
-                  </li>
-                  <li>
-                    <Translate>
-                      Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin
-                      Galactic etc. rocket ship.
                     </Translate>
                   </li>
                   <li>
@@ -335,7 +335,7 @@ export default function Home() {
                   <Translate
                     values={{
                       token: (
-                        <Link to="/docs/token">$MOONEY governance tokens</Link>
+                        <Link to="/docs/to-the-moon/token">$MOONEY governance tokens</Link>
                       ),
                     }}>
                     {
@@ -518,7 +518,7 @@ export default function Home() {
                 <div id="community_actions" className="Row AlignCenter">
                   <div>
                     <a
-                      href="https://moondao.com/docs/contribute"
+                      href="/docs/work/roles"
                       className="Button Primary Outlined">
                       <Translate>Contribute</Translate>
                     </a>

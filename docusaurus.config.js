@@ -44,13 +44,13 @@ module.exports = {
           position: 'left',
         },
         {
-          to: '/docs/introduction',
+          to: '/docs/to-the-moon/introduction',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'right',
         },
         {
-          to: '/#community',
+          to: '/docs/work/roles',
           label: 'Contribute',
           position: 'right',
         },

@@ -1,23 +1,17 @@
 ---
 id: team
-title: Our (growing) team
-description: Get to know our growing team of Contributors.
+title: Team
+description: Get to know our growing team of contributors.
 keywords:
   [
     Contributors,
     Team,
     Core Team,
     Progressive Governance,
-    Titles,
-    Astronauts,
-    Cosmonauts,
-    Rocketeers,
-    Moon Settlers,
-    Earthlings,
-    Subject Roles,
+    Titles
   ]
-sidebar_label: Team
-sidebar_position: 5
+sidebar_label: 👥 | Team
+sidebar_position: 1
 ---
 
 **Disclaimer:** We're providing this info because we think it helps build trust to have our names and reputation behind this effort (we're not a rug pull). However we don't claim to be the "leaders" of this DAO, we're just helping guide it during its early life and then like proud parents will let it run free once it reaches maturity.
@@ -46,7 +40,7 @@ Discord ID: @kogero
 
 ## Progressive decentralization
 
-As MoonDAO matures, @Moon-settlers @extraterrestrials, @cosmonauts and @astronauts will be decided in a decentralized, bottom-up approach through wider community vote. The 'in' group should not decide roles — MoonDAO is not a clique, it's a community. Eventually once MoonDAO reaches full-maturity we can get rid of roles altogether.
+As MoonDAO matures, Moon Settler, Rocketeer, Voyager, and Astronaut roles will be decided in a decentralized, bottom-up approach through wider community vote. The 'in' group should not decide roles — MoonDAO is not a clique, it's a community. Eventually once MoonDAO reaches full-maturity we can get rid of roles altogether.
 
 In MoonDAOs very early life, we will help guide the DAO until it can find its feet and walk on its own. As such, at the beginning, we will have to centrally grow the MoonDAO team, but will do so while filtering strongly for individuals who are not status/bureaucracy-oriented and who are working on dedicated channels (dev, legal, finance, design).
 
