@@ -212,15 +212,13 @@ export default function Home() {
                           </strong>
                         ),
                       }}>
-                      {
-                        'Release the {ticketToSpace} NFT collection. These NFTs will give you a chance to fly to space in 2022.'
-                      }
+                      {'Purchase a ticket to space with Blue Origin!'}
                     </Translate>
                   </li>
                   <li>
                     <Translate>
-                      Buy a ticket(s) to space on a SpaceX/Blue Origin/Virgin
-                      Galactic etc. rocket ship.
+                      Release the Ticket To Space NFT collection. These NFTs
+                      will give you a chance to fly to space in 2022.
                     </Translate>
                   </li>
                   <li>
