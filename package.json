@@ -28,7 +28,7 @@
     "docusaurus-plugin-sass": "^0.1.12",
     "https-browserify": "^1.0.0",
     "node": "^17.2.0",
-    "node-fetch": "^3.1.0",
+    "node-fetch": "^3.1.1",
     "npm": "^7.19.1",
     "os-browserify": "^0.3.0",
     "react": "^16.8.4",
