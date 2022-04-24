@@ -32,7 +32,7 @@ Every investor, builder, or fren, big or small, **has gotten the same terms.** N
 
 ## 🌓 Moon Phase 2: Send a MoonDAO member to space in 2022.
 
-1. We will release the Ticket to Space NFT collection. These NFTs can only be purchased with our token, and will put you into a lottery to win a ticket to fly to space in 2022.
+1. We will release the Ticket to Space NFT collection. These NFTs will put you in the running to win a ticket to fly to space in 2022.
 2. The money raised from the sale of these NFTs will be used to buy tickets to space on a SpaceX/Blue Origin/Virgin Galactic etc. rocket ship.
 3. Send MoonDAO member(s) to space in 2022.
 
