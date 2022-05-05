@@ -72,7 +72,6 @@ code {
 }
 
 #homeTitle {
-  margin-top: 20px;
   padding-top: 0px;
 }
 
@@ -171,11 +170,6 @@ code {
 #disclaimer {
   margin-top: 5px;
   font-size: small;
-}
-
-#heroButton {
-  background-color: #5ce0d8;
-  color: black;
 }
 
 #MoonPhase {

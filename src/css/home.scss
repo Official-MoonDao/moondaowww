@@ -20,6 +20,7 @@
 .HeroButtonGroup {
   margin-top: 40px;
   @media (min-width: $mobile + 1) {
+    display: flex;
     .Button:not(:first-child) {
       margin-left: 25px;
     }
@@ -45,19 +46,82 @@
   justify-content: flex-start;
   h1 {
     font-size: 3em;
+    color: #d7d9d4;
     @media (max-width: $mobile) {
       font-size: 2em;
     }
     span {
       display: block;
       font-size: 0.5em;
-      margin-top: 20px;
+      // margin-top: 20px;
     }
   }
   @media (max-width: $grid) {
     width: calc(100%);
     padding: 25px;
   }
+}
+
+.NFTContainer {
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.NFTBox {
+  min-height: 90%;
+  width: 40%;
+  margin-top: 1em;
+  min-width: 350px;
+  justify-self: start;
+  margin-right: 5%;
+  display: flex;
+  border: 3px solid #d7d9d4;
+  border-radius: 3em;
+  box-shadow: -2px 0.5em 2em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.NFTInfo {
+  min-height: 90%;
+  padding: 2em;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    font-style: $heading-font;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #d7d9d4;
+  }
+
+  a {
+    background-color: black;
+    border: 2px solid #d7d9d4;
+    padding: 1.5em;
+    min-width: 10em;
+    text-align: center;
+    border-radius: 3em;
+    box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    color: #d7d9d4;
+    margin-right: 2em;
+  }
+}
+
+.NFTPrice {
+  font-style: $heading-font;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #d7d9d4;
 }
 
 #community {
