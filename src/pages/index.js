@@ -12,6 +12,7 @@ import LaunchSvg from '@site/static/img/undraw_launch_day_4e04.svg';
 
 import '../css/global.scss';
 import '../css/home.scss';
+import Hero from '../Components/Hero';
 
 // Juicebox TerminalV1 address.
 const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
@@ -136,43 +137,7 @@ export default function Home() {
       <BrowserOnlyAxios></BrowserOnlyAxios>
       <meta charset="UTF-8" />
       <div className="Home">
-        <div className="HomeHero">
-          <div className="BigHero">
-            <div className="Block__Contents" id="homeTitle">
-              <h1 className="daoColor" id="homeTitle">
-                <Translate>We are sending MoonDAO members to space!</Translate>
-              </h1>
-              <h2 className="daoColor" id="endRaiseTitle">
-                <Translate>Our token launch raised...</Translate>
-              </h2>
-              <h1 className="BigP" id="endRaise">
-                2495.15 ETH
-              </h1>
-              <p className="BigP" id="thankYou">
-                <Translate>
-                  Thanks for everyone's contributions! Our next step will be
-                  releasing TicketToSpace NFTs and sending members to space!
-                  &#x1f680; &#x1f680; &#x1f680;
-                </Translate>
-              </p>
-              <div className="HeroButtonGroup">
-                <a
-                  href="https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8"
-                  target="_blank"
-                  className="Button Big Primary Outlined"
-                  id="heroButton">
-                  <Translate>Learn More</Translate>
-                </a>
-                <a
-                  href="https://app.uniswap.org/#/swap?&inputCurrency=ETH&outputCurrency=0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395"
-                  className="Button Big Primary Outlined"
-                  id="heroButton">
-                  <Translate>Buy $MOONEY</Translate>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Hero />
         <div className="Goal Block">
           <div className="Block__Contents">
             <div className="Row">
