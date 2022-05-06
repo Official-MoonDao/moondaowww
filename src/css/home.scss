@@ -35,10 +35,9 @@
 }
 
 .BigHero {
-  padding-left: 0px;
   width: calc(100%);
   background: url('/img/lunar-panorama-large.png') no-repeat bottom;
-  background-color: $primary-background;
+  background-color: black;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -58,17 +57,26 @@
   }
   @media (max-width: $grid) {
     width: calc(100%);
-    padding: 25px;
+  }
+}
+
+.Block__Contents {
+  @media (max-width: $mobile) {
+    text-align: center;
   }
 }
 
 .NFTContainer {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: start;
   flex-wrap: wrap;
   width: 100%;
   min-height: 50vh;
+  @media (max-width: $mobile) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .NFTBox {
@@ -85,6 +93,13 @@
   justify-content: start;
   align-items: center;
   overflow: hidden;
+  @media (max-width: $mobile) {
+    min-width: 350px;
+    margin-right: 0%;
+    @media (max-width: $mobile - 368) {
+      min-width: calc(100%);
+    }
+  }
 }
 
 .NFTInfo {
@@ -95,11 +110,16 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media (max-width: $mobile) {
+    min-width: calc(100%);
+  }
+
   p {
     font-style: $heading-font;
     font-weight: bold;
     font-size: 1.5em;
     color: #d7d9d4;
+    margin-top: 1em;
   }
 
   a {
@@ -114,6 +134,30 @@
     border-radius: 0.5em;
     color: #d7d9d4;
     margin-right: 2em;
+    @media (max-width: $mobile) {
+      margin-bottom: 1em;
+      min-width: calc(100%);
+    }
+  }
+
+  #timerContainer {
+    align-self: center;
+  }
+
+  .base-timer {
+    @media (max-width: $mobile) {
+      height: 70px;
+      width: 70px;
+      margin-left: 15px;
+    }
+  }
+
+  .base-timer__label {
+    @media (max-width: $mobile) {
+      height: 70px;
+      width: 70px;
+      font-size: 15px;
+    }
   }
 }
 

@@ -48,7 +48,7 @@ code {
 }
 
 .navbar__item {
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: 0.05em;
 }
 
@@ -194,16 +194,19 @@ code {
 }
 
 #countdownLabel {
-  margin-top: 30px;
   font-size: large;
 }
 
 .base-timer {
   position: relative;
   display: flex;
-  height: 150px;
-  width: 150px;
-  margin-left: 30px;
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+}
+
+#daysTimer {
+  margin-left: 0px;
 }
 
 .base-timer__circle {
@@ -219,8 +222,8 @@ code {
 .base-timer__label {
   position: absolute;
 
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 
   top: 0;
 
@@ -228,7 +231,7 @@ code {
   align-items: center;
   justify-content: center;
 
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .base-timer__path-remaining-days {

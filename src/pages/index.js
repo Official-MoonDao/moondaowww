@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import Translate, {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
@@ -13,6 +12,7 @@ import LaunchSvg from '@site/static/img/undraw_launch_day_4e04.svg';
 import '../css/global.scss';
 import '../css/home.scss';
 import Hero from '../Components/Hero';
+import runCountdown from '../Components/Countdown';
 
 // Juicebox TerminalV1 address.
 const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
@@ -118,24 +118,13 @@ async function fetchAndUpdateProgress() {
   //document.getElementById('endRaise').textContent = '2495.15 ETH ' + String.fromCodePoint(0x23E9) + ' $' + usdReadable;
 }
 
-const BrowserOnlyAxios = () => {
-  return (
-    <BrowserOnly fallback={<div> Loading... </div>}>
-      {() => {
-        fetchAndUpdateProgress();
-      }}
-    </BrowserOnly>
-  );
-};
-
 export default function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <BrowserOnlyAxios></BrowserOnlyAxios>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <div className="Home">
         <Hero />
         <div className="Goal Block">
