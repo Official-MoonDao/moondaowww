@@ -5,7 +5,7 @@ export const runCountdown = () => {
   var currentTime = new Date();
   const offset = currentTime.getTimezoneOffset();
   currentTime.setMinutes(currentTime.getMinutes() + offset);
-  var finalTime = new Date('2022-05-16T12:00:00Z');
+  var finalTime = new Date('2022-05-16T15:00:00Z');
   finalTime.setMinutes(finalTime.getMinutes() + offset);
   var fundraiseStartTime = new Date('2022-05-05T22:00:00Z');
   fundraiseStartTime.setMinutes(fundraiseStartTime.getMinutes() + offset);

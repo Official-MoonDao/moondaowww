@@ -19,7 +19,7 @@
 
 .HeroButtonGroup {
   margin-top: 40px;
-  @media (min-width: $mobile + 1) {
+  @media (min-width: ($mobile + 1)) {
     display: flex;
     .Button:not(:first-child) {
       margin-left: 25px;
@@ -88,7 +88,7 @@
   justify-self: start;
   margin-right: 5%;
   display: flex;
-  border: 3px solid #d7d9d4;
+  // border: 3px solid #d7d9d4;
   border-radius: 3em;
   box-shadow: -2px 0.5em 2em 2px #b7b8b4, 2px 2px 6px #f7faf4;
   justify-content: start;
@@ -97,7 +97,7 @@
   @media (max-width: $mobile) {
     min-width: 350px;
     margin-right: 0%;
-    @media (max-width: $mobile - 368) {
+    @media (max-width: ($mobile - 368)) {
       min-width: calc(100%);
     }
   }
@@ -127,7 +127,7 @@
 
   a {
     background-color: black;
-    border: 2px solid #d7d9d4;
+    // border: 2px solid #d7d9d4;
     padding: 1.5em;
     min-width: 10em;
     text-align: center;
@@ -140,6 +140,24 @@
     @media (max-width: $mobile) {
       margin-bottom: 1em;
       min-width: calc(100%);
+    }
+  }
+
+  .countdownContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .timerText {
+    text-align: center;
+    font-family: $body-font;
+    font-weight: bold;
+    font-size: 0.75em;
+    color: #d7d9d4;
+
+    .timerTime {
+      font-size: 1.5em;
     }
   }
 
