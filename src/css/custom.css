@@ -194,7 +194,8 @@ code {
 }
 
 #countdownLabel {
-  font-size: large;
+  text-align: center;
+  font-size: 1.25em;
 }
 
 .base-timer {
