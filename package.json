@@ -32,6 +32,7 @@
     "npm": "^7.19.1",
     "os-browserify": "^0.3.0",
     "react": "^16.8.4",
+    "react-countdown-circle-timer": "^3.0.9",
     "react-dom": "^16.8.4",
     "react-icons": "^4.2.0",
     "stream-browserify": "^3.0.0",

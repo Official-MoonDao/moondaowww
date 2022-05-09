@@ -19,12 +19,17 @@
 
 .HeroButtonGroup {
   margin-top: 40px;
-  @media (min-width: $mobile + 1) {
+  justify-content: center;
+  .buyMooney {
+    margin-right: 0em;
+  }
+  @media (min-width: ($mobile + 1)) {
+    display: flex;
     .Button:not(:first-child) {
       margin-left: 25px;
     }
   }
-  @media (max-width: $mobile) {
+  @media (max-width: 925px) {
     display: flex;
     flex-direction: column;
     .Button:not(:first-child) {
@@ -34,10 +39,9 @@
 }
 
 .BigHero {
-  padding-left: 0px;
   width: calc(100%);
   background: url('/img/lunar-panorama-large.png') no-repeat bottom;
-  background-color: $primary-background;
+  background-color: black;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -45,18 +49,144 @@
   justify-content: flex-start;
   h1 {
     font-size: 3em;
-    @media (max-width: $mobile) {
-      font-size: 2em;
+    color: #d7d9d4;
+    @media (max-width: 925px) {
+      font-size: 1.75em;
+      margin-bottom: 0px;
     }
     span {
       display: block;
       font-size: 0.5em;
-      margin-top: 20px;
+      // margin-top: 20px;
     }
   }
   @media (max-width: $grid) {
     width: calc(100%);
-    padding: 25px;
+  }
+}
+
+.Block__Contents {
+  @media (max-width: 925px) {
+    text-align: center;
+  }
+}
+
+.NFTContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 50vh;
+  @media (max-width: 925px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.NFTBox {
+  min-height: 90%;
+  width: 40%;
+  margin-top: 1em;
+  min-width: 350px;
+  justify-self: start;
+  margin-right: 5%;
+  display: flex;
+  border-radius: 3em;
+  box-shadow: -2px 0.5em 2em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  @media (max-width: $mobile) {
+    min-width: 350px;
+    margin-right: 0%;
+    @media (max-width: ($mobile - 368)) {
+      min-width: calc(100%);
+    }
+  }
+}
+
+.NFTInfo {
+  min-height: 90%;
+  padding: 2em;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 925px) {
+    padding: 1em;
+    padding-top: 0em;
+    justify-content: center;
+    min-width: calc(100%);
+  }
+
+  p {
+    font-style: $heading-font;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #d7d9d4;
+    margin-top: 1em;
+  }
+
+  a {
+    background-color: black;
+    border: 2px solid #d7d9d4;
+    padding: 1.5em;
+    min-width: calc(45%);
+    text-align: center;
+    border-radius: 3em;
+    box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    color: #d7d9d4;
+    margin-right: 2em;
+    @media (max-width: 925px) {
+      margin-bottom: 1.5em;
+      min-width: calc(100%);
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .countdownContainer {
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    .countdownSeperator {
+      display: flex;
+      direction: row;
+    }
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .timer {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .timerText {
+    text-align: center;
+    font-family: $body-font;
+    font-weight: bold;
+    font-size: 0.75em;
+    color: #d7d9d4;
+
+    .timerTime {
+      font-size: 2em;
+    }
   }
 }
 
