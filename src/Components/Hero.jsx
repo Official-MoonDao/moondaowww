@@ -1,6 +1,7 @@
 import React from 'react';
 import Translate from '@docusaurus/Translate';
 import Countdown from '../Components/Countdown';
+import NewCount from './Countdown';
 
 const Hero = () => {
   return (
@@ -27,7 +28,9 @@ const Hero = () => {
               <p id="NFTInfoHeading">
                 Win a chance to go to space with our Ticket To Space NFT!
               </p>
-              <p id="countdownLabel">NFT Minting Begins In</p>
+              <p id="countdownLabel">
+                <Translate>NFT Minting Begins In...</Translate>
+              </p>
               <Countdown />
               <div className="HeroButtonGroup">
                 <a
