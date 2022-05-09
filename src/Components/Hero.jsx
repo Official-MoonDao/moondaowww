@@ -40,7 +40,8 @@ const Hero = () => {
                 </a>
                 <a
                   href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395&chain=mainnet"
-                  target="_blank">
+                  target="_blank"
+                  className="buyMooney">
                   <Translate>Buy $MOONEY</Translate>
                 </a>
               </div>
