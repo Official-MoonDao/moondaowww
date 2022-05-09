@@ -17,6 +17,7 @@ const Hero = () => {
                 id="NFTVideo"
                 autoPlay
                 muted
+                playsInline
                 src="img/NFTTicketV3.mp4"
                 onMouseEnter={(e) => e.target.play()}
                 onLoadedData={(e) => e.target.play()}
