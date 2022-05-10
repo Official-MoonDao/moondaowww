@@ -21,11 +21,13 @@ const timerProps = {
 };
 
 export default function Countdown() {
-  const startTime = Date.now() / 1000; // use UNIX timestamp in seconds
+  const startTime = new Date('2022-05-06T02:17:00Z') / 1000; // use UNIX timestamp in seconds
+  const currentTime = Date.now() / 1000; // use UNIX timestamp in seconds
   const endTime = new Date('2022-05-16T15:00:00Z') / 1000; // use UNIX timestamp in seconds
 
-  const remainingTime = endTime - startTime;
-  const days = Math.ceil(remainingTime / daySeconds);
+  const remainingTime = endTime - currentTime;
+  const totalTime = endTime - startTime;
+  const days = Math.ceil(totalTime / daySeconds);
   const daysDuration = days * daySeconds;
 
   return (
