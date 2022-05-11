@@ -18,7 +18,7 @@ const Hero = () => {
                 autoPlay
                 muted
                 playsInline
-                src="img/NFTTicketV3.mp4"
+                src="img/Ticket_9060.mp4"
                 onMouseEnter={(e) => e.target.play()}
                 onLoadedData={(e) => e.target.play()}
                 width={'100%'}
