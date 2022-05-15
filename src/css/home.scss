@@ -18,8 +18,8 @@
 }
 
 .HeroButtonGroup {
-  margin-top: 40px;
-  justify-content: center;
+  // margin-top: 40px;
+  justify-content: space-between;
   .buyMooney {
     margin-right: 0em;
   }
@@ -140,7 +140,9 @@
     padding: 1.5em;
     border-radius: 0.5em;
     color: #d7d9d4;
-    margin-right: 2em;
+    &:first-child {
+      margin-right: 2em;
+    }
     @media (max-width: 925px) {
       margin-bottom: 1.5em;
       min-width: calc(100%);
@@ -149,7 +151,30 @@
       color: $primary;
     }
   }
-
+  .Mint-btn {
+    background-image: linear-gradient(to right, #0affe2, #7f32fc);
+    color: #fff;
+    box-shadow: none;
+    border: none;
+    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    height: 78px;
+    // &:hover {
+    //   color: #fff;
+    // }
+    img {
+      height: 40px;
+      margin: 0 10px;
+    }
+    .arrow-icon {
+      height: 22px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .countdownContainer {
     display: flex;
     direction: column;
@@ -157,7 +182,7 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-
+    margin-bottom: 40px;
     .countdownSeperator {
       display: flex;
       direction: row;

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Translate from '@docusaurus/Translate';
-import Countdown from '../Components/Countdown';
-import NewCount from './Countdown';
+import Countdown from './Countdown';
+
+import VectorIcon from '../icons/icon-Vector.png';
+import ArrowIcon from '../icons/icon-double_arrow.png';
 
 const Hero = () => {
+  const [showMintButton, setShowMintButton] = useState(false);
   return (
     <div className="HomeHero">
       <div className="BigHero">
@@ -29,10 +32,24 @@ const Hero = () => {
               <p id="NFTInfoHeading">
                 Win a chance to go to space with our Ticket To Space NFT!
               </p>
-              <p id="countdownLabel">
-                <Translate>NFT Minting Begins In...</Translate>
-              </p>
-              <Countdown />
+              {showMintButton ? (
+                <a
+                  href="https://nft.moondao.com"
+                  target="_blank"
+                  className="Mint-btn">
+                  <img src={VectorIcon} alt="" />
+                  MINT NOW
+                  <img className="arrow-icon" src={ArrowIcon} alt="" />
+                </a>
+              ) : (
+                <React.Fragment>
+                  <p id="countdownLabel">
+                    <Translate>NFT Minting Begins In...</Translate>
+                  </p>
+                  <Countdown onEnd={() => setShowMintButton(true)} />
+                </React.Fragment>
+              )}
+
               <div className="HeroButtonGroup">
                 <a
                   href="https://mirror.xyz/pmoncada.eth/HyA4_czQTchCx6x_BN_2zk87zED9w6_AtEGcWhF-vCg"
