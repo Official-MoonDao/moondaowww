@@ -415,13 +415,13 @@ img {
   }
   &__Item {
     width: 33%;
-    @media (min-width: $grid + 1px) {
+    @media (min-width: ($grid + 1px)) {
       &:not(:nth-child(3n)) {
         margin-right: 15px;
         width: calc(33% - 15px);
       }
     }
-    @media (min-width: $mobile + 1px) and (max-width: $grid) {
+    @media (min-width: ($mobile + 1px)) and (max-width: $grid) {
       width: calc(50%);
       &:not(:nth-child(2n)) {
         margin-right: 15px;
