@@ -65,12 +65,6 @@
   }
 }
 
-.Block__Contents {
-  @media (max-width: 925px) {
-    text-align: center;
-  }
-}
-
 .NFTContainer {
   display: flex;
   align-items: center;
@@ -195,13 +189,14 @@
     margin: 40px 0;
     justify-content: start;
   }
-  .Button:first-child {
+  .Button {
     margin-right: 25px;
   }
 }
 
 .Social {
   display: flex;
+  margin-top: 1em;
   a {
     margin-right: 15px;
     width: 36px;
