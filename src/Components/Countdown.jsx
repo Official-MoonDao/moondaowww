@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {CountdownCircleTimer} from 'react-countdown-circle-timer';
 import Translate from '@docusaurus/Translate';
 
@@ -20,7 +20,7 @@ const timerProps = {
   trailColor: '#808080',
 };
 
-export default function Countdown() {
+export default function Countdown(props) {
   const startTime = new Date('2022-05-06T02:17:00Z') / 1000; // use UNIX timestamp in seconds
   const currentTime = Date.now() / 1000; // use UNIX timestamp in seconds
   const endTime = new Date('2022-06-03T15:00:00Z') / 1000; // use UNIX timestamp in seconds
@@ -29,6 +29,20 @@ export default function Countdown() {
   const totalTime = endTime - startTime;
   const days = Math.ceil(totalTime / daySeconds);
   const daysDuration = days * daySeconds;
+
+  // make sure to appear the minting link when the countdown ends
+  useEffect(() => {
+    let timer = null;
+    const shouldEnd = () => {
+      const remainingTimeNow = endTime - Date.now() / 1000;
+      if (remainingTimeNow <= 0) {
+        clearInterval(timer);
+        props.onEnd && props.onEnd();
+      }
+    };
+    shouldEnd();
+    timer = setInterval(shouldEnd, 1000);
+  }, []);
 
   return (
     <div className="countdownContainer">
