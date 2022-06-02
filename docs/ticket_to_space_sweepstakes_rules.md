@@ -4,10 +4,10 @@ title: Ticket to Space Sweepstakes Rules
 description: Official rules regarding the Ticket to Space Sweepstakes
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: Sweepstakes Rules
-sidebar_position: 7
+sidebar_position: 8
 ---
 
-## MoonDAO™ Ticket to Space Sweepstakes Rules
+## **MoonDAO™ Ticket to Space Sweepstakes Rules**
 
 **NO PURCHASE NECESSARY TO PLAY OR WIN. PURCHASE WILL NOT INCREASE YOUR ODDS OF WINNING.**
 
