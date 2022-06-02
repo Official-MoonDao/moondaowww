@@ -50,17 +50,17 @@ If you are located in the United Kingdom or the EU, you may contact Achieved Com
 
 EU
 
-By email: info@moondao.com
+By email: TBD
 
-By mail: [INSERT COMPANY/INDIVIDUAL NAME AND MAILING ADDRESS].
+By mail: TBD
 
 UK
 
-By email: info@moondao.com
+By TBD
 
-By mail: [INSERT COMPANY/INDIVIDUAL NAME AND MAILING ADDRESS].
+By mail: TBD
 
-Please be advised that our EU representative is [INSERT NAME], who can be contacted at [INSERT CONTACT INFORMATION].
+Please be advised that our EU representative is TBD, who can be contacted at TBD.
 
 ### **Legal Basis**
 
