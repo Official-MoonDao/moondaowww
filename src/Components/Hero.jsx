@@ -34,7 +34,7 @@ const Hero = () => {
               </p>
               {showMintButton ? (
                 <a
-                  href="https://nft.moondao.com"
+                  href="https://mint.moondao.com"
                   target="_blank"
                   className="Mint-btn">
                   <img src={VectorIcon} alt="" />
