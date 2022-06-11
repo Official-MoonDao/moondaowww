@@ -21,6 +21,23 @@
   justify-content: space-between;
   .buyMooney {
     margin-right: 0em;
+    background-color: black;
+    border: 2px solid #d7d9d4;
+    padding: 1.5em;
+    min-width: calc(45%);
+    text-align: center;
+    border-radius: 3em;
+    box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    color: #d7d9d4;
+    @media (max-width: 925px) {
+      margin-bottom: 1.5em;
+      min-width: calc(100%);
+    }
+    &:hover {
+      color: $primary;
+    }
   }
   @media (min-width: ($mobile + 1)) {
     display: flex;
@@ -121,7 +138,7 @@
     margin-top: 1em;
   }
 
-  a {
+  .buttonClass {
     background-color: black;
     border: 2px solid #d7d9d4;
     padding: 1.5em;
@@ -148,6 +165,7 @@
     color: #fff;
     box-shadow: none;
     border: none;
+    border-radius: 0.5em;
     margin-right: 0;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -163,6 +181,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.5em;
   }
   .countdownContainer {
     display: flex;
@@ -201,6 +220,15 @@
     .timerTime {
       font-size: 2em;
     }
+  }
+
+  .buyMooneyDesc {
+    font-style: $heading-font;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #d7d9d4;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
   }
 }
 

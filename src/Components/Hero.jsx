@@ -37,9 +37,7 @@ const Hero = () => {
                   href="https://nft.moondao.com"
                   target="_blank"
                   className="Mint-btn">
-                  <img src={VectorIcon} alt="" />
-                  MINT NOW
-                  <img className="arrow-icon" src={ArrowIcon} alt="" />
+                  Buy $MOONEY
                 </a>
               ) : (
                 <React.Fragment>
@@ -49,14 +47,24 @@ const Hero = () => {
                   <Countdown onEnd={() => setShowMintButton(true)} />
                 </React.Fragment>
               )}
+              <div className="buyMooneyDesc">
+                Buy $MOONEY to vote which KOL we will be sending to space on our{' '}
+                <a
+                  classname="snapshotLink"
+                  href="https://snapshot.org/#/tomoondao.eth/proposal/0xdec77b14a0f7a6405d42a57661a0e9ee297b37d3d03e6d9387f0ad4d339b9840">
+                  Snapshot
+                </a>
+              </div>
 
               <div className="HeroButtonGroup">
                 <a
+                  className="buttonClass"
                   href="https://mirror.xyz/pmoncada.eth/HyA4_czQTchCx6x_BN_2zk87zED9w6_AtEGcWhF-vCg"
                   target="_blank">
                   <Translate>Learn More</Translate>
                 </a>
                 <a
+                  className="buttonClass"
                   href="https://app.verisoul.xyz/moondao"
                   target="_blank"
                   className="buyMooney">
