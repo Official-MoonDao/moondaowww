@@ -127,65 +127,7 @@ export default function Home() {
       <meta charSet="UTF-8" />
       <div className="Home">
         <Hero />
-        <div className="Goal Block">
-          <div className="Block__Contents">
-            <div className="Row">
-              <div className="Column--100">
-                <h3>
-                  <Translate>
-                    Our plan to send a MoonDAO member to space in 2022:
-                  </Translate>
-                </h3>
-                <ol>
-                  <li>
-                    <Translate
-                      values={{
-                        token: (
-                          <Link to="/docs/token">
-                            $MOONEY governance tokens
-                          </Link>
-                        ),
-                      }}>
-                      {
-                        'Offer {token} to begin decentralized community governance of MoonDAO.'
-                      }
-                    </Translate>
-                    &nbsp;
-                    <strong>
-                      <Translate>
-                        This will be our only supply of tokens.
-                      </Translate>
-                    </strong>
-                  </li>
-                  <li>
-                    <Translate
-                      values={{
-                        ticketToSpace: (
-                          <strong>
-                            <Translate>Ticket to Space</Translate>
-                          </strong>
-                        ),
-                      }}>
-                      {'Purchase a ticket to space with Blue Origin!'}
-                    </Translate>
-                  </li>
-                  <li>
-                    <Translate>
-                      Release the Ticket To Space NFT collection. These NFTs
-                      will give you a chance to fly to space in 2022.
-                    </Translate>
-                  </li>
-                  <li>
-                    <Translate>
-                      Send MoonDAO member(s) to space in 2022.
-                    </Translate>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="Block PrimaryBg">
+        <div className="Block_PrimaryBg" id="mission">
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--100">
@@ -222,8 +164,88 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="downArrow">
+            <a href="#objectives">
+              <img
+                src="/img/down-arrow-1767595-1502499.png"
+                alt="downwards arrow"
+              />
+            </a>
+          </div>
         </div>
-        <div className="Values Block">
+        <div className="Goal_Block" id="objectives">
+          <div className="Block__Contents">
+            <div className="Row">
+              <div className="Column--100">
+                <h5 className="daoColor">
+                  <Translate>2022 Objectives</Translate>
+                </h5>
+                <h3>
+                  <Translate>
+                    Our plan to send a MoonDAO member to space in 2022:
+                  </Translate>
+                </h3>
+                <ol>
+                  <li>
+                    <Translate
+                      values={{
+                        token: (
+                          <Link to="/docs/token">
+                            $MOONEY governance tokens
+                          </Link>
+                        ),
+                      }}>
+                      {
+                        'Offer {token} to begin decentralized community governance of MoonDAO.'
+                      }
+                    </Translate>
+                    &nbsp;
+                    <strong>
+                      <Translate>
+                        This will be our only supply of tokens.
+                      </Translate>
+                    </strong>
+                    <span> &#x2705; </span>
+                  </li>
+                  <li>
+                    <Translate
+                      values={{
+                        ticketToSpace: (
+                          <strong>
+                            <Translate>Ticket to Space</Translate>
+                          </strong>
+                        ),
+                      }}>
+                      {'Purchase a ticket to space with Blue Origin!'}
+                    </Translate>
+                    <span> &#x2705; </span>
+                  </li>
+                  <li>
+                    <Translate>
+                      Release the Ticket To Space NFT collection. These NFTs
+                      will give you a chance to fly to space in 2022.
+                    </Translate>
+                    <span> &#x2705; </span>
+                  </li>
+                  <li>
+                    <Translate>
+                      Send MoonDAO member(s) to space in 2022.
+                    </Translate>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div className="downArrow">
+            <a href="#values">
+              <img
+                src="/img/down-arrow-1767595-1502499.png"
+                alt="downwards arrow"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="Values_Block" id="values">
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--100">
@@ -263,7 +285,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="Roadmap Block PrimaryBg" id="MoonPhase">
+        <div className="Roadmap_Block" id="MoonPhase">
           <div className="Block__Contents">
             <h5>
               <Translate>Moon Phases</Translate>
@@ -308,7 +330,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="Column--33">
-                <p className="center roadmap-moon-icon">
+                <p className="center roadmap-moon-icon" id="moonIcon">
                   🌒 <br />
                 </p>
               </div>
@@ -344,7 +366,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="Column--33">
-                <p className="center roadmap-moon-icon">
+                <p className="center roadmap-moon-icon" id="moonIcon">
                   🌓 <br />
                 </p>
               </div>
@@ -382,7 +404,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="Column--33">
-                <p className="center roadmap-moon-icon">
+                <p className="center roadmap-moon-icon" id="moonIcon">
                   🌔 <br />
                 </p>
               </div>
@@ -420,7 +442,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="Column--33">
-                <p className="center roadmap-moon-icon">
+                <p className="center roadmap-moon-icon" id="moonIcon">
                   🌕 <br />
                 </p>
               </div>
@@ -445,7 +467,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="Column--33">
-                <p className="center roadmap-moon-icon">
+                <p className="center roadmap-moon-icon" id="moonIcon">
                   🌝 <br />
                 </p>
               </div>

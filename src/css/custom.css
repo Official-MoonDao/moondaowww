@@ -63,8 +63,8 @@ code {
 }
 
 .navbar__logo {
-  height: 70px;
-  width: 250px;
+  height: 90px;
+  width: 320px;
 }
 
 .container {
@@ -170,10 +170,6 @@ code {
 #disclaimer {
   margin-top: 5px;
   font-size: small;
-}
-
-#MoonPhase {
-  margin-top: 20px;
 }
 
 #MoonPhase5 {
@@ -310,4 +306,8 @@ code {
 .base-timer__svg {
   /* Flips the svg and makes the animation to move left-to-right */
   transform: scaleX(-1);
+}
+
+#moonIcon {
+  font-size: 5em;
 }

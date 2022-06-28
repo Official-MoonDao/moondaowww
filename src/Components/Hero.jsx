@@ -9,8 +9,20 @@ const Hero = () => {
   const [showMintButton, setShowMintButton] = useState(false);
   return (
     <div className="HomeHero">
-      <div className="BigHero">
-        <div className="Block__Contents" id="homeTitle">
+      <div className="mainText">
+        <div className="titleText">Decentralizing Access to Space</div>
+        <div className="projectDescription">Offering grants for anyone</div>
+      </div>
+      <div className="downArrow">
+        <a href="#mission">
+          <img
+            src="/img/down-arrow-1767595-1502499.png"
+            alt="downwards arrow"
+          />
+        </a>
+      </div>
+      {/* <div className="BigHero"> */}
+      {/* <div className="Block__Contents" id="homeTitle">
           <h1 id="homeTitle">
             <Translate>We are sending MoonDAO members to space!</Translate>
           </h1>
@@ -65,8 +77,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };

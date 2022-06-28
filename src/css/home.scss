@@ -9,12 +9,136 @@
 }
 
 .HomeHero {
+  position: relative;
+  min-height: 100vh;
+  height: 103vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/362470151-huge.jpg') no-repeat;
+  background-size: cover;
+  .mainText {
+    display: flex;
+    flex-direction: column;
+    .titleText {
+      position: relative;
+      margin-top: 10%;
+      margin-left: 5%;
+      font-size: 3em;
+      color: white;
+      font-family: 'Montserrat';
+      font-weight: bold;
+    }
+    .projectDescription {
+      position: relative;
+      color: black;
+      margin-top: 5em;
+      margin-left: 5%;
+      font-size: 1em;
+    }
+  }
+  .downArrow {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+    img {
+      height: 5em;
+      width: 5em;
+    }
+  }
+}
+
+.Goal_Block {
+  position: relative;
   display: flex;
   flex-direction: row;
-  min-height: 90vh;
-  color: white;
-  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
   flex-wrap: wrap;
+  background: url('/img/shutterstock_1630095409.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+  }
+  li {
+    font-size: 1.3em;
+    padding-bottom: 1em;
+    span {
+      color: green;
+      padding-left: 5px;
+    }
+  }
+  .downArrow {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+    img {
+      height: 5em;
+      width: 5em;
+    }
+  }
+}
+
+.Block_PrimaryBg {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_9263629.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+  }
+  .downArrow {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+    img {
+      height: 5em;
+      width: 5em;
+    }
+  }
+}
+
+.Values_Block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_1454730908.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
+}
+
+.Roadmap_Block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_1494511394.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
 }
 
 .HeroButtonGroup {
@@ -39,7 +163,6 @@
 
 .BigHero {
   width: calc(100%);
-  background: url('/img/lunar-panorama-large.png') no-repeat bottom;
   background-color: black;
   position: relative;
   display: flex;
@@ -244,6 +367,7 @@
 }
 
 .Home {
+  margin-top: -7em;
   .Carousel {
     position: relative;
     width: 50%;
