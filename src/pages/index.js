@@ -249,7 +249,7 @@ export default function Home() {
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--100">
-                <h5>
+                <h5 className="daoColor">
                   <Translate>Values</Translate>
                 </h5>
                 <h3>
@@ -284,10 +284,18 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="downArrow">
+            <a href="#MoonPhase">
+              <img
+                src="/img/down-arrow-1767595-1502499.png"
+                alt="downwards arrow"
+              />
+            </a>
+          </div>
         </div>
         <div className="Roadmap_Block" id="MoonPhase">
           <div className="Block__Contents">
-            <h5>
+            <h5 className="daoColor">
               <Translate>Moon Phases</Translate>
             </h5>
             <h3>
@@ -295,7 +303,7 @@ export default function Home() {
             </h3>
             <div className="Row AlignCenter">
               <div className="Column--66">
-                <h4>
+                <h4 className="daoColor2">
                   <Translate>Moon phase 1</Translate>
                 </h4>
                 <p>
@@ -337,7 +345,7 @@ export default function Home() {
             </div>
             <div className="Row AlignCenter" id="MoonPhase">
               <div className="Column--66">
-                <h4>
+                <h4 className="daoColor2">
                   <Translate>Moon phase 2</Translate>
                 </h4>
                 <p>
@@ -373,7 +381,7 @@ export default function Home() {
             </div>
             <div className="Row AlignCenter" id="MoonPhase">
               <div className="Column--66">
-                <h4>
+                <h4 className="daoColor2">
                   <Translate>Moon phase 3</Translate>
                 </h4>
                 <p>
@@ -411,7 +419,7 @@ export default function Home() {
             </div>
             <div className="Row AlignCenter" id="MoonPhase">
               <div className="Column--66">
-                <h4>
+                <h4 className="daoColor2">
                   <Translate>Moon phase 4</Translate>
                 </h4>
                 <p>
@@ -449,7 +457,7 @@ export default function Home() {
             </div>
             <div className="Row AlignCenter" id="MoonPhase5">
               <div className="Column--66">
-                <h4>
+                <h4 className="daoColor2">
                   <Translate>Moon phase 5</Translate>
                 </h4>
                 <p>

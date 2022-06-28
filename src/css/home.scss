@@ -123,9 +123,23 @@
   width: calc(100%);
   background-color: black;
   flex-wrap: wrap;
-  background: url('/img/shutterstock_1454730908.jpg') no-repeat top;
+  background: url('/img/shutterstock_1169075996.jpg') no-repeat top;
   background-size: cover;
   color: white;
+  .Block__Contents {
+    margin-top: 5em;
+  }
+  .downArrow {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+    img {
+      height: 5em;
+      width: 5em;
+    }
+  }
 }
 
 .Roadmap_Block {
@@ -136,9 +150,12 @@
   width: calc(100%);
   background-color: black;
   flex-wrap: wrap;
-  background: url('/img/shutterstock_1494511394.jpg') no-repeat top;
+  background: url('/img/shutterstock_1958659744.jpg') no-repeat top;
   background-size: cover;
   color: white;
+  .Block__Contents {
+    margin-top: 5em;
+  }
 }
 
 .HeroButtonGroup {
