@@ -7,6 +7,11 @@
 .Search {
   background-color: $primary;
 }
+@media (max-width: 1024px) {
+  .downArrow {
+    display: none;
+  }
+}
 
 .HomeHero {
   position: relative;
@@ -28,13 +33,20 @@
       color: white;
       font-family: 'Montserrat';
       font-weight: bold;
+      @media (max-width: 1024px) {
+        margin-top: 25%;
+      }
     }
+
     .projectDescription {
       position: relative;
-      color: black;
+      color: white;
       margin-top: 5em;
       margin-left: 5%;
       font-size: 1em;
+      @media (max-width: 768px) {
+        color: black;
+      }
     }
   }
   .downArrow {
@@ -351,6 +363,8 @@
   }
   .Button {
     margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
