@@ -62,11 +62,6 @@ code {
   letter-spacing: -1px;
 }
 
-.navbar__logo {
-  height: 90px;
-  width: 320px;
-}
-
 .container {
   max-width: calc(1100px);
 }

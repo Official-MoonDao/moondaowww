@@ -1,84 +1,48 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ScrolldownArrow from '../Components/ScrolldownArrow';
 import Translate from '@docusaurus/Translate';
-import Countdown from './Countdown';
 
-import VectorIcon from '../icons/icon-Vector.png';
-import ArrowIcon from '../icons/icon-double_arrow.png';
+export default class Hero extends React.Component {
+  constructor() {
+    super();
+  }
 
-const Hero = () => {
-  const [showMintButton, setShowMintButton] = useState(false);
-  return (
-    <div className="HomeHero">
-      <div className="mainText">
-        <div className="titleText">Decentralizing Access to Space</div>
-        <div className="projectDescription">Offering grants for anyone</div>
-      </div>
-      <div className="downArrow">
-        <a href="#mission">
-          <ScrolldownArrow />
-        </a>
-      </div>
-      {/* <div className="BigHero"> */}
-      {/* <div className="Block__Contents" id="homeTitle">
-          <h1 id="homeTitle">
-            <Translate>We are sending MoonDAO members to space!</Translate>
-          </h1>
-          <div id="NFTContainer" className="NFTContainer">
-            <div id="NFTBox" className="NFTBox">
-              <video
-                id="NFTVideo"
-                autoPlay
-                muted
-                playsInline
-                src="img/Ticket_9060.mp4"
-                onMouseEnter={(e) => e.target.play()}
-                onLoadedData={(e) => e.target.play()}
-                width={'100%'}
-                height="auto"
-              />
-            </div>
-            <div id="NFTInfo" className="NFTInfo">
-              <p id="NFTInfoHeading">
-                Win a chance to go to space with our Ticket To Space NFT!
-              </p>
-              {showMintButton ? (
-                <a
-                  href="https://mint.moondao.com"
-                  target="_blank"
-                  className="Mint-btn">
-                  <img src={VectorIcon} alt="" />
-                  MINT NOW
-                  <img className="arrow-icon" src={ArrowIcon} alt="" />
-                </a>
-              ) : (
-                <React.Fragment>
-                  <p id="countdownLabel">
-                    <Translate>NFT Minting Begins In...</Translate>
-                  </p>
-                  <Countdown onEnd={() => setShowMintButton(true)} />
-                </React.Fragment>
-              )}
+  componentDidMount() {
+    const titleText = document.querySelector('.titleText');
+    titleText.classList.remove('titleTextTransition');
 
-              <div className="HeroButtonGroup">
-                <a
-                  href="https://mirror.xyz/pmoncada.eth/HyA4_czQTchCx6x_BN_2zk87zED9w6_AtEGcWhF-vCg"
-                  target="_blank">
-                  <Translate>Learn More</Translate>
-                </a>
-                <a
-                  href="https://app.verisoul.xyz/moondao"
-                  target="_blank"
-                  className="buyMooney">
-                  <Translate>Join MoonList</Translate>
-                </a>
-              </div>
-            </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          titleText.classList.add('titleTextTransition');
+          return;
+        }
+
+        titleText.classList.remove('titleTextTransition');
+      });
+    });
+
+    observer.observe(document.querySelector('.mainText'));
+  }
+
+  render() {
+    return (
+      <div className="HomeHero">
+        <div className="mainText">
+          <div className="titleText">We are going to the Moon</div>
+          <div className="projectDescription">
+            Check out our discord to see what's up
+            <a href="https://discord.gg/5nAu7K9aES" target="_blank">
+              <Translate>Join Now!</Translate>
+            </a>
           </div>
-        </div> */}
-      {/* </div> */}
-    </div>
-  );
-};
-
-export default Hero;
+        </div>
+        <div className="downArrow">
+          <a href="#mission">
+            <ScrolldownArrow />
+          </a>
+        </div>
+      </div>
+    );
+  }
+}

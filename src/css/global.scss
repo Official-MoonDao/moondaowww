@@ -123,6 +123,15 @@ a {
   }
 }
 
+.navbar__logo {
+  height: 90px;
+  width: 320px;
+  @media (max-width: $mobile) {
+    height: 60px;
+    width: 213px;
+  }
+}
+
 .footer {
   .footer__link-item {
     color: $secondary;

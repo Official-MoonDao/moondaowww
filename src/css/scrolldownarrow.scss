@@ -1,18 +1,17 @@
-$animation-delay: .1s;
-$arrow-size: 12px;
-  
-.scroll-arrow {
+$animation-delay: 0.1s;
+$arrow-size: 16px;
 
+.scroll-arrow {
   width: $arrow-size;
   height: $arrow-size;
   transform: rotate(45deg);
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
+  border-right: 4px solid #d85c4c;
+  border-bottom: 4px solid #d85c4c;
   animation: arrow-wave 1s infinite;
   animation-direction: alternate;
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      animation-delay: $animation-delay*$i;
+      animation-delay: $animation-delay * $i;
     }
   }
 }
@@ -22,7 +21,7 @@ $arrow-size: 12px;
     opacity: 0;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
