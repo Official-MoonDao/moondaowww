@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import ScrolldownArrow from '../Components/ScrolldownArrow';
 import Translate from '@docusaurus/Translate';
 import Countdown from './Countdown';
 
@@ -15,10 +16,7 @@ const Hero = () => {
       </div>
       <div className="downArrow">
         <a href="#mission">
-          <img
-            src="/img/down-arrow-1767595-1502499.png"
-            alt="downwards arrow"
-          />
+          <ScrolldownArrow />
         </a>
       </div>
       {/* <div className="BigHero"> */}

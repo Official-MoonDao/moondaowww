@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
-import {ImTwitter} from 'react-icons/im';
-import {DiGithubAlt} from 'react-icons/di';
+import { ImTwitter } from 'react-icons/im';
+import { DiGithubAlt } from 'react-icons/di';
 import DiscordSvg from '@site/static/img/Discord_alt.svg';
 import LaunchSvg from '@site/static/img/undraw_launch_day_4e04.svg';
 
@@ -13,6 +13,7 @@ import '../css/global.scss';
 import '../css/home.scss';
 import Hero from '../Components/Hero';
 import runCountdown from '../Components/Countdown';
+import ScrolldownArrow from '../Components/ScrolldownArrow';
 
 // Juicebox TerminalV1 address.
 const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
@@ -120,7 +121,7 @@ async function fetchAndUpdateProgress() {
 
 export default function Home() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
 
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
@@ -166,10 +167,9 @@ export default function Home() {
           </div>
           <div className="downArrow">
             <a href="#objectives">
-              <img
-                src="/img/down-arrow-1767595-1502499.png"
-                alt="downwards arrow"
-              />
+
+              <ScrolldownArrow />
+
             </a>
           </div>
         </div>
@@ -238,10 +238,7 @@ export default function Home() {
           </div>
           <div className="downArrow">
             <a href="#values">
-              <img
-                src="/img/down-arrow-1767595-1502499.png"
-                alt="downwards arrow"
-              />
+            <ScrolldownArrow />
             </a>
           </div>
         </div>
@@ -286,10 +283,7 @@ export default function Home() {
           </div>
           <div className="downArrow">
             <a href="#MoonPhase">
-              <img
-                src="/img/down-arrow-1767595-1502499.png"
-                alt="downwards arrow"
-              />
+            <ScrolldownArrow />
             </a>
           </div>
         </div>
