@@ -52,7 +52,7 @@ export default class Hero extends React.Component {
             </div>
             <div className="joinDiscord">
               <a href="https://discord.gg/5nAu7K9aES" target="_blank">
-                <Translate>Join our Discord!</Translate>
+                <Translate>Join our Discord</Translate>
               </a>
             </div>
           </div>
