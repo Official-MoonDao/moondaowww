@@ -8,6 +8,20 @@ export default class Hero extends React.Component {
   }
 
   componentDidMount() {
+    setInterval(() => {
+      var currentPath = window.location.pathname;
+      const navbar = document.querySelector('.navbar');
+      if (
+        currentPath.length === 0 ||
+        currentPath === '/' ||
+        currentPath.match(/^\/?index/)
+      ) {
+        navbar.classList.add('navbar-trans');
+      } else {
+        navbar.classList.remove('navbar-trans');
+      }
+    }, 10);
+
     const titleText = document.querySelector('.titleText');
     titleText.classList.remove('titleTextTransition');
 

@@ -117,10 +117,14 @@ a {
 
 .navbar {
   height: 10%;
-  background-color: transparent;
+  background-color: black;
   a:hover {
     color: $primary;
   }
+}
+
+.navbar-trans {
+  background-color: transparent;
 }
 
 .navbar__logo {

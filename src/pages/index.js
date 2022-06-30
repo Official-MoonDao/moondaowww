@@ -145,6 +145,10 @@ export default function Home() {
                     decentralized public space program.
                   </Translate>
                 </p>
+                <div className="multisigDonation">
+                  Donate to our treasury:
+                  0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9
+                </div>
                 <div id="community_actions" className="Row AlignCenter">
                   <div>
                     <a
@@ -158,9 +162,12 @@ export default function Home() {
                       <Translate>Buy $MOONEY</Translate>
                     </a>
                   </div>
-                  <div className="multisigDonation">
-                    Donate to our treasury:
-                    0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9
+                  <div className="disclaimer">
+                    Disclaimer: There is no expectation of profit with the
+                    $MOONEY token. It is a governance token. You are not
+                    receiving fractionalized ownership of the DAOs assets in
+                    exchange for the token, check our FAQs for more information
+                    and disclaimers.
                   </div>
                   <div className="Social">
                     <a
