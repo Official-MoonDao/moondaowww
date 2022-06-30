@@ -30,7 +30,7 @@
     flex-direction: column;
     .titleText {
       position: relative;
-      margin-top: 10%;
+      margin-top: 15%;
       margin-left: 5%;
       margin-right: 2%;
       font-size: 3em;
@@ -39,7 +39,8 @@
       font-weight: bold;
       @media (max-width: $mobile) {
         margin-top: 30%;
-        font-size: 2em;
+        font-size: 3em;
+        text-align: center;
       }
       opacity: 0;
       transform: scale(1.2);
@@ -49,42 +50,68 @@
       opacity: 1;
       transform: none;
     }
-    .projectDescription {
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
       position: relative;
       color: white;
-      margin-top: 3em;
+      margin-top: 1.5em;
       margin-left: 6%;
-      font-size: 1.5em;
+      font-size: 1.2em;
+      width: 30em;
       @media (max-width: 768px) {
-        margin-top: 0.5em;
+        margin-top: 1.5em;
+        font-size: 1em;
+        flex-direction: column;
+        margin-left: 0%;
+        align-items: center;
+        width: 100%;
       }
-      a {
+      .joinDiscord {
+        width: calc(35%);
         background-color: black;
         border: 2px solid #d7d9d4;
-        min-width: 2em;
-        margin-left: 1em;
-        height: 1em;
+        padding: 1em;
         text-align: center;
-        border-radius: 3em;
         box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
-        padding-top: 0.8em;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 0.9em;
         border-radius: 0.5em;
         color: #d7d9d4;
-        &:first-child {
-          margin-right: 2em;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: opacity 1.5s ease, transform 2.5s ease;
+        @media (max-width: 768px) {
+          width: calc(65%);
+          margin-top: 2em;
         }
-        @media (max-width: $mobile) {
-          margin-left: 0.5em;
-          padding: 0.3em;
-          min-width: calc(100%);
-          border-radius: 0em;
-          box-shadow: none;
-          border: none;
-          color: $primary;
+      }
+      .joinDiscordTransition {
+        opacity: 1;
+        transform: none;
+      }
+      .learnMore {
+        width: calc(35%);
+        background-color: black;
+        border: 2px solid #d7d9d4;
+        padding: 1em;
+        text-align: center;
+        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+        border-radius: 0.5em;
+        color: #d7d9d4;
+        margin-right: 2em;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: opacity 1.5s ease, transform 2.5s ease;
+        @media (max-width: 768px) {
+          width: calc(65%);
+          margin-right: 0em;
         }
+      }
+      .learnMoreTransition {
+        opacity: 1;
+        transform: none;
+      }
+      a {
+        color: #d7d9d4;
         &:hover {
           color: $primary;
         }
@@ -136,7 +163,7 @@
     font-size: 1.3em;
     padding-bottom: 1em;
     @media (max-width: $mobile) {
-      @media (max-height: 700px) {
+      @media (max-height: 768px) {
         font-size: 1em;
         padding-bottom: 0.5em;
       }
@@ -144,6 +171,14 @@
     span {
       color: green;
       padding-left: 5px;
+    }
+    .checkMark {
+      opacity: 0;
+      transition: opacity 3s, transform 3s;
+    }
+    .checkMarkTransition {
+      opacity: 1;
+      transform: none;
     }
   }
   .downArrow {
@@ -176,6 +211,15 @@
       transition: opacity 4s, transform 4s;
     }
     .titleTextTransition2 {
+      opacity: 1;
+      transform: none;
+    }
+    .quote {
+      opacity: 0;
+      transform: translateX(10em);
+      transition: opacity 4s, transform 4s;
+    }
+    .quoteTransition {
       opacity: 1;
       transform: none;
     }
@@ -475,6 +519,11 @@
   #community_actions {
     margin: 20px 0;
     justify-content: start;
+    .multisigDonation {
+      @media (max-width: 768px) {
+        font-size: 0.7em;
+      }
+    }
   }
   .Button {
     margin-right: 25px;

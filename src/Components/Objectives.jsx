@@ -14,14 +14,35 @@ export default class Objectives extends React.Component {
     const titleText = document.querySelector('.titleText3');
     titleText.classList.remove('titleTextTransition3');
 
+    const checkMark1 = document.querySelector('#checkMark1');
+    checkMark1.classList.remove('checkMarkTransition');
+    const checkMark2 = document.querySelector('#checkMark2');
+    checkMark2.classList.remove('checkMarkTransition');
+    const checkMark3 = document.querySelector('#checkMark3');
+    checkMark3.classList.remove('checkMarkTransition');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           titleText.classList.add('titleTextTransition3');
+
+          setTimeout(() => {
+            checkMark1.classList.add('checkMarkTransition');
+          }, 1000);
+          setTimeout(() => {
+            checkMark2.classList.add('checkMarkTransition');
+          }, 2000);
+          setTimeout(() => {
+            checkMark3.classList.add('checkMarkTransition');
+          }, 3000);
+
           return;
         }
 
         titleText.classList.remove('titleTextTransition3');
+        checkMark1.classList.remove('checkMarkTransition');
+        checkMark2.classList.remove('checkMarkTransition');
+        checkMark3.classList.remove('checkMarkTransition');
       });
     });
 
@@ -71,7 +92,10 @@ export default class Objectives extends React.Component {
                       This will be our only supply of tokens.
                     </Translate>
                   </strong>
-                  <span> &#x2705; </span>
+                  <span className="checkMark" id="checkMark1">
+                    {' '}
+                    &#x2705;{' '}
+                  </span>
                 </li>
                 <li>
                   <Translate
@@ -84,14 +108,20 @@ export default class Objectives extends React.Component {
                     }}>
                     {'Purchase a ticket to space with Blue Origin!'}
                   </Translate>
-                  <span> &#x2705; </span>
+                  <span className="checkMark" id="checkMark2">
+                    {' '}
+                    &#x2705;{' '}
+                  </span>
                 </li>
                 <li>
                   <Translate>
                     Release the Ticket To Space NFT collection. These NFTs will
                     give you a chance to fly to space in 2022.
                   </Translate>
-                  <span> &#x2705; </span>
+                  <span className="checkMark" id="checkMark3">
+                    {' '}
+                    &#x2705;{' '}
+                  </span>
                 </li>
                 <li>
                   <Translate>

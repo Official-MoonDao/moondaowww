@@ -11,14 +11,28 @@ export default class Hero extends React.Component {
     const titleText = document.querySelector('.titleText');
     titleText.classList.remove('titleTextTransition');
 
+    const joinDiscord = document.querySelector('.joinDiscord');
+    joinDiscord.classList.remove('joinDiscordTransition');
+
+    const learnMore = document.querySelector('.learnMore');
+    learnMore.classList.remove('learnMoreTransition');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           titleText.classList.add('titleTextTransition');
+          setTimeout(() => {
+            learnMore.classList.add('learnMoreTransition');
+          }, 1000);
+          setTimeout(() => {
+            joinDiscord.classList.add('joinDiscordTransition');
+          }, 2000);
           return;
         }
 
         titleText.classList.remove('titleTextTransition');
+        joinDiscord.classList.remove('joinDiscordTransition');
+        learnMore.classList.remove('learnMoreTransition');
       });
     });
 
@@ -30,11 +44,17 @@ export default class Hero extends React.Component {
       <div className="HomeHero">
         <div className="mainText">
           <div className="titleText">We are going to the Moon</div>
-          <div className="projectDescription">
-            Check out our discord to see what's up
-            <a href="https://discord.gg/5nAu7K9aES" target="_blank">
-              <Translate>Join Now!</Translate>
-            </a>
+          <div className="buttonContainer">
+            <div className="learnMore">
+              <a href="#mission">
+                <Translate>Learn More</Translate>
+              </a>
+            </div>
+            <div className="joinDiscord">
+              <a href="https://discord.gg/5nAu7K9aES" target="_blank">
+                <Translate>Join our Discord!</Translate>
+              </a>
+            </div>
           </div>
         </div>
         <div className="downArrow">

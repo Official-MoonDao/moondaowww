@@ -13,14 +13,21 @@ export default class Mission extends React.Component {
     const titleText = document.querySelector('.titleText2');
     titleText.classList.remove('titleTextTransition2');
 
+    const quote = document.querySelector('.quote');
+    quote.classList.remove('quoteTransition');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           titleText.classList.add('titleTextTransition2');
+          setTimeout(() => {
+            quote.classList.add('quoteTransition');
+          }, 2000);
           return;
         }
 
         titleText.classList.remove('titleTextTransition2');
+        quote.classList.remove('quoteTransition');
       });
     });
 
@@ -67,7 +74,7 @@ export default class Mission extends React.Component {
                   the everyday person.
                 </Translate>
               </p>
-              <blockquote>
+              <blockquote className="quote">
                 <p>
                   "
                   <Translate>

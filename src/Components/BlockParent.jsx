@@ -16,7 +16,11 @@ export default class BlockParent extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
       const newScrollHeight = window.scrollY;
-      this.setState({currentScrollHeight: newScrollHeight});
+      if (screen.width < 768) {
+        this.setState({currentScrollHeight: 10000000});
+      } else {
+        this.setState({currentScrollHeight: newScrollHeight});
+      }
       console.log(window.innerHeight);
       console.log(newScrollHeight);
     };
