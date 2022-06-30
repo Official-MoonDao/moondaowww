@@ -7,14 +7,326 @@
 .Search {
   background-color: $primary;
 }
+@media (max-width: $mobile) {
+  .downArrow {
+    display: none;
+  }
+}
 
 .HomeHero {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/362470151-huge.jpg') no-repeat;
+  @media (max-width: $mobile) {
+    background-position: 27% 0%;
+  }
+  background-size: cover;
+  .mainText {
+    display: flex;
+    flex-direction: column;
+    .titleText {
+      position: relative;
+      margin-top: 15%;
+      margin-left: 5%;
+      margin-right: 2%;
+      font-size: 3em;
+      color: white;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      @media (max-width: $mobile) {
+        margin-top: 30%;
+        font-size: 3em;
+        text-align: center;
+      }
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 1.5s ease, transform 2.5s ease;
+    }
+    .titleTextTransition {
+      opacity: 1;
+      transform: none;
+    }
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      color: white;
+      margin-top: 1.5em;
+      margin-left: 6%;
+      font-size: 1.2em;
+      width: 30em;
+      @media (max-width: 768px) {
+        margin-top: 1.5em;
+        font-size: 1em;
+        flex-direction: column;
+        margin-left: 0%;
+        align-items: center;
+        width: 100%;
+      }
+      .joinDiscord {
+        width: calc(35%);
+        background-color: black;
+        border: 2px solid #d7d9d4;
+        padding: 1em;
+        text-align: center;
+        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+        border-radius: 0.5em;
+        color: #d7d9d4;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: opacity 1.5s ease, transform 2.5s ease;
+        @media (max-width: 768px) {
+          width: calc(65%);
+          margin-top: 2em;
+        }
+      }
+      .joinDiscordTransition {
+        opacity: 1;
+        transform: none;
+      }
+      .learnMore {
+        width: calc(35%);
+        background-color: black;
+        border: 2px solid #d7d9d4;
+        padding: 1em;
+        text-align: center;
+        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+        border-radius: 0.5em;
+        color: #d7d9d4;
+        margin-right: 2em;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: opacity 1.5s ease, transform 2.5s ease;
+        @media (max-width: 768px) {
+          width: calc(65%);
+          margin-right: 0em;
+        }
+      }
+      .learnMoreTransition {
+        opacity: 1;
+        transform: none;
+      }
+      a {
+        color: #d7d9d4;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .downArrow {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Goal_Block {
+  position: relative;
   display: flex;
   flex-direction: row;
-  min-height: 90vh;
-  color: white;
-  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
   flex-wrap: wrap;
+  background: url('/img/shutterstock_1630095409.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+    .titleText3 {
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 4s, transform 4s;
+    }
+    .titleTextTransition3 {
+      opacity: 1;
+      transform: none;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0.5em;
+      h3 {
+        font-size: 1.75em;
+      }
+    }
+  }
+  li {
+    font-size: 1.3em;
+    padding-bottom: 1em;
+    @media (max-width: $mobile) {
+      @media (max-height: 768px) {
+        font-size: 1em;
+        padding-bottom: 0.5em;
+      }
+    }
+    span {
+      color: green;
+      padding-left: 5px;
+    }
+    .checkMark {
+      opacity: 0;
+      transition: opacity 3s, transform 3s;
+    }
+    .checkMarkTransition {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .downArrow {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Block_PrimaryBg {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_9263629.jpg') no-repeat top;
+  background-size: cover;
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+    .titleText2 {
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 4s, transform 4s;
+    }
+    .titleTextTransition2 {
+      opacity: 1;
+      transform: none;
+    }
+    .quote {
+      opacity: 0;
+      transform: translateX(10em);
+      transition: opacity 4s, transform 4s;
+    }
+    .quoteTransition {
+      opacity: 1;
+      transform: none;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0.5em;
+      .titleText2 {
+        font-size: 2em;
+      }
+      @media (max-height: 700px) {
+        h2 {
+          font-size: 1.75em;
+        }
+        p {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  .downArrow {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Values_Block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_1169075993.jpg') no-repeat top;
+  background-size: cover;
+  @media (max-width: $mobile) {
+    background: url('/img/values_background_mobile.jpg') no-repeat;
+    background-position: 50% 70%;
+  }
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+    .titleText4 {
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 4s, transform 4s;
+    }
+    .titleTextTransition4 {
+      opacity: 1;
+      transform: none;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0.5em;
+      .titleText4 {
+        font-size: 1.5em;
+      }
+      @media (max-height: 700px) {
+        p {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  .downArrow {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Roadmap_Block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  background: url('/img/shutterstock_1958659744.jpg') no-repeat top;
+  background-position: 60% 0%;
+  @media (max-width: $mobile) {
+    background-position: 50% 60%;
+  }
+  background-size: cover;
+  color: white;
+  .Block__Contents {
+    margin-top: 5em;
+    .titleText5 {
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 4s, transform 4s;
+    }
+    .titleTextTransition5 {
+      opacity: 1;
+      transform: none;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0.5em;
+    }
+  }
 }
 
 .HeroButtonGroup {
@@ -39,7 +351,6 @@
 
 .BigHero {
   width: calc(100%);
-  background: url('/img/lunar-panorama-large.png') no-repeat bottom;
   background-color: black;
   position: relative;
   display: flex;
@@ -206,11 +517,21 @@
 
 #community {
   #community_actions {
-    margin: 40px 0;
+    margin: 20px 0;
     justify-content: start;
+    .multisigDonation {
+      @media (max-width: 768px) {
+        font-size: 0.7em;
+      }
+    }
+    .disclaimer {
+      font-size: 0.5em;
+    }
   }
   .Button {
     margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -244,6 +565,11 @@
 }
 
 .Home {
+  margin-top: -106px;
+  background-color: black;
+  @media (max-width: $mobile) {
+    margin-top: -76px;
+  }
   .Carousel {
     position: relative;
     width: 50%;
