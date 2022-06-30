@@ -128,8 +128,10 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <meta charSet="UTF-8" />
       <div className="Home">
-        <Hero />
-        <BlockParent />
+        <BrowserOnly>
+          <Hero />
+          <BlockParent />
+        </BrowserOnly>
         <div className="Block" id="community">
           <div className="Block__Contents">
             <div className="Row">
