@@ -32,7 +32,7 @@ export default class Values extends React.Component {
     var opacity = 1;
     if (!this.state.fullOpacity) {
       opacity = Math.min(
-        this.props.currentScrollHeight / window.innerHeight - 2,
+        this.props.currentScrollHeight / this.props.windowHeight - 2,
         1,
       );
       if (opacity >= 1) {

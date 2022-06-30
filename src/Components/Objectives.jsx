@@ -53,7 +53,7 @@ export default class Objectives extends React.Component {
     var opacity = 1;
     if (!this.state.fullOpacity) {
       opacity = Math.min(
-        this.props.currentScrollHeight / window.innerHeight - 1,
+        this.props.currentScrollHeight / this.props.windowHeight - 1,
         1,
       );
       if (opacity >= 1) {

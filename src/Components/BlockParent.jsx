@@ -6,6 +6,7 @@ import Objectives from './Objectives';
 import Values from './Values';
 import Roadmap from './Roadmap';
 import {render} from 'react-dom';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 export default class BlockParent extends React.Component {
   constructor() {
@@ -26,13 +27,44 @@ export default class BlockParent extends React.Component {
     };
   }
 
+  BrowserOnlyJS = () => {
+    return (
+      <BrowserOnly fallback={<div></div>}>
+        {() => {
+          this.state.windowHeight = window.innerHeight;
+          window.onscroll = () => {
+            const newScrollHeight = window.scrollY;
+            if (screen.width < 768) {
+              this.setState({currentScrollHeight: 10000000});
+            } else {
+              this.setState({currentScrollHeight: newScrollHeight});
+            }
+          };
+        }}
+      </BrowserOnly>
+    );
+  };
+
   render() {
     return (
       <div>
-        <Mission currentScrollHeight={this.state.currentScrollHeight} />
-        <Objectives currentScrollHeight={this.state.currentScrollHeight} />
-        <Values currentScrollHeight={this.state.currentScrollHeight} />
-        <Roadmap currentScrollHeight={this.state.currentScrollHeight} />
+        <this.BrowserOnlyJS></this.BrowserOnlyJS>
+        <Mission
+          currentScrollHeight={this.state.currentScrollHeight}
+          windowHeight={this.state.windowHeight}
+        />
+        <Objectives
+          currentScrollHeight={this.state.currentScrollHeight}
+          windowHeight={this.state.windowHeight}
+        />
+        <Values
+          currentScrollHeight={this.state.currentScrollHeight}
+          windowHeight={this.state.windowHeight}
+        />
+        <Roadmap
+          currentScrollHeight={this.state.currentScrollHeight}
+          windowHeight={this.state.windowHeight}
+        />
       </div>
     );
   }

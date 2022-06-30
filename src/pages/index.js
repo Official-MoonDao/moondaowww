@@ -15,7 +15,6 @@ import Hero from '../Components/Hero';
 import BlockParent from '../Components/BlockParent';
 import runCountdown from '../Components/Countdown';
 import ScrolldownArrow from '../Components/ScrolldownArrow';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 
 // Juicebox TerminalV1 address.
 const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
@@ -129,10 +128,8 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <meta charSet="UTF-8" />
       <div className="Home">
-        <BrowserOnly>
-          <Hero />
-          <BlockParent />
-        </BrowserOnly>
+        <Hero />
+        <BlockParent />
         <div className="Block" id="community">
           <div className="Block__Contents">
             <div className="Row">

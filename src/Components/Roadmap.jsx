@@ -33,7 +33,7 @@ export default class Roadmap extends React.Component {
     var opacity = 1;
     if (!this.state.fullOpacity) {
       opacity = Math.min(
-        this.props.currentScrollHeight / window.innerHeight - 3,
+        this.props.currentScrollHeight / this.props.windowHeight - 3,
         1,
       );
       if (opacity >= 1) {

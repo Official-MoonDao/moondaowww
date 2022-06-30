@@ -36,14 +36,11 @@ export default class Mission extends React.Component {
 
   render() {
     var opacity = 1;
-    var slide = 0;
     if (!this.state.fullOpacity) {
       opacity = Math.min(
-        this.props.currentScrollHeight / window.innerHeight,
+        this.props.currentScrollHeight / this.props.windowHeight,
         1,
       );
-      slide =
-        Math.min(this.props.currentScrollHeight / window.innerHeight, 1) * 100;
       if (opacity >= 1) {
         this.state.fullOpacity = true;
       }
