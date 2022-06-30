@@ -15,6 +15,7 @@ import Hero from '../Components/Hero';
 import BlockParent from '../Components/BlockParent';
 import runCountdown from '../Components/Countdown';
 import ScrolldownArrow from '../Components/ScrolldownArrow';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 // Juicebox TerminalV1 address.
 const JUICEBOX_ADDRESS = '0xd569d3cce55b71a8a3f3c418c329a66e5f714431';
