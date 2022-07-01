@@ -146,7 +146,7 @@ export default function Home() {
                   </Translate>
                 </p>
                 <div id="community_actions" className="Row AlignCenter">
-                  <div>
+                  <div id="actionButtons">
                     <a
                       href="https://gnosis-safe.io/app/eth:0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9/apps"
                       className="Button Primary Outlined actionButton">
