@@ -67,7 +67,7 @@
         align-items: center;
         width: 100%;
       }
-      .joinDiscord {
+      .buttonCTA {
         width: calc(35%);
         background-color: black;
         border: 2px solid #d7d9d4;
@@ -76,28 +76,6 @@
         box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
         border-radius: 0.5em;
         color: #d7d9d4;
-        opacity: 0;
-        transform: scale(1.2);
-        transition: opacity 1.5s ease, transform 2.5s ease;
-        @media (max-width: 768px) {
-          width: calc(65%);
-          margin-top: 2em;
-        }
-      }
-      .joinDiscordTransition {
-        opacity: 1;
-        transform: none;
-      }
-      .learnMore {
-        width: calc(35%);
-        background-color: black;
-        border: 2px solid #d7d9d4;
-        padding: 1em;
-        text-align: center;
-        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
-        border-radius: 0.5em;
-        color: #d7d9d4;
-        margin-right: 2em;
         opacity: 0;
         transform: scale(1.2);
         transition: opacity 1.5s ease, transform 2.5s ease;
@@ -105,8 +83,11 @@
           width: calc(65%);
           margin-right: 0em;
         }
+        &:first-child {
+          margin-right: 2em;
+        }
       }
-      .learnMoreTransition {
+      .buttonCTATransition {
         opacity: 1;
         transform: none;
       }
