@@ -50,7 +50,7 @@
     }
     .titleTextTransition {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     .buttonContainer {
       display: flex;
@@ -95,7 +95,7 @@
       }
       .buttonCTATransition {
         opacity: 1 !important;
-        transform: none;
+        transform: none !important;
       }
       a {
         color: #d7d9d4;
@@ -137,7 +137,7 @@
     }
     .titleTextTransition3 {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     @media (max-width: $mobile) {
       margin-top: 0.5em;
@@ -165,7 +165,7 @@
     }
     .checkMarkTransition {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
   }
   .downArrow {
@@ -200,7 +200,7 @@
     }
     .titleTextTransition2 {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     .quote {
       margin-top: 20px;
@@ -210,7 +210,7 @@
     }
     .quoteTransition {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     @media (max-width: $mobile) {
       margin-top: 0.5em;
@@ -262,7 +262,7 @@
     }
     .titleTextTransition4 {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     @media (max-width: $mobile) {
       margin-top: 0.5em;
@@ -310,7 +310,7 @@
     }
     .titleTextTransition5 {
       opacity: 1 !important;
-      transform: none;
+      transform: none !important;
     }
     @media (max-width: $mobile) {
       margin-top: 0.5em;
