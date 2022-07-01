@@ -30,10 +30,6 @@ export default class Hero extends React.Component {
           }, 2000);
           return;
         }
-
-        titleText.classList.remove('titleTextTransition');
-        joinDiscord.classList.remove('buttonCTATransition');
-        learnMore.classList.remove('buttonCTATransition');
       });
     });
 

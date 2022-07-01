@@ -21,8 +21,6 @@ export default class Roadmap extends React.Component {
           titleText.classList.add('titleTextTransition5');
           return;
         }
-
-        titleText.classList.remove('titleTextTransition5');
       });
     });
 
