@@ -36,10 +36,12 @@
       font-size: 3em;
       color: white;
       font-family: 'Montserrat';
-      font-weight: bold;
+      font-weight: bolder;
       @media (max-width: $mobile) {
         margin-top: 30%;
-        font-size: 3em;
+        margin-right: 8%;
+        margin-left: 8%;
+        font-size: 2.75em;
         text-align: center;
       }
       opacity: 0;
@@ -190,6 +192,7 @@
   color: white;
   .Block__Contents {
     margin-top: 5em;
+
     .titleText2 {
       opacity: 0;
       transform: scale(1.2);
@@ -200,6 +203,7 @@
       transform: none;
     }
     .quote {
+      margin-top: 20px;
       opacity: 0;
       transform: translateX(10em);
       transition: opacity 4s, transform 4s;
@@ -214,6 +218,7 @@
         font-size: 2em;
       }
       @media (max-height: 700px) {
+        margin-top: 0em;
         h2 {
           font-size: 1.75em;
         }
@@ -363,8 +368,17 @@
   #community_actions {
     margin: 20px 0;
     justify-content: start;
+    #actionButtons {
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     .actionButton {
       width: 80%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
       text-align: center;
     }
     .multisigDonation {
