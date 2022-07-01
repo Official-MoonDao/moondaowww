@@ -12,28 +12,28 @@ export default class Hero extends React.Component {
     const titleText = document.querySelector('.titleText');
     titleText.classList.remove('titleTextTransition');
 
-    const joinDiscord = document.querySelector('.joinDiscord');
-    joinDiscord.classList.remove('joinDiscordTransition');
+    const joinDiscord = document.querySelector('#joinDiscord');
+    joinDiscord.classList.remove('buttonCTATransition');
 
-    const learnMore = document.querySelector('.learnMore');
-    learnMore.classList.remove('learnMoreTransition');
+    const learnMore = document.querySelector('#learnMore');
+    learnMore.classList.remove('buttonCTATransition');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           titleText.classList.add('titleTextTransition');
           setTimeout(() => {
-            learnMore.classList.add('learnMoreTransition');
+            learnMore.classList.add('buttonCTATransition');
           }, 1000);
           setTimeout(() => {
-            joinDiscord.classList.add('joinDiscordTransition');
+            joinDiscord.classList.add('buttonCTATransition');
           }, 2000);
           return;
         }
 
         titleText.classList.remove('titleTextTransition');
-        joinDiscord.classList.remove('joinDiscordTransition');
-        learnMore.classList.remove('learnMoreTransition');
+        joinDiscord.classList.remove('buttonCTATransition');
+        learnMore.classList.remove('buttonCTATransition');
       });
     });
 
@@ -69,12 +69,12 @@ export default class Hero extends React.Component {
         <div className="mainText">
           <div className="titleText">We are going to the Moon</div>
           <div className="buttonContainer">
-            <div className="learnMore">
+            <div className="buttonCTA" id="learnMore">
               <a href="#mission">
                 <Translate>Learn More</Translate>
               </a>
             </div>
-            <div className="joinDiscord">
+            <div className="buttonCTA" id="joinDiscord">
               <a href="https://discord.gg/5nAu7K9aES" target="_blank">
                 <Translate>Join our Discord</Translate>
               </a>
