@@ -49,7 +49,7 @@
       transition: opacity 1.5s ease, transform 2.5s ease;
     }
     .titleTextTransition {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     .buttonContainer {
@@ -136,7 +136,7 @@
       transition: opacity 4s, transform 4s;
     }
     .titleTextTransition3 {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     @media (max-width: $mobile) {
@@ -164,7 +164,7 @@
       transition: opacity 3s, transform 3s;
     }
     .checkMarkTransition {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
   }
@@ -199,7 +199,7 @@
       transition: opacity 4s, transform 4s;
     }
     .titleTextTransition2 {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     .quote {
@@ -209,7 +209,7 @@
       transition: opacity 4s, transform 4s;
     }
     .quoteTransition {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     @media (max-width: $mobile) {
@@ -262,7 +262,7 @@
       transition: opacity 4s, transform 4s;
     }
     .titleTextTransition4 {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     @media (max-width: $mobile) {
@@ -310,7 +310,7 @@
       transition: opacity 4s, transform 4s;
     }
     .titleTextTransition5 {
-      opacity: 1;
+      opacity: 1 !important;
       transform: none;
     }
     @media (max-width: $mobile) {
