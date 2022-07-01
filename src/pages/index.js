@@ -145,12 +145,13 @@ export default function Home() {
                     decentralized public space program.
                   </Translate>
                 </p>
-                <div className="multisigDonation">
-                  Donate to our treasury:
-                  0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9
-                </div>
                 <div id="community_actions" className="Row AlignCenter">
                   <div>
+                    <a
+                      href="https://gnosis-safe.io/app/eth:0xce4a1E86a5c47CD677338f53DA22A91d85cab2c9/apps"
+                      className="Button Primary Outlined actionButton">
+                      Donate to our treasury
+                    </a>
                     <a
                       href="https://moondao.com/docs/contribute"
                       className="Button Primary Outlined actionButton">
