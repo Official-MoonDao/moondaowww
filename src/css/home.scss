@@ -85,6 +85,10 @@
         }
         &:first-child {
           margin-right: 2em;
+          @media (max-width: 768px) {
+            margin-right: 0em;
+            margin-bottom: 2em;
+          }
         }
       }
       .buttonCTATransition {
