@@ -22,12 +22,9 @@ export default class Mission extends React.Component {
           titleText.classList.add('titleTextTransition2');
           setTimeout(() => {
             quote.classList.add('quoteTransition');
-          }, 2000);
+          }, 1500);
           return;
         }
-
-        titleText.classList.remove('titleTextTransition2');
-        quote.classList.remove('quoteTransition');
       });
     });
 

@@ -20,8 +20,6 @@ export default class Values extends React.Component {
           titleText.classList.add('titleTextTransition4');
           return;
         }
-
-        titleText.classList.remove('titleTextTransition4');
       });
     });
 

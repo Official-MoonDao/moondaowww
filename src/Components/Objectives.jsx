@@ -38,11 +38,6 @@ export default class Objectives extends React.Component {
 
           return;
         }
-
-        titleText.classList.remove('titleTextTransition3');
-        checkMark1.classList.remove('checkMarkTransition');
-        checkMark2.classList.remove('checkMarkTransition');
-        checkMark3.classList.remove('checkMarkTransition');
       });
     });
 

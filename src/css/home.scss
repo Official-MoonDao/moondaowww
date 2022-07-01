@@ -250,8 +250,7 @@
   background: url('/img/values-background.jpg') no-repeat top;
   background-size: cover;
   @media (max-width: $mobile) {
-    background: url('/img/values-background-mobile.jpg') no-repeat;
-    background-position: 50% 70%;
+    background: url('/img/values-background-mobile.jpg') no-repeat bottom;
   }
   color: white;
   .Block__Contents {
