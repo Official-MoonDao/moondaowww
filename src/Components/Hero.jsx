@@ -8,6 +8,38 @@ export default class Hero extends React.Component {
     super();
   }
 
+  componentDidMount() {
+    const titleText = document.querySelector('.titleText');
+    titleText.classList.remove('titleTextTransition');
+
+    const joinDiscord = document.querySelector('.joinDiscord');
+    joinDiscord.classList.remove('joinDiscordTransition');
+
+    const learnMore = document.querySelector('.learnMore');
+    learnMore.classList.remove('learnMoreTransition');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          titleText.classList.add('titleTextTransition');
+          setTimeout(() => {
+            learnMore.classList.add('learnMoreTransition');
+          }, 1000);
+          setTimeout(() => {
+            joinDiscord.classList.add('joinDiscordTransition');
+          }, 2000);
+          return;
+        }
+
+        titleText.classList.remove('titleTextTransition');
+        joinDiscord.classList.remove('joinDiscordTransition');
+        learnMore.classList.remove('learnMoreTransition');
+      });
+    });
+
+    observer.observe(document.querySelector('.mainText'));
+  }
+
   BrowserOnlyJS = () => {
     return (
       <BrowserOnly fallback={<div></div>}>
@@ -25,36 +57,6 @@ export default class Hero extends React.Component {
               navbar.classList.remove('navbar-trans');
             }
           }, 10);
-
-          const titleText = document.querySelector('.titleText');
-          titleText.classList.remove('titleTextTransition');
-
-          const joinDiscord = document.querySelector('.joinDiscord');
-          joinDiscord.classList.remove('joinDiscordTransition');
-
-          const learnMore = document.querySelector('.learnMore');
-          learnMore.classList.remove('learnMoreTransition');
-
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                titleText.classList.add('titleTextTransition');
-                setTimeout(() => {
-                  learnMore.classList.add('learnMoreTransition');
-                }, 1000);
-                setTimeout(() => {
-                  joinDiscord.classList.add('joinDiscordTransition');
-                }, 2000);
-                return;
-              }
-
-              titleText.classList.remove('titleTextTransition');
-              joinDiscord.classList.remove('joinDiscordTransition');
-              learnMore.classList.remove('learnMoreTransition');
-            });
-          });
-
-          observer.observe(document.querySelector('.mainText'));
         }}
       </BrowserOnly>
     );
