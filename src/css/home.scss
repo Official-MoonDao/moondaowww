@@ -519,6 +519,10 @@
   #community_actions {
     margin: 20px 0;
     justify-content: start;
+    .actionButton {
+      width: 80%;
+      text-align: center;
+    }
     .multisigDonation {
       @media (max-width: 768px) {
         font-size: 0.7em;
