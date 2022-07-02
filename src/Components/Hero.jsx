@@ -1,74 +1,88 @@
 import React, {useState} from 'react';
+import ScrolldownArrow from '../Components/ScrolldownArrow';
 import Translate from '@docusaurus/Translate';
-import Countdown from './Countdown';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
-import VectorIcon from '../icons/icon-Vector.png';
-import ArrowIcon from '../icons/icon-double_arrow.png';
+export default class Hero extends React.Component {
+  constructor() {
+    super();
+  }
 
-const Hero = () => {
-  const [showMintButton, setShowMintButton] = useState(false);
-  return (
-    <div className="HomeHero">
-      <div className="BigHero">
-        <div className="Block__Contents" id="homeTitle">
-          <h1 id="homeTitle">
-            <Translate>We are sending MoonDAO members to space!</Translate>
-          </h1>
-          <div id="NFTContainer" className="NFTContainer">
-            <div id="NFTBox" className="NFTBox">
-              <video
-                id="NFTVideo"
-                autoPlay
-                muted
-                playsInline
-                src="img/Ticket_9060.mp4"
-                onMouseEnter={(e) => e.target.play()}
-                onLoadedData={(e) => e.target.play()}
-                width={'100%'}
-                height="auto"
-              />
+  componentDidMount() {
+    const titleText = document.querySelector('.titleText');
+    titleText.classList.remove('titleTextTransition');
+
+    const joinDiscord = document.querySelector('#joinDiscord');
+    joinDiscord.classList.remove('buttonCTATransition');
+
+    const learnMore = document.querySelector('#learnMore');
+    learnMore.classList.remove('buttonCTATransition');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          titleText.classList.add('titleTextTransition');
+          setTimeout(() => {
+            learnMore.classList.add('buttonCTATransition');
+          }, 1000);
+          setTimeout(() => {
+            joinDiscord.classList.add('buttonCTATransition');
+          }, 2000);
+          return;
+        }
+      });
+    });
+
+    observer.observe(document.querySelector('.mainText'));
+  }
+
+  BrowserOnlyJS = () => {
+    return (
+      <BrowserOnly fallback={<div></div>}>
+        {() => {
+          setInterval(() => {
+            var currentPath = window.location.pathname;
+            const navbar = document.querySelector('.navbar');
+            if (
+              currentPath.length === 0 ||
+              currentPath === '/' ||
+              currentPath.match(/^\/?index/)
+            ) {
+              navbar.classList.add('navbar-trans');
+            } else {
+              navbar.classList.remove('navbar-trans');
+            }
+          }, 10);
+        }}
+      </BrowserOnly>
+    );
+  };
+
+  render() {
+    return (
+      <div className="HomeHero">
+        <this.BrowserOnlyJS></this.BrowserOnlyJS>
+        <div className="mainText">
+          <div className="titleText">We are going to the Moon</div>
+          <div className="buttonContainer">
+            <div className="buttonCTA" id="learnMore">
+              <a href="#mission">
+                <Translate>Learn More</Translate>
+              </a>
             </div>
-            <div id="NFTInfo" className="NFTInfo">
-              <p id="NFTInfoHeading">
-                Win a chance to go to space with our Ticket To Space NFT!
-              </p>
-              {showMintButton ? (
-                <a
-                  href="https://mint.moondao.com"
-                  target="_blank"
-                  className="Mint-btn">
-                  <img src={VectorIcon} alt="" />
-                  MINT NOW
-                  <img className="arrow-icon" src={ArrowIcon} alt="" />
-                </a>
-              ) : (
-                <React.Fragment>
-                  <p id="countdownLabel">
-                    <Translate>NFT Minting Begins In...</Translate>
-                  </p>
-                  <Countdown onEnd={() => setShowMintButton(true)} />
-                </React.Fragment>
-              )}
-
-              <div className="HeroButtonGroup">
-                <a
-                  href="https://mirror.xyz/pmoncada.eth/HyA4_czQTchCx6x_BN_2zk87zED9w6_AtEGcWhF-vCg"
-                  target="_blank">
-                  <Translate>Learn More</Translate>
-                </a>
-                <a
-                  href="https://app.verisoul.xyz/moondao"
-                  target="_blank"
-                  className="buyMooney">
-                  <Translate>Join MoonList</Translate>
-                </a>
-              </div>
+            <div className="buttonCTA" id="joinDiscord">
+              <a href="https://discord.gg/5nAu7K9aES" target="_blank">
+                <Translate>Join our Discord</Translate>
+              </a>
             </div>
           </div>
         </div>
+        <div className="downArrow">
+          <a href="#mission">
+            <ScrolldownArrow />
+          </a>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Hero;
+    );
+  }
+}
