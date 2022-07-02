@@ -27,6 +27,11 @@ module.exports = {
         name: 'twitter:description',
         content: "MoonDAO's mission is to decentralize access to space.",
       },
+      {
+        name: 'keywords',
+        content:
+          'MoonDAO,Mooney,DAO,space,to the moon,space research,space exploration,web3,web nasa',
+      },
     ],
     colorMode: {
       disableSwitch: true,
@@ -109,6 +114,9 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        googleAnalytics: {
+          trackingID: 'UA-233494912-1',
         },
       },
     ],
