@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -27,13 +31,13 @@ h1 {
 h2 {
   font-family: $heading-font;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h3 {
   font-family: $heading-font;
   font-weight: 900;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h4 {
@@ -45,7 +49,7 @@ h4 {
 h5 {
   font-family: $heading-font;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 h6 {
@@ -112,8 +116,23 @@ a {
 }
 
 .navbar {
+  height: 10%;
+  background-color: black;
   a:hover {
     color: $primary;
+  }
+}
+
+.navbar-trans {
+  background-color: transparent;
+}
+
+.navbar__logo {
+  height: 90px;
+  width: 320px;
+  @media (max-width: $mobile) {
+    height: 60px;
+    width: 213px;
   }
 }
 
@@ -128,6 +147,7 @@ a {
 
 blockquote {
   font-family: 'Poppins';
+  color: #ffbc5c;
   margin-top: 40px;
   font-size: 1.25em;
   font-weight: bold;
@@ -480,6 +500,10 @@ p.Large {
 
 .daoColor {
   color: $primary;
+}
+
+.daoColor2 {
+  color: #ffbc5c;
 }
 
 .JustifyCenter {
