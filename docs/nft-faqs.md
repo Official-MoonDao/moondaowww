@@ -38,7 +38,7 @@ Registration on the Moonlist is entirely free. In order to register on the Moonl
 
 ### **Will the Moonlist close? Is there a limit to the number of people that can be on the list?**
 
-Everyone who is of the legal age of majority will have the opportunity to register on the Moonlist before we select the astronaut (and alternates) on June 8th at 7pm PST. There is no limit to the number of people that can register on the Moonlist.
+Everyone who is of the legal age of majority will have the opportunity to register on the Moonlist before we select the astronaut (and alternates) on June 11th at 7pm PST. There is no limit to the number of people that can register on the Moonlist.
 
 ### **How will the winning astronaut be selected?**
 
