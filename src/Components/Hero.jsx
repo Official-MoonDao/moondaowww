@@ -64,17 +64,26 @@ export default class Hero extends React.Component {
         <this.BrowserOnlyJS></this.BrowserOnlyJS>
         <div className="mainText">
           <div className="titleText">We are going to the Moon</div>
+          <div>
+            <a
+              className="subText"
+              href="https://www.youtube.com/watch?v=venrE8gdz30"
+              target="_blank">
+              MoonDAO is sending Copy from Dude Perfect to space through Blue
+              Origin's New Sheppard rocket!
+            </a>
+          </div>
           <div className="buttonContainer">
-            <div className="buttonCTA" id="learnMore">
-              <a href="#mission">
-                <Translate>Learn More</Translate>
-              </a>
-            </div>
-            <div className="buttonCTA" id="joinDiscord">
-              <a href="https://discord.gg/5nAu7K9aES" target="_blank">
-                <Translate>Join our Discord</Translate>
-              </a>
-            </div>
+            <a
+              href="/docs/token"
+              target="_blank"
+              className="buttonCTA"
+              id="joinDiscord">
+              <Translate>Govern MoonDAO with $MOONEY</Translate>
+            </a>
+            <a href="#mission" className="buttonCTA" id="learnMore">
+              <Translate>Learn More</Translate>
+            </a>
           </div>
         </div>
         <div className="downArrow">

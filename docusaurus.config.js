@@ -45,8 +45,18 @@ module.exports = {
       hideOnScroll: true,
       items: [
         {
-          type: 'localeDropdown',
           position: 'left',
+          html: '<img width="50" src="https://s3.amazonaws.com/moonlist.moondao.link/twitter-logo.png" alt="" />',
+          to: 'https://twitter.com/OfficialMoonDAO',
+        },
+        {
+          position: 'left',
+          html: '<img width="50" src="https://s3.amazonaws.com/moonlist.moondao.link/discord-logo.png" alt="" />',
+          to: 'https://discord.com/invite/5nAu7K9aES',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           to: '/docs/introduction',
