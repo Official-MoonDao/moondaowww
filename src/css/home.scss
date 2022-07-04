@@ -48,6 +48,10 @@
       transform: scale(1.2);
       transition: opacity 1.5s ease, transform 2.5s ease;
     }
+    .subText {
+      margin-left: 5%;
+      color: #d85c4c;
+    }
     .titleTextTransition {
       opacity: 1 !important;
       transform: none !important;
@@ -58,7 +62,7 @@
       position: relative;
       color: white;
       margin-top: 1.5em;
-      margin-left: 6%;
+      margin-left: 5%;
       font-size: 1.2em;
       width: 30em;
       @media (max-width: 768px) {
@@ -70,7 +74,7 @@
         width: 100%;
       }
       .buttonCTA {
-        width: calc(35%);
+        // width: calc(35%);
         background-color: black;
         border: 2px solid #d7d9d4;
         padding: 1em;
