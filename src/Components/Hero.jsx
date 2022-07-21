@@ -24,10 +24,8 @@ export default class Hero extends React.Component {
           }, 1000);
           setTimeout(() => {
             learnMore.classList.add('buttonCTATransition');
-          }, 2000);
-          setTimeout(() => {
             joinDiscord.classList.add('buttonCTATransition');
-          }, 3000);
+          }, 2000);
           return;
         }
       });

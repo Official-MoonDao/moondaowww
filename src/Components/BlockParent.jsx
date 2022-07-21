@@ -58,10 +58,6 @@ export default class BlockParent extends React.Component {
           currentScrollHeight={this.state.currentScrollHeight}
           windowHeight={this.state.windowHeight}
         />
-        <Objectives
-          currentScrollHeight={this.state.currentScrollHeight}
-          windowHeight={this.state.windowHeight}
-        />
         <Values
           currentScrollHeight={this.state.currentScrollHeight}
           windowHeight={this.state.windowHeight}
