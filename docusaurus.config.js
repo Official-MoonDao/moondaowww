@@ -40,8 +40,18 @@ module.exports = {
       hideOnScroll: true,
       items: [
         {
-          type: 'localeDropdown',
           position: 'left',
+          className: 'twitterNavbar',
+          to: 'https://twitter.com/OfficialMoonDAO',
+        },
+        {
+          position: 'left',
+          className: 'discordNavbar',
+          to: 'https://discord.com/invite/5nAu7K9aES',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           to: '/docs/introduction',

@@ -5,8 +5,8 @@ $arrow-size: 16px;
   width: $arrow-size;
   height: $arrow-size;
   transform: rotate(45deg);
-  border-right: 4px solid #d85c4c;
-  border-bottom: 4px solid #d85c4c;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
   animation: arrow-wave 1s infinite;
   animation-direction: alternate;
   @for $i from 1 through 3 {

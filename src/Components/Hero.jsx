@@ -2,40 +2,38 @@ import React, {useState} from 'react';
 import ScrolldownArrow from '../Components/ScrolldownArrow';
 import Translate from '@docusaurus/Translate';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
 export default class Hero extends React.Component {
   constructor() {
     super();
   }
-
   componentDidMount() {
     const titleText = document.querySelector('.titleText');
     titleText.classList.remove('titleTextTransition');
-
+    const subTextContainer = document.querySelector('.subTextContainer');
+    subTextContainer.classList.remove('subTextTransition');
     const joinDiscord = document.querySelector('#joinDiscord');
     joinDiscord.classList.remove('buttonCTATransition');
-
     const learnMore = document.querySelector('#learnMore');
     learnMore.classList.remove('buttonCTATransition');
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           titleText.classList.add('titleTextTransition');
           setTimeout(() => {
-            learnMore.classList.add('buttonCTATransition');
+            subTextContainer.classList.add('subTextTransition');
           }, 1000);
           setTimeout(() => {
-            joinDiscord.classList.add('buttonCTATransition');
+            learnMore.classList.add('buttonCTATransition');
           }, 2000);
+          setTimeout(() => {
+            joinDiscord.classList.add('buttonCTATransition');
+          }, 3000);
           return;
         }
       });
     });
-
     observer.observe(document.querySelector('.mainText'));
   }
-
   BrowserOnlyJS = () => {
     return (
       <BrowserOnly fallback={<div></div>}>
@@ -57,28 +55,35 @@ export default class Hero extends React.Component {
       </BrowserOnly>
     );
   };
-
   render() {
     return (
       <div className="HomeHero">
         <this.BrowserOnlyJS></this.BrowserOnlyJS>
         <div className="mainText">
-          <div className="titleText">We are going to the Moon</div>
+          <div className="titleText">Lets decentralize access to space</div>
+          <div className="subTextContainer">
+            MoonDAO’s mission is is to create a self-sustaining, self-governing
+            colony on the Moon to act as a launch point for humanity to explore
+            the cosmos.
+          </div>
           <div className="buttonContainer">
-            <div className="buttonCTA" id="learnMore">
-              <a href="#mission">
-                <Translate>Learn More</Translate>
-              </a>
-            </div>
-            <div className="buttonCTA" id="joinDiscord">
-              <a href="https://discord.gg/5nAu7K9aES" target="_blank">
-                <Translate>Join our Discord</Translate>
-              </a>
-            </div>
+            <a
+              href="https://discord.com/invite/5nAu7K9aES"
+              target="_blank"
+              className="buttonCTA"
+              id="joinDiscord">
+              <Translate>Join Us</Translate>
+            </a>
+            <a
+              href="https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8"
+              className="buttonCTA"
+              id="learnMore">
+              <Translate>Learn More</Translate>
+            </a>
           </div>
         </div>
         <div className="downArrow">
-          <a href="#mission">
+          <a href="#activeProject">
             <ScrolldownArrow />
           </a>
         </div>

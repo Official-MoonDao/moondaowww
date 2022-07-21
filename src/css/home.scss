@@ -1,9 +1,7 @@
 @import './variables.scss';
-
 .daoList {
   padding: $base-padding;
 }
-
 .Search {
   background-color: $primary;
 }
@@ -12,7 +10,6 @@
     display: none;
   }
 }
-
 .HomeHero {
   position: relative;
   min-height: 100vh;
@@ -34,19 +31,37 @@
       margin-left: 5%;
       margin-right: 2%;
       font-size: 3em;
-      color: white;
+      color: $tertiary;
       font-family: 'Montserrat';
-      font-weight: bolder;
+      font-weight: 900;
+      font-style: italic;
       @media (max-width: $mobile) {
         margin-top: 30%;
         margin-right: 8%;
         margin-left: 8%;
-        font-size: 2.75em;
+        margin-bottom: 5%;
+        font-size: 2em;
         text-align: center;
       }
       opacity: 0;
       transform: scale(1.2);
       transition: opacity 1.5s ease, transform 2.5s ease;
+    }
+    .subTextContainer {
+      margin-left: 5%;
+      margin-right: 20%;
+      color: white;
+      font-size: 1.25em;
+      @media (max-width: $mobile) {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      opacity: 0;
+      transition: opacity 3s ease;
+    }
+    .subTextTransition {
+      opacity: 1 !important;
     }
     .titleTextTransition {
       opacity: 1 !important;
@@ -56,9 +71,9 @@
       display: flex;
       flex-direction: row;
       position: relative;
-      color: white;
+      color: $tertiary;
       margin-top: 1.5em;
-      margin-left: 6%;
+      margin-left: 5%;
       font-size: 1.2em;
       width: 30em;
       @media (max-width: 768px) {
@@ -70,20 +85,26 @@
         width: 100%;
       }
       .buttonCTA {
-        width: calc(35%);
-        background-color: black;
-        border: 2px solid #d7d9d4;
+        // width: calc(35%);
+        background-color: transparent;
+        border: 2px solid $tertiary;
         padding: 1em;
+        width: 15em;
         text-align: center;
-        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px #f7faf4;
+        box-shadow: -2px 0.25em 1em 2px $tertiary, 2px 2px 6px $tertiary;
         border-radius: 0.5em;
-        color: #d7d9d4;
+        color: $tertiary;
         opacity: 0;
         transform: scale(1.2);
         transition: opacity 1.5s ease, transform 2.5s ease;
+        color: $tertiary;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 1.25em;
         @media (max-width: 768px) {
           width: calc(65%);
           margin-right: 0em;
+          background-color: black;
         }
         &:first-child {
           margin-right: 2em;
@@ -105,7 +126,6 @@
       }
     }
   }
-
   .downArrow {
     position: absolute;
     left: 50%;
@@ -113,6 +133,131 @@
     bottom: 10px;
     align-items: center;
     text-align: center;
+  }
+}
+
+.DudePerfect {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  width: calc(100%);
+  background-color: black;
+  flex-wrap: wrap;
+  color: white;
+  .Mobile_Opacity {
+    z-index: 3;
+    @media (max-width: $mobile) {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .Block__Contents {
+      z-index: 3;
+      margin-top: 5em;
+
+      .titleText {
+        font-size: 3em;
+        font-weight: 900;
+        font-style: italic;
+        color: $tertiary;
+        @media (max-width: $mobile) {
+          font-size: 3em;
+        }
+      }
+      .descText {
+        font-size: large;
+        @media (max-width: $mobile) {
+          text-align: center;
+        }
+      }
+      .buttonContainer {
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        color: white;
+        margin-top: 1.5em;
+        width: 40em;
+        @media (max-width: 768px) {
+          margin-top: 1.5em;
+          font-size: 1em;
+          flex-direction: column;
+          margin-left: 0%;
+          align-items: center;
+          width: 100%;
+        }
+        .buttonCTA {
+          z-index: 3;
+          // width: calc(35%);
+          background-color: rgba(0, 0, 0, 0.2);
+          border: 2px solid $tertiary;
+          padding: 1em;
+          text-align: center;
+          width: 15em;
+          box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px $tertiary;
+          border-radius: 0.5em;
+          color: $tertiary;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 1.5em;
+          @media (max-width: 768px) {
+            width: calc(65%);
+            margin-right: 0em;
+            font-size: 1em;
+          }
+          &:first-child {
+            margin-right: 2em;
+            @media (max-width: 768px) {
+              margin-right: 0em;
+              margin-bottom: 2em;
+            }
+          }
+        }
+        a {
+          color: #d7d9d4;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+      @media (max-width: $mobile) {
+        margin-top: 0.5em;
+        .titleText {
+          font-size: 1.5em;
+        }
+        @media (max-height: 700px) {
+          margin-top: 0em;
+          h2 {
+            font-size: 1.75em;
+          }
+          p {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+  .downArrow {
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    bottom: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  #dpVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
   }
 }
 
@@ -527,4 +672,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }

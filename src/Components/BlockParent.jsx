@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Translate from '@docusaurus/Translate';
 import ScrolldownArrow from '../Components/ScrolldownArrow';
+import ActiveProject from './ActiveProject';
 import Mission from './Mission';
 import Objectives from './Objectives';
 import Values from './Values';
@@ -49,6 +50,10 @@ export default class BlockParent extends React.Component {
     return (
       <div>
         <this.BrowserOnlyJS></this.BrowserOnlyJS>
+        <ActiveProject
+          currentScrollHeight={this.state.currentScrollHeight}
+          windowHeight={this.state.windowHeight}
+        />
         <Mission
           currentScrollHeight={this.state.currentScrollHeight}
           windowHeight={this.state.windowHeight}
