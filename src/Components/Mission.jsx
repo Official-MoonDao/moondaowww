@@ -82,7 +82,7 @@ export default class Mission extends React.Component {
           </div>
         </div>
         <div className="downArrow">
-          <a href="#objectives">
+          <a href="#values">
             <ScrolldownArrow />
           </a>
         </div>
