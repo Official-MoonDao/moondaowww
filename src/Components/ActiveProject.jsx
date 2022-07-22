@@ -48,7 +48,7 @@ export default class ActiveProject extends React.Component {
         id="activeProject"
         style={{opacity: opacity}}>
         <video autoPlay muted playsInline loop id="dpVideo">
-          <source src="/img/ModelRocketBattlleClip.mp4" type="video/mp4" />
+          <source src="/img/DPClip.mp4" type="video/mp4" />
         </video>
         <div className="Block__Contents">
           <div className="Row">

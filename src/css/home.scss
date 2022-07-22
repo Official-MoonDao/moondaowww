@@ -36,12 +36,11 @@
       font-weight: 900;
       font-style: italic;
       @media (max-width: $mobile) {
-        margin-top: 30%;
+        margin-top: 23%;
         margin-right: 8%;
         margin-left: 8%;
         margin-bottom: 5%;
-        font-size: 2em;
-        text-align: center;
+        font-size: 1.5em;
       }
       opacity: 0;
       transform: scale(1.2);
@@ -53,9 +52,9 @@
       color: white;
       font-size: 1.25em;
       @media (max-width: $mobile) {
-        text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 8%;
+        margin-right: 8%;
+        font-size: 1em;
       }
       opacity: 0;
       transition: opacity 3s ease;
@@ -148,19 +147,32 @@
   .Block__Contents {
     z-index: 3;
     margin-top: 5em;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      background-color: rgba(0, 0, 0, 0.35);
+    }
     .titleText {
       font-size: 3em;
       font-weight: 900;
       font-style: italic;
       color: $tertiary;
       @media (max-width: $mobile) {
+        margin-right: 8%;
+        margin-left: 8%;
         font-size: 3em;
+      }
+    }
+    .subtitleText {
+      @media (max-width: $mobile) {
+        margin-right: 8%;
+        margin-left: 8%;
       }
     }
     .descText {
       font-size: large;
       @media (max-width: $mobile) {
-        text-align: center;
+        margin-right: 8%;
+        margin-left: 8%;
       }
     }
     .buttonContainer {
@@ -187,7 +199,7 @@
         padding: 1em;
         text-align: center;
         width: 15em;
-        box-shadow: -2px 0.25em 1em 2px #b7b8b4, 2px 2px 6px $tertiary;
+        box-shadow: -2px 0.25em 1em 2px $tertiary, 2px 2px 6px $tertiary;
         border-radius: 0.5em;
         color: $tertiary;
         font-style: italic;
@@ -217,7 +229,7 @@
       .titleText {
         font-size: 1.5em;
       }
-      @media (max-height: 700px) {
+      @media (max-width: $mobile) {
         margin-top: 0em;
         h2 {
           font-size: 1.75em;
@@ -239,16 +251,16 @@
   }
   #dpVideo {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
     width: 100vw;
     height: 100vh;
     z-index: 2;
     object-fit: cover;
-    background-size: cover;
-    overflow: hidden;
+    // background-size: cover;
+    overflow: hidden hidden;
   }
 }
 
@@ -665,6 +677,7 @@
   height: 100%;
 }
 
+html,
 body {
   overflow-x: hidden;
 }
