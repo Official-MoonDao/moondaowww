@@ -29,15 +29,15 @@ export default class Roadmap extends React.Component {
 
   render() {
     var opacity = 1;
-    if (!this.state.fullOpacity) {
-      opacity = Math.min(
-        this.props.currentScrollHeight / this.props.windowHeight - 3,
-        1,
-      );
-      if (opacity >= 1) {
-        this.state.fullOpacity = true;
-      }
-    }
+    // if (!this.state.fullOpacity) {
+    //   opacity = Math.min(
+    //     this.props.currentScrollHeight / this.props.windowHeight - 3,
+    //     1,
+    //   );
+    //   if (opacity >= 1) {
+    //     this.state.fullOpacity = true;
+    //   }
+    // }
 
     return (
       <div className="Roadmap_Block" id="MoonPhase" style={{opacity: opacity}}>

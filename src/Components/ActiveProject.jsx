@@ -32,22 +32,22 @@ export default class ActiveProject extends React.Component {
 
   render() {
     var opacity = 1;
-    if (!this.state.fullOpacity) {
-      opacity = Math.min(
-        this.props.currentScrollHeight / this.props.windowHeight,
-        1,
-      );
-      if (opacity >= 1) {
-        this.state.fullOpacity = true;
-      }
-    }
+    // if (!this.state.fullOpacity) {
+    //   opacity = Math.min(
+    //     this.props.currentScrollHeight / this.props.windowHeight,
+    //     1,
+    //   );
+    //   if (opacity >= 1) {
+    //     this.state.fullOpacity = true;
+    //   }
+    // }
 
     return (
       <div
         className="DudePerfect"
         id="activeProject"
         style={{opacity: opacity}}>
-        <video autoPlay muted playsInline loop id="dpVideo">
+        <video defaultMuted autoPlay muted playsInline loop id="dpVideo">
           <source src="/img/DPClip.mp4" type="video/mp4" />
         </video>
         <div className="Block__Contents">
