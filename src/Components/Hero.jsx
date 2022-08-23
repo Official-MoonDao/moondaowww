@@ -60,7 +60,7 @@ export default class Hero extends React.Component {
         <div className="mainText">
           <div className="titleText">Let's decentralize access to space</div>
           <div className="subTextContainer">
-            MoonDAO’s mission is is to create a self-sustaining, self-governing
+            MoonDAO’s mission is to create a self-sustaining, self-governing
             colony on the Moon to act as a launch point for humanity to explore
             the cosmos.
           </div>
