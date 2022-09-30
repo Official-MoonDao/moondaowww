@@ -4,7 +4,7 @@ title: Dispute Notice
 description: Dispute Notice regarding Ticket to Space NFT Sweepstakes
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: Dispute Notice
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 **MoonDAO™ Initial Dispute Notice**

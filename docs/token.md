@@ -15,7 +15,7 @@ keywords:
     Space Travel,
   ]
 sidebar_label: $MOONEY token
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 The $MOONEY token launched on **Friday, December 17, 2021** on Juicebox. The funding period lasted for one lunar cycle and ended on **Sunday, January 16, 2022 at 3:18 PM EST**.

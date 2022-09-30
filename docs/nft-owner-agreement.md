@@ -4,7 +4,7 @@ title: NFT Owner Agreement
 description: Agreements regarding ownership of the MoonDAO Ticket to Space NFT
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: NFT Owner Agreement
-sidebar_position: 10
+sidebar_position: 12
 ---
 
 **NFT OWNER AGREEMENT**

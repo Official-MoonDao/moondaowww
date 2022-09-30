@@ -16,7 +16,7 @@ keywords:
     Decentralization,
   ]
 sidebar_label: Contribute
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 If you have any more questions, or would like to hang out with the community and get involved, join our Discord or follow us on Twitter.

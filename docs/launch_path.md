@@ -17,7 +17,7 @@ keywords:
     Exploration,
     Moon Parties,
   ]
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 ## 🌒 Moon Phase 1: Deploy a token for decentralized governance of MoonDAO.
