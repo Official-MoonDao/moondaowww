@@ -4,7 +4,7 @@ title: MoonDAO Website Terms and Conditions
 description: MoonDAO website terms and conditions
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: Website Terms and Conditions
-sidebar_position: 12
+sidebar_position: 14
 ---
 
 ## **MoonDAO™ Website Terms and Conditions**

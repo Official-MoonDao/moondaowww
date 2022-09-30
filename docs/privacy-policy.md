@@ -4,7 +4,7 @@ title: MoonDAO Website Privacy Policy
 description: MoonDAO website privacy policy
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: Privacy Policy
-sidebar_position: 13
+sidebar_position: 15
 ---
 
 **Last Updated: June 2nd, 2022**

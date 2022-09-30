@@ -4,7 +4,7 @@ title: Ticket to Space NFT FAQs
 description: FAQs regarding MoonDAO's Ticket to Space NFT
 keywords: [NFT, Ticket-to-Space, MoonDAO, Space Travel]
 sidebar_label: Ticket to Space NFT FAQs
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 ### **What are the Ticket To Space NFTs?**

@@ -3,7 +3,7 @@ id: faq
 title: FAQ
 description: Find Answers to our Frequently asked Questions, and learn more about the DAO.
 keywords: [FAQ, Funds, Risks, Token, DAO Conpesation, Governance]
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 ### Where are the funds going to be stored?
